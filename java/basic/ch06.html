@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="true" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>第六章：內建類別 | 虎头鯨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="常見的內建類別一覽   類別名稱 所屬套件 用途說明    String java.lang 字串處理   Math java.lang 數學計算   Scanner java.util 輸入處理（鍵盤輸入）   Random java.util 產生亂數   Date java.util 表示日期時間（較舊）   LocalDate java.time 處理日期（較新）   ArrayList">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第六章：內建類別">
+<meta property="og:url" content="http://example.com/java/basic/ch06">
+<meta property="og:site_name" content="虎头鯨">
+<meta property="og:description" content="常見的內建類別一覽   類別名稱 所屬套件 用途說明    String java.lang 字串處理   Math java.lang 數學計算   Scanner java.util 輸入處理（鍵盤輸入）   Random java.util 產生亂數   Date java.util 表示日期時間（較舊）   LocalDate java.time 處理日期（較新）   ArrayList">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-06-24T15:49:57.187Z">
+<meta property="article:modified_time" content="2025-06-11T05:37:08.000Z">
+<meta property="article:author" content="虎头鲸">
+<meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="虎头鯨" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/img/avatar.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+     
+<div class="widget color-picker">
+  <h3 class="widget-title">Theme Preview</h3>
+  <div id="banner-toggle-bar">
+    <label for="vehicle1">Show Banner</label><br>
+    <input type="checkbox" id="banner-checkbox" name="banner-checkbox" value="show">
+  </div>
+
+  <div id="preset-list">
+    
+      <div class="preset-btn" style="background-color: #f486aa;" data-hue="0"></div>
+    
+      <div class="preset-btn" style="background-color: #fa8978;" data-hue="30"></div>
+    
+      <div class="preset-btn" style="background-color: #ee9748;" data-hue="60"></div>
+    
+      <div class="preset-btn" style="background-color: #00cab1;" data-hue="180"></div>
+    
+      <div class="preset-btn" style="background-color: #63b3ff;" data-hue="250"></div>
+    
+      <div class="preset-btn" style="background-color: #8ca8ff;" data-hue="270"></div>
+    
+      <div class="preset-btn" style="background-color: #bc98f9;" data-hue="300"></div>
+    
+      <div class="preset-btn" style="background-color: #df8cd8;" data-hue="330"></div>
+    
+      <div class="preset-btn" style="background-color: #ec88c2;" data-hue="345"></div>
+     
+  </div>
+  <input type="range" min="0" max="360" value="250" class="slider" id="colorSlider" step="5" style="width: 100%;">
+  <p class="hue-text">Hue: <span id="hueValue"></span></p>
+  <p class="oklch-tip">You are using an outdated browser that does not support OKLCH colors. The color setting will not take effect.</p>
+</div>
+
+<script>
+  let slider = document.getElementById("colorSlider");
+  let output = document.getElementById("hueValue");
+  let presetList = document.getElementById("preset-list");
+  let r = document.querySelector(':root');
+  output.innerHTML = slider.value; // Display the default slider value
+
+  function getColorNode(l, c, h) {
+    return new Color("oklch", [l, c, h]).to("srgb").toString({format: "hex"});
+  }
+  function setHue(hue) {
+    localStorage.setItem('hue', hue);
+    output.innerHTML = hue;
+    slider.value = hue;
+
+    r.style.setProperty(`--primary-hue`, hue);
+  }
+
+  let storedHue = localStorage.getItem('hue');
+  if (storedHue) {
+    setHue(storedHue);
+  }
+
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+    let hue = this.value;
+    setHue(hue);
+  }
+
+  presetList.onclick = function(event) {
+    let hue = event.target.dataset.hue;
+    if (hue) {
+      setHue(hue);
+    }
+  }
+
+  // Banner switch
+
+  function enableBanner() {
+    r.setAttribute("showBanner", "true");
+    localStorage.setItem('showBanner', "true");
+  }
+  
+  function disableBanner() {
+    r.setAttribute("showBanner", "false");
+    localStorage.setItem('showBanner', "false");
+  }
+
+  let showBannerCheck = document.querySelector("input[name=banner-checkbox]");
+  if (r.getAttribute("showBanner") === "true") {
+    showBannerCheck.checked = true;
+  }
+  showBannerCheck.addEventListener('change', function() {
+    if (this.checked) {
+      enableBanner();
+    } else {
+      disableBanner();
+    }
+  });
+</script>
+  
+  
+  
+    
+<div id="banner" class="">
+  <img src="/img/banner.png" itemprop="image">
+  <div id="banner-dim"></div>
+</div>
+ 
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>虎头鯨 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">首頁</a>
+    
+      <a class="main-nav-link" href="/archives">彙整</a>
+    
+      <a class="main-nav-link" href="/about">關於</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">首頁</a>
+    
+      <a class="nav-dropdown-link" href="/archives">彙整</a>
+    
+      <a class="nav-dropdown-link" href="/about">關於</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/img/avatar.png></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">虎头鯨 </div>
+      <div class="dot"></div>
+      <div class="subtitle">PU CSIM </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://discordapp.com/users/975001678350811206" title="Discord"><i class="fa-brands fa-discord"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://steamcommunity.com/id/DEVlenient/" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/DEVlenient" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分類</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/">
+                程式語言
+                <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
+                標記語言
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
+                硬碟
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%AD%B8%E6%A0%A1/">
+                學校
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%9B%BB%E8%85%A6/">
+                電腦
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">標籤</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A1%AC%E9%AB%94/" rel="tag">硬體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%B3%87%E7%AE%A1%E4%B8%80A/" rel="tag">資管一A</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%BB%E8%85%A6/" rel="tag">電腦</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%9C%E5%AE%9C%E5%A4%A7%E5%AD%B8/" rel="tag">靜宜大學</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%A1%AF%E5%8D%A1/" rel="tag">顯卡</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">彙整</h3>
+      
+      
+        <a class="archive-link" href="/archives/2025/06 ">
+          六月 2025 
+          <div class="archive-count">5 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/03 ">
+          三月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <a class="recent-link" href="/2025/06/27/VRAM/" title="顯存（VRAM）是甚麼" >
+            <div class="recent-link-text">
+              顯存（VRAM）是甚麼
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/07/Markdown_menu/" title="Markdown 教學目錄" >
+            <div class="recent-link-text">
+              Markdown 教學目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/07/Python_menu/" title="Python 教學目錄" >
+            <div class="recent-link-text">
+              Python 教學目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
+            <div class="recent-link-text">
+              Java 教學目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/SSD_menu/" title="認識HDD、SSD" >
+            <div class="recent-link-text">
+              認識HDD、SSD
+            </div>
+          </a>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        第六章：內建類別
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-06-24T15:49:57.187Z" itemprop="datePublished">2025-06-24</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分類 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.6k 字 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h2 id="常見的內建類別一覽"><a href="#常見的內建類別一覽" class="headerlink" title="常見的內建類別一覽"></a>常見的內建類別一覽</h2><table>
+<thead>
+<tr>
+<th>類別名稱</th>
+<th>所屬套件</th>
+<th>用途說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>String</code></td>
+<td><code>java.lang</code></td>
+<td>字串處理</td>
+</tr>
+<tr>
+<td><code>Math</code></td>
+<td><code>java.lang</code></td>
+<td>數學計算</td>
+</tr>
+<tr>
+<td><code>Scanner</code></td>
+<td><code>java.util</code></td>
+<td>輸入處理（鍵盤輸入）</td>
+</tr>
+<tr>
+<td><code>Random</code></td>
+<td><code>java.util</code></td>
+<td>產生亂數</td>
+</tr>
+<tr>
+<td><code>Date</code></td>
+<td><code>java.util</code></td>
+<td>表示日期時間（較舊）</td>
+</tr>
+<tr>
+<td><code>LocalDate</code></td>
+<td><code>java.time</code></td>
+<td>處理日期（較新）</td>
+</tr>
+<tr>
+<td><code>ArrayList</code></td>
+<td><code>java.util</code></td>
+<td>動態陣列（集合類別）</td>
+</tr>
+</tbody></table>
+<h2 id="String-類別"><a href="#String-類別" class="headerlink" title="String 類別"></a><code>String</code> 類別</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">System.out.println(s.length());       <span class="comment">// 字串長度</span></span><br><span class="line">System.out.println(s.toUpperCase()); <span class="comment">// 轉大寫</span></span><br><span class="line">System.out.println(s.charAt(<span class="number">1</span>));     <span class="comment">// 第二個字元 &#x27;e&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.length()</code></td>
+<td>回傳字串長度</td>
+</tr>
+<tr>
+<td><code>.charAt(i)</code></td>
+<td>取得第 i 個字元</td>
+</tr>
+<tr>
+<td><code>.substring()</code></td>
+<td>截取子字串</td>
+</tr>
+<tr>
+<td><code>.equals()</code></td>
+<td>比較內容是否相等</td>
+</tr>
+<tr>
+<td><code>.equalsIgnoreCase()</code></td>
+<td>忽略大小寫比較</td>
+</tr>
+</tbody></table>
+<ul>
+<li>注意：<code>==</code> 是比較記憶體位置，<strong>不可用來比較字串內容</strong>！</li>
+</ul>
+<h2 id="Math-類別"><a href="#Math-類別" class="headerlink" title="Math 類別"></a><code>Math</code> 類別</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(Math.sqrt(<span class="number">9</span>));      <span class="comment">// 開根號</span></span><br><span class="line">System.out.println(Math.pow(<span class="number">2</span>, <span class="number">3</span>));    <span class="comment">// 2 的 3 次方</span></span><br><span class="line">System.out.println(Math.max(<span class="number">10</span>, <span class="number">20</span>));  <span class="comment">// 取大</span></span><br><span class="line">System.out.println(Math.random());     <span class="comment">// 0~1 隨機數</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Math.abs()</code></td>
+<td>絕對值</td>
+</tr>
+<tr>
+<td><code>Math.pow(x,y)</code></td>
+<td>次方運算</td>
+</tr>
+<tr>
+<td><code>Math.sqrt()</code></td>
+<td>開根號</td>
+</tr>
+<tr>
+<td><code>Math.max()</code></td>
+<td>取最大值</td>
+</tr>
+<tr>
+<td><code>Math.min()</code></td>
+<td>取最小值</td>
+</tr>
+<tr>
+<td><code>Math.round()</code></td>
+<td>四捨五入</td>
+</tr>
+</tbody></table>
+<h2 id="Scanner-類別"><a href="#Scanner-類別" class="headerlink" title="Scanner 類別"></a><code>Scanner</code> 類別</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">System.out.print(<span class="string">&quot;請輸入名字：&quot;</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> sc.nextLine();</span><br><span class="line">System.out.println(<span class="string">&quot;Hello, &quot;</span> + name);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>資料型態</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nextLine()</code></td>
+<td>讀取一整行字串</td>
+</tr>
+<tr>
+<td><code>nextInt()</code></td>
+<td>整數輸入</td>
+</tr>
+<tr>
+<td><code>nextDouble()</code></td>
+<td>小數輸入</td>
+</tr>
+<tr>
+<td><code>next()</code></td>
+<td>讀一個單字</td>
+</tr>
+</tbody></table>
+<h2 id="Random-類別"><a href="#Random-類別" class="headerlink" title="Random 類別"></a><code>Random</code> 類別</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="type">Random</span> <span class="variable">rand</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Random</span>();</span><br><span class="line"><span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> rand.nextInt(<span class="number">10</span>); <span class="comment">// 產生 0~9 的整數</span></span><br><span class="line">System.out.println(<span class="string">&quot;亂數：&quot;</span> + num);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>nextInt(n)</code></td>
+<td>0 ~ n-1 的亂數整數</td>
+</tr>
+<tr>
+<td><code>nextDouble()</code></td>
+<td>0.0 ~ 1.0 亂數小數</td>
+</tr>
+<tr>
+<td><code>nextBoolean()</code></td>
+<td>true 或 false 隨機</td>
+</tr>
+</tbody></table>
+<h2 id="LocalDate-類別（新日期類別）"><a href="#LocalDate-類別（新日期類別）" class="headerlink" title="LocalDate 類別（新日期類別）"></a><code>LocalDate</code> 類別（新日期類別）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.time.LocalDate;</span><br><span class="line"></span><br><span class="line"><span class="type">LocalDate</span> <span class="variable">today</span> <span class="operator">=</span> LocalDate.now();</span><br><span class="line">System.out.println(<span class="string">&quot;今天日期：&quot;</span> + today);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>LocalDate.now()</code></td>
+<td>取得今天日期</td>
+</tr>
+<tr>
+<td><code>plusDays(n)</code></td>
+<td>加上 n 天</td>
+</tr>
+<tr>
+<td><code>minusMonths(n)</code></td>
+<td>減去 n 個月</td>
+</tr>
+</tbody></table>
+<h2 id="記憶體觀念（stack-vs-heap）"><a href="#記憶體觀念（stack-vs-heap）" class="headerlink" title="記憶體觀念（stack vs heap）"></a>記憶體觀念（stack vs heap）</h2><ul>
+<li><p>內建類別（如 <code>String</code>, <code>Scanner</code>）大多是物件型態（<strong>參考資料形態</strong>），儲存在 <strong>heap（堆積區）</strong>。</p>
+</li>
+<li><p>宣告的參考變數（如 <code>String s = &quot;Hi&quot;;</code>）則存於 <strong>stack（堆疊區）</strong>。</p>
+</li>
+</ul>
+<h2 id="常見錯誤與迷思"><a href="#常見錯誤與迷思" class="headerlink" title="常見錯誤與迷思"></a>常見錯誤與迷思</h2><table>
+<thead>
+<tr>
+<th>錯誤類型</th>
+<th>錯誤範例</th>
+<th>原因說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>==</code> 比較字串</td>
+<td><code>&quot;abc&quot; == &quot;abc&quot;</code></td>
+<td>檢查的是位置，不是內容</td>
+</tr>
+<tr>
+<td>忘記 <code>import</code></td>
+<td><code>Scanner</code> 無法使用</td>
+<td>忘了引入 <code>java.util.Scanner</code></td>
+</tr>
+<tr>
+<td>錯用 <code>next()</code></td>
+<td><code>next()</code> 只能輸入一個字</td>
+<td>輸入多字需用 <code>nextLine()</code></td>
+</tr>
+</tbody></table>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+
+  
+</article>
+
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer" style="padding: 20px 0;">
+  
+  <div id="footer-info" class="inner" style="text-align:center; width:100%; max-width:900px; margin: 0 auto;">
+    
+    
+    &copy; 2024 - 2025 by 虎头鯨<br>
+    框架 <a href="https://hexo.io/" target="_blank">Hexo</a> | 主題 <a href="https://github.com/saicaca/hexo-theme-vivia" target="_blank">Vivia</a>
+
+    <div id="site-runtime" style="margin-top: 2px; font-size: 15px; color: var(--neut-L50);"></div>
+  </div>
+  <script>
+    // 設定網站啟用日期（請依實際上線日調整）
+    var siteLaunchDate = new Date('2024-11-20T00:00:00');
+    var sessionStart = new Date();
+    function formatSessionRuntime(ms) {
+      var seconds = Math.floor(ms / 1000) % 60;
+      var minutes = Math.floor(ms / 1000 / 60) % 60;
+      var hours = Math.floor(ms / 1000 / 60 / 60) % 24;
+      var days = Math.floor(ms / 1000 / 60 / 60 / 24);
+      return `${days} 天 ${hours} 時 ${minutes} 分 ${seconds} 秒`;
+    }
+    function formatSiteRuntime(from, to) {
+      var years = to.getFullYear() - from.getFullYear();
+      var months = to.getMonth() - from.getMonth();
+      var days = to.getDate() - from.getDate();
+      var hours = to.getHours() - from.getHours();
+      var minutes = to.getMinutes() - from.getMinutes();
+      var seconds = to.getSeconds() - from.getSeconds();
+      if (seconds < 0) { seconds += 60; minutes--; }
+      if (minutes < 0) { minutes += 60; hours--; }
+      if (hours < 0) { hours += 24; days--; }
+      if (days < 0) {
+        var prevMonth = new Date(to.getFullYear(), to.getMonth(), 0);
+        days += prevMonth.getDate();
+        months--;
+      }
+      if (months < 0) { months += 12; years--; }
+      return `${years} 年 ${months} 個月 ${days} 天 ${hours} 時 ${minutes} 分 ${seconds} 秒`;
+    }
+    function updateSiteRuntime() {
+      var now = new Date();
+      var sessionDiff = now - sessionStart;
+      var text = `瀏覽已運行：${formatSessionRuntime(sessionDiff)}\n網站已運行：${formatSiteRuntime(siteLaunchDate, now)}`;
+      document.getElementById('site-runtime').innerText = text;
+    }
+    updateSiteRuntime();
+    setInterval(updateSiteRuntime, 1000);
+  </script>
+</footer>
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>

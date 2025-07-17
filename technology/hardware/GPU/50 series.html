@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="true" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>NVIDIA GeForce RTX 50 系列 | 虎头鯨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="RTX 50 系列是 NVIDIA 於 2025 年 1 月 6 日在 CES 2025 正式發表的最新一代消費級顯示卡，採用 Blackwell 架構，全面支援 AI 加速（DLSS 4） 及次世代 光線追蹤 運算，是接替 RTX 40 系列的新旗艦產品線    RTX 50 桌上型顯示卡技術規格一覽表   型號 CUDA 核心 記憶體 記憶體介面 頻寬（GB&#x2F;s） 基礎頻率（MHz）">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NVIDIA GeForce RTX 50 系列">
+<meta property="og:url" content="http://example.com/technology/hardware/GPU/50%20series">
+<meta property="og:site_name" content="虎头鯨">
+<meta property="og:description" content="RTX 50 系列是 NVIDIA 於 2025 年 1 月 6 日在 CES 2025 正式發表的最新一代消費級顯示卡，採用 Blackwell 架構，全面支援 AI 加速（DLSS 4） 及次世代 光線追蹤 運算，是接替 RTX 40 系列的新旗艦產品線    RTX 50 桌上型顯示卡技術規格一覽表   型號 CUDA 核心 記憶體 記憶體介面 頻寬（GB&#x2F;s） 基礎頻率（MHz）">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-07-16T17:04:52.940Z">
+<meta property="article:modified_time" content="2025-07-16T17:04:52.940Z">
+<meta property="article:author" content="虎头鲸">
+<meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="虎头鯨" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/img/avatar.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+     
+<div class="widget color-picker">
+  <h3 class="widget-title">Theme Preview</h3>
+  <div id="banner-toggle-bar">
+    <label for="vehicle1">Show Banner</label><br>
+    <input type="checkbox" id="banner-checkbox" name="banner-checkbox" value="show">
+  </div>
+
+  <div id="preset-list">
+    
+      <div class="preset-btn" style="background-color: #f486aa;" data-hue="0"></div>
+    
+      <div class="preset-btn" style="background-color: #fa8978;" data-hue="30"></div>
+    
+      <div class="preset-btn" style="background-color: #ee9748;" data-hue="60"></div>
+    
+      <div class="preset-btn" style="background-color: #00cab1;" data-hue="180"></div>
+    
+      <div class="preset-btn" style="background-color: #63b3ff;" data-hue="250"></div>
+    
+      <div class="preset-btn" style="background-color: #8ca8ff;" data-hue="270"></div>
+    
+      <div class="preset-btn" style="background-color: #bc98f9;" data-hue="300"></div>
+    
+      <div class="preset-btn" style="background-color: #df8cd8;" data-hue="330"></div>
+    
+      <div class="preset-btn" style="background-color: #ec88c2;" data-hue="345"></div>
+     
+  </div>
+  <input type="range" min="0" max="360" value="250" class="slider" id="colorSlider" step="5" style="width: 100%;">
+  <p class="hue-text">Hue: <span id="hueValue"></span></p>
+  <p class="oklch-tip">You are using an outdated browser that does not support OKLCH colors. The color setting will not take effect.</p>
+</div>
+
+<script>
+  let slider = document.getElementById("colorSlider");
+  let output = document.getElementById("hueValue");
+  let presetList = document.getElementById("preset-list");
+  let r = document.querySelector(':root');
+  output.innerHTML = slider.value; // Display the default slider value
+
+  function getColorNode(l, c, h) {
+    return new Color("oklch", [l, c, h]).to("srgb").toString({format: "hex"});
+  }
+  function setHue(hue) {
+    localStorage.setItem('hue', hue);
+    output.innerHTML = hue;
+    slider.value = hue;
+
+    r.style.setProperty(`--primary-hue`, hue);
+  }
+
+  let storedHue = localStorage.getItem('hue');
+  if (storedHue) {
+    setHue(storedHue);
+  }
+
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+    let hue = this.value;
+    setHue(hue);
+  }
+
+  presetList.onclick = function(event) {
+    let hue = event.target.dataset.hue;
+    if (hue) {
+      setHue(hue);
+    }
+  }
+
+  // Banner switch
+
+  function enableBanner() {
+    r.setAttribute("showBanner", "true");
+    localStorage.setItem('showBanner', "true");
+  }
+  
+  function disableBanner() {
+    r.setAttribute("showBanner", "false");
+    localStorage.setItem('showBanner', "false");
+  }
+
+  let showBannerCheck = document.querySelector("input[name=banner-checkbox]");
+  if (r.getAttribute("showBanner") === "true") {
+    showBannerCheck.checked = true;
+  }
+  showBannerCheck.addEventListener('change', function() {
+    if (this.checked) {
+      enableBanner();
+    } else {
+      disableBanner();
+    }
+  });
+</script>
+  
+  
+  
+    
+<div id="banner" class="">
+  <img src="/img/banner.png" itemprop="image">
+  <div id="banner-dim"></div>
+</div>
+ 
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>虎头鯨 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">首頁</a>
+    
+      <a class="main-nav-link" href="/archives">彙整</a>
+    
+      <a class="main-nav-link" href="/about">關於</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">首頁</a>
+    
+      <a class="nav-dropdown-link" href="/archives">彙整</a>
+    
+      <a class="nav-dropdown-link" href="/about">關於</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/img/avatar.png></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">虎头鯨 </div>
+      <div class="dot"></div>
+      <div class="subtitle">PU CSIM </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://discordapp.com/users/975001678350811206" title="Discord"><i class="fa-brands fa-discord"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://steamcommunity.com/id/DEVlenient/" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/DEVlenient" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分類</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/">
+                程式語言
+                <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
+                標記語言
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
+                硬碟
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%AD%B8%E6%A0%A1/">
+                學校
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%9B%BB%E8%85%A6/">
+                電腦
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">標籤</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A1%AC%E9%AB%94/" rel="tag">硬體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%B3%87%E7%AE%A1%E4%B8%80A/" rel="tag">資管一A</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%BB%E8%85%A6/" rel="tag">電腦</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9D%9C%E5%AE%9C%E5%A4%A7%E5%AD%B8/" rel="tag">靜宜大學</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%A1%AF%E5%8D%A1/" rel="tag">顯卡</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">彙整</h3>
+      
+      
+        <a class="archive-link" href="/archives/2025/06 ">
+          六月 2025 
+          <div class="archive-count">5 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/03 ">
+          三月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <a class="recent-link" href="/2025/06/27/VRAM/" title="顯存（VRAM）是甚麼" >
+            <div class="recent-link-text">
+              顯存（VRAM）是甚麼
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/07/Markdown_menu/" title="Markdown 教學目錄" >
+            <div class="recent-link-text">
+              Markdown 教學目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/07/Python_menu/" title="Python 教學目錄" >
+            <div class="recent-link-text">
+              Python 教學目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
+            <div class="recent-link-text">
+              Java 教學目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/SSD_menu/" title="認識HDD、SSD" >
+            <div class="recent-link-text">
+              認識HDD、SSD
+            </div>
+          </a>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        NVIDIA GeForce RTX 50 系列
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-16T17:04:52.940Z" itemprop="datePublished">2025-07-17</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分類 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.7k 字 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <p>RTX 50 系列是 NVIDIA 於 2025 年 1 月 6 日在 CES 2025 正式發表的最新一代消費級顯示卡，採用 Blackwell 架構，全面支援 AI 加速（DLSS 4） 及次世代 光線追蹤 運算，是接替 RTX 40 系列的新旗艦產品線</p>
+<hr>
+<br>
+
+<h2 id="RTX-50-桌上型顯示卡技術規格一覽表"><a href="#RTX-50-桌上型顯示卡技術規格一覽表" class="headerlink" title="RTX 50 桌上型顯示卡技術規格一覽表"></a>RTX 50 桌上型顯示卡技術規格一覽表</h2><table>
+<thead>
+<tr>
+<th>型號</th>
+<th>CUDA 核心</th>
+<th>記憶體</th>
+<th>記憶體介面</th>
+<th>頻寬（GB&#x2F;s）</th>
+<th>基礎頻率（MHz）</th>
+<th>ROPs 數量</th>
+<th>TDP（W）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>RTX 5090</strong></td>
+<td>21,760</td>
+<td>32GB GDDR7</td>
+<td>512-bit</td>
+<td>1,792</td>
+<td>2,010（2,410）</td>
+<td>176</td>
+<td>575</td>
+</tr>
+<tr>
+<td><strong>RTX 5080</strong></td>
+<td>10,752</td>
+<td>16GB GDDR7</td>
+<td>256-bit</td>
+<td>960</td>
+<td>2,300（2,620）</td>
+<td>112</td>
+<td>360</td>
+</tr>
+<tr>
+<td><strong>RTX 5070 Ti</strong></td>
+<td>8,960</td>
+<td>16GB GDDR7</td>
+<td>256-bit</td>
+<td>890</td>
+<td>2,300（2,450）</td>
+<td>96</td>
+<td>300</td>
+</tr>
+<tr>
+<td><strong>RTX 5070</strong></td>
+<td>6,144</td>
+<td>12GB GDDR7</td>
+<td>192-bit</td>
+<td>672</td>
+<td>2,160（2,510）</td>
+<td>80</td>
+<td>250</td>
+</tr>
+<tr>
+<td><strong>RTX 5060 Ti（16GB）</strong></td>
+<td>4,608</td>
+<td>16GB GDDR7</td>
+<td>128-bit</td>
+<td>123.5</td>
+<td>2,407（2,572）</td>
+<td>48</td>
+<td>180</td>
+</tr>
+<tr>
+<td><strong>RTX 5060 Ti（8GB）</strong></td>
+<td>4,608</td>
+<td>8GB GDDR7</td>
+<td>128-bit</td>
+<td>123.5</td>
+<td>2,407（2,572）</td>
+<td>48</td>
+<td>180</td>
+</tr>
+<tr>
+<td><strong>RTX 5060</strong></td>
+<td>3,840</td>
+<td>8GB GDDR7</td>
+<td>128-bit</td>
+<td>448</td>
+<td>2,280（2,497）</td>
+<td>48</td>
+<td>145</td>
+</tr>
+<tr>
+<td><strong>RTX 5050</strong></td>
+<td>2,560</td>
+<td>8GB GDDR6</td>
+<td>128-bit</td>
+<td>320</td>
+<td>2,317（2,572）</td>
+<td>32</td>
+<td>130</td>
+</tr>
+</tbody></table>
+<br>
+
+<h2 id="RTX-50-桌上型-ROPs-數量對照表"><a href="#RTX-50-桌上型-ROPs-數量對照表" class="headerlink" title="RTX 50 桌上型 ROPs 數量對照表"></a>RTX 50 桌上型 ROPs 數量對照表</h2><p>ROP（Raster Operations Pipeline）是 GPU 渲染的最後關卡，負責像素寫入、Z-Buffer、混合與抗鋸齒等工作。<br>ROP 數量若不足，即使核心性能再強，也可能造成輸出瓶頸、延遲或畫面撕裂。</p>
+<table>
+<thead>
+<tr>
+<th>顯示卡型號</th>
+<th>ROPs 數量</th>
+<th>少一組 ROP</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>RTX 5090</strong></td>
+<td>176</td>
+<td>168</td>
+<td>少一組損失約 4% 效能</td>
+</tr>
+<tr>
+<td><strong>RTX 5080</strong></td>
+<td>112</td>
+<td>104</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>RTX 5070 Ti</strong></td>
+<td>96</td>
+<td>88</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>RTX 5070</strong></td>
+<td>80</td>
+<td>無</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>RTX 5060 Ti</strong></td>
+<td>48</td>
+<td>無</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>RTX 5060</strong></td>
+<td>48</td>
+<td>無</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="省流"><a href="#省流" class="headerlink" title="省流"></a>省流</h2><ul>
+<li>只有少部分 RTX 5090 &#x2F; 5080 &#x2F; 5070 Ti 出現 ROP 缺失</li>
+</ul>
+<br>
+
+<h2 id="RTX-50-行動版顯示卡技術規格一覽表"><a href="#RTX-50-行動版顯示卡技術規格一覽表" class="headerlink" title="RTX 50 行動版顯示卡技術規格一覽表"></a>RTX 50 行動版顯示卡技術規格一覽表</h2><table>
+<thead>
+<tr>
+<th>型號</th>
+<th>CUDA 核心</th>
+<th>記憶體</th>
+<th>頻寬（GB&#x2F;s）</th>
+<th>FP4 AI 性能（TOPS）</th>
+<th>RT 光追效能（TFLOPS）</th>
+<th>ROPs 數量</th>
+<th>TDP（W）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>RTX 5090</strong></td>
+<td>10,496</td>
+<td>24GB GDDR7</td>
+<td>1,344</td>
+<td>1,824</td>
+<td>318</td>
+<td>112</td>
+<td>95 W</td>
+</tr>
+<tr>
+<td><strong>RTX 5080</strong></td>
+<td>7,680</td>
+<td>16GB GDDR7</td>
+<td>896</td>
+<td>1,334</td>
+<td>171</td>
+<td>96</td>
+<td>80 W</td>
+</tr>
+<tr>
+<td><strong>RTX 5070 Ti</strong></td>
+<td>5,888</td>
+<td>12GB GDDR7</td>
+<td>672</td>
+<td>992</td>
+<td>133</td>
+<td>80</td>
+<td>60 W</td>
+</tr>
+<tr>
+<td><strong>RTX 5070</strong></td>
+<td>4,608</td>
+<td>8GB GDDR7</td>
+<td>448</td>
+<td>798</td>
+<td>94</td>
+<td>48</td>
+<td>50 W</td>
+</tr>
+<tr>
+<td><strong>RTX 5060</strong></td>
+<td>3,328</td>
+<td>8GB GDDR7</td>
+<td>384</td>
+<td></td>
+<td></td>
+<td>48</td>
+<td>45 W</td>
+</tr>
+<tr>
+<td><strong>RTX 5050</strong></td>
+<td>2,560</td>
+<td>8GB GDDR6</td>
+<td>224</td>
+<td></td>
+<td></td>
+<td>32</td>
+<td>50 W</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="核心架構與技術"><a href="#核心架構與技術" class="headerlink" title="核心架構與技術"></a>核心架構與技術</h2><table>
+<thead>
+<tr>
+<th>項目</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>架構名稱</td>
+<td><strong>Blackwell</strong>（後續於 RTX 40 系列的 Lovelace 之後）</td>
+</tr>
+<tr>
+<td>AI 引擎</td>
+<td>搭載 NVIDIA DLSS 4，聚焦 AI 推論與多幀合成效能</td>
+</tr>
+<tr>
+<td>光線追蹤</td>
+<td>強化版光線追蹤核心，專為即時光線渲染最佳化</td>
+</tr>
+<tr>
+<td>記憶體技術</td>
+<td>採用 GDDR7，較前代 GDDR6X 有更高頻寬與效能擴展能力</td>
+</tr>
+<tr>
+<td>運算加速</td>
+<td>強化 AI 與影像生成能力，強調創作者與遊戲玩家雙向應用</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="效能與應用亮點"><a href="#效能與應用亮點" class="headerlink" title="效能與應用亮點"></a>效能與應用亮點</h2><ul>
+<li>AI 運算：整合 DLSS 4 技術，可透過 AI 重建影像、提升 FPS，實現更快速清晰的畫質體驗 </li>
+<li>光線追蹤提升：相較 RTX 40 系有顯著升級，渲染品質與成像效率更高</li>
+<li>創作與遊戲：新一代 GPU 不僅適合高畫質實境遊戲，也強化創作者在影片剪輯、圖像編輯上的效率</li>
+</ul>
+<p><br><br></p>
+<h2 id="產品線概況（上市款式）"><a href="#產品線概況（上市款式）" class="headerlink" title="產品線概況（上市款式）"></a>產品線概況（上市款式）</h2><p>目前公開的部分 GPU 型號包括：</p>
+<ul>
+<li>RTX 5090（旗艦級）</li>
+<li>RTX 5080（高階版本）</li>
+<li>RTX 5070 Ti &#x2F; 5070（中高階定位）</li>
+<li>RTX 5060 系列（中階主流）</li>
+<li>RTX 5050 系列（入門級）</li>
+</ul>
+<p><br><br></p>
+<h2 id="市場前景與應用方向"><a href="#市場前景與應用方向" class="headerlink" title="市場前景與應用方向"></a>市場前景與應用方向</h2><ul>
+<li>遊戲方面：全面支援 4K 光追高畫質、FPS 穩定提升</li>
+<li>AI 創作：透過 DLSS 4 加速穩態影像生成</li>
+<li>專業創作：搭配 NVIDIA Studio 平台支援各大剪輯軟體、高畫質影像輸出</li>
+<li>移動應用：筆電版本同步導入（如 RTX 5070 Laptop）</li>
+</ul>
+<p><br><br></p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li>維基百科（中文）：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/GeForce_RTX_50%E7%B3%BB%E5%88%97">維基百科</a></li>
+<li>GeForce（中文）：<a target="_blank" rel="noopener" href="https://www.nvidia.com/zh-tw/geforce/graphics-cards/50-series/">GeForce</a></li>
+<li>Techpowerup（英文）：<a target="_blank" rel="noopener" href="https://www.techpowerup.com/gpu-specs/">Techpowerup</a></li>
+</ul>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+
+  
+</article>
+
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer" style="padding: 20px 0;">
+  
+  <div id="footer-info" class="inner" style="text-align:center; width:100%; max-width:900px; margin: 0 auto;">
+    
+    
+    &copy; 2024 - 2025 by 虎头鯨<br>
+    框架 <a href="https://hexo.io/" target="_blank">Hexo</a> | 主題 <a href="https://github.com/saicaca/hexo-theme-vivia" target="_blank">Vivia</a>
+
+    <div id="site-runtime" style="margin-top: 2px; font-size: 15px; color: var(--neut-L50);"></div>
+  </div>
+  <script>
+    // 設定網站啟用日期（請依實際上線日調整）
+    var siteLaunchDate = new Date('2024-11-20T00:00:00');
+    var sessionStart = new Date();
+    function formatSessionRuntime(ms) {
+      var seconds = Math.floor(ms / 1000) % 60;
+      var minutes = Math.floor(ms / 1000 / 60) % 60;
+      var hours = Math.floor(ms / 1000 / 60 / 60) % 24;
+      var days = Math.floor(ms / 1000 / 60 / 60 / 24);
+      return `${days} 天 ${hours} 時 ${minutes} 分 ${seconds} 秒`;
+    }
+    function formatSiteRuntime(from, to) {
+      var years = to.getFullYear() - from.getFullYear();
+      var months = to.getMonth() - from.getMonth();
+      var days = to.getDate() - from.getDate();
+      var hours = to.getHours() - from.getHours();
+      var minutes = to.getMinutes() - from.getMinutes();
+      var seconds = to.getSeconds() - from.getSeconds();
+      if (seconds < 0) { seconds += 60; minutes--; }
+      if (minutes < 0) { minutes += 60; hours--; }
+      if (hours < 0) { hours += 24; days--; }
+      if (days < 0) {
+        var prevMonth = new Date(to.getFullYear(), to.getMonth(), 0);
+        days += prevMonth.getDate();
+        months--;
+      }
+      if (months < 0) { months += 12; years--; }
+      return `${years} 年 ${months} 個月 ${days} 天 ${hours} 時 ${minutes} 分 ${seconds} 秒`;
+    }
+    function updateSiteRuntime() {
+      var now = new Date();
+      var sessionDiff = now - sessionStart;
+      var text = `瀏覽已運行：${formatSessionRuntime(sessionDiff)}\n網站已運行：${formatSiteRuntime(siteLaunchDate, now)}`;
+      document.getElementById('site-runtime').innerText = text;
+    }
+    updateSiteRuntime();
+    setInterval(updateSiteRuntime, 1000);
+  </script>
+</footer>
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
