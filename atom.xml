@@ -43,25 +43,6 @@
   </entry>
   
   <entry>
-    <title>Markdown 教學目錄</title>
-    <link href="https://aixlnyt.github.io/2025/06/07/Markdown_menu/"/>
-    <id>https://aixlnyt.github.io/2025/06/07/Markdown_menu/</id>
-    <published>2025-06-06T16:00:00.000Z</published>
-    <updated>2025-06-15T15:14:50.000Z</updated>
-    
-    
-    <summary type="html">Markdown是一種輕量級標記式語言，允許使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML文件。這種語言吸收了很多在電子郵件中已有的純文字標記的特性。</summary>
-    
-    
-    
-    <category term="標記語言" scheme="https://aixlnyt.github.io/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/"/>
-    
-    
-    <category term="Markdown" scheme="https://aixlnyt.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python 教學目錄</title>
     <link href="https://aixlnyt.github.io/2025/06/07/Python_menu/"/>
     <id>https://aixlnyt.github.io/2025/06/07/Python_menu/</id>
@@ -77,6 +58,25 @@
     
     
     <category term="Python" scheme="https://aixlnyt.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown 教學目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/07/Markdown_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/07/Markdown_menu/</id>
+    <published>2025-06-06T16:00:00.000Z</published>
+    <updated>2025-06-15T15:14:50.000Z</updated>
+    
+    
+    <summary type="html">Markdown是一種輕量級標記式語言，允許使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML文件。這種語言吸收了很多在電子郵件中已有的純文字標記的特性。</summary>
+    
+    
+    
+    <category term="標記語言" scheme="https://aixlnyt.github.io/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/"/>
+    
+    
+    <category term="Markdown" scheme="https://aixlnyt.github.io/tags/Markdown/"/>
     
   </entry>
   
