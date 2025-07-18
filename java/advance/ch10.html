@@ -20,15 +20,15 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="虎头鲸 - blog">
+  <meta name="description" content="什麼是「自訂類別」在 Java 中，我們可以自己定義一個類別（class）來描述某個事物的屬性（成員變數）和行為（方法）。這就叫做自訂類別，是物件導向的基礎。  類別 vs 物件   名稱 是什麼？ 範例    類別（Class） 藍圖 class Student &#123;&#125;   物件（Object） 真正的實體 Student s1 &#x3D; new Student();    如何">
 <meta property="og:type" content="website">
 <meta property="og:title" content="第十章：自訂類別與方法">
 <meta property="og:url" content="https://aixlnyt.github.io/java/advance/ch10">
 <meta property="og:site_name" content="虎头鯨">
-<meta property="og:description" content="虎头鲸 - blog">
+<meta property="og:description" content="什麼是「自訂類別」在 Java 中，我們可以自己定義一個類別（class）來描述某個事物的屬性（成員變數）和行為（方法）。這就叫做自訂類別，是物件導向的基礎。  類別 vs 物件   名稱 是什麼？ 範例    類別（Class） 藍圖 class Student &#123;&#125;   物件（Object） 真正的實體 Student s1 &#x3D; new Student();    如何">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2025-06-24T15:49:57.138Z">
-<meta property="article:modified_time" content="2025-06-11T14:17:28.000Z">
+<meta property="article:published_time" content="2025-07-18T16:45:06.091Z">
+<meta property="article:modified_time" content="2025-07-18T16:45:06.091Z">
 <meta property="article:author" content="虎头鲸">
 <meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
 <meta name="twitter:card" content="summary">
@@ -146,11 +146,6 @@
     <div class="widget">
       <h3 class="widget-title">分類</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
-                標記語言
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/%E9%A1%AF%E5%8D%A1/">
                 顯卡
                 <div class="category-count">1</div>
@@ -159,6 +154,11 @@
             <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/">
                 程式語言
                 <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
+                標記語言
+                <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
@@ -221,15 +221,15 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
-            <div class="recent-link-text">
-              Java 教學目錄
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/06/05/SSD_menu/" title="硬碟與固態硬碟" >
             <div class="recent-link-text">
               硬碟與固態硬碟
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
+            <div class="recent-link-text">
+              Java 教學目錄
             </div>
           </a>
         
@@ -264,7 +264,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-06-24T15:49:57.138Z" itemprop="datePublished">2025-06-24</time>
+  <time class="dt-published" datetime="2025-07-18T16:45:06.091Z" itemprop="datePublished">2025-07-19</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -275,7 +275,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            0 字 
+            3.4k 字 
           </div>
         </div>
         
@@ -283,7 +283,184 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          
+          <br>
+
+<h2 id="什麼是「自訂類別」"><a href="#什麼是「自訂類別」" class="headerlink" title="什麼是「自訂類別」"></a>什麼是「自訂類別」</h2><p>在 Java 中，我們可以自己定義一個類別（class）來描述某個事物的屬性（成員變數）和行為（方法）。這就叫做<strong>自訂類別</strong>，是物件導向的基礎。</p>
+<p><br><br></p>
+<h2 id="類別-vs-物件"><a href="#類別-vs-物件" class="headerlink" title="類別 vs 物件"></a>類別 vs 物件</h2><table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>是什麼？</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>類別（Class）</td>
+<td>藍圖</td>
+<td><code>class Student &#123;&#125;</code></td>
+</tr>
+<tr>
+<td>物件（Object）</td>
+<td>真正的實體</td>
+<td><code>Student s1 = new Student();</code></td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="如何定義一個類別"><a href="#如何定義一個類別" class="headerlink" title="如何定義一個類別"></a>如何定義一個類別</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="comment">// 成員變數（欄位 / 屬性）</span></span><br><span class="line">    String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 方法（行為）</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">sayHi</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hi! 我是 &quot;</span> + name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(); <span class="comment">// 建立物件</span></span><br><span class="line">        s1.name = <span class="string">&quot;小明&quot;</span>;</span><br><span class="line">        s1.age = <span class="number">18</span>;</span><br><span class="line">        s1.sayHi();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="輸出結果："><a href="#輸出結果：" class="headerlink" title="輸出結果："></a>輸出結果：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi! 我是 小明</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="記憶體說明（Stack-vs-Heap）"><a href="#記憶體說明（Stack-vs-Heap）" class="headerlink" title="記憶體說明（Stack vs Heap）"></a>記憶體說明（Stack vs Heap）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Student</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>區域</th>
+<th>儲存什麼</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stack</td>
+<td>變數 <code>s</code>，存放記憶體地址</td>
+</tr>
+<tr>
+<td>Heap</td>
+<td>實際的 <code>Student</code> 物件（name, age…）</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="建構子-Constructor"><a href="#建構子-Constructor" class="headerlink" title="建構子 Constructor"></a>建構子 Constructor</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    Student(String n, <span class="type">int</span> a) &#123;</span><br><span class="line">        name = n;</span><br><span class="line">        age = a;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">sayHi</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;我是 &quot;</span> + name + <span class="string">&quot;，今年 &quot;</span> + age + <span class="string">&quot; 歲&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;小華&quot;</span>, <span class="number">17</span>);</span><br><span class="line">        s.sayHi();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Student-類別："><a href="#Student-類別：" class="headerlink" title="Student 類別："></a>Student 類別：</h3><ul>
+<li>定義了兩個屬性：<code>name</code> 和 <code>age</code></li>
+<li>建構子接收姓名和年齡來初始化物件</li>
+<li><code>sayHi()</code> 方法用來自我介紹</li>
+</ul>
+<h3 id="Main-類別："><a href="#Main-類別：" class="headerlink" title="Main 類別："></a>Main 類別：</h3><ul>
+<li>建立一個名為”小華”、17歲的 Student 物件</li>
+<li>呼叫 <code>sayHi()</code> 方法</li>
+</ul>
+<h3 id="執行結果"><a href="#執行結果" class="headerlink" title="執行結果"></a>執行結果</h3><blockquote>
+<p><strong>我是 小華，今年 17 歲</strong></p>
+</blockquote>
+<h3 id="關鍵概念"><a href="#關鍵概念" class="headerlink" title="關鍵概念"></a>關鍵概念</h3><ul>
+<li>建構子：<code>Student(String n, int a)</code> 在建立物件時自動執行</li>
+<li>物件建立：<code>new Student(&quot;小華&quot;, 17)</code> 建立實體</li>
+<li>方法呼叫：<code>s.sayHi()</code> 執行物件的行為</li>
+</ul>
+<p><br><br></p>
+<h2 id="this-關鍵字"><a href="#this-關鍵字" class="headerlink" title="this 關鍵字"></a>this 關鍵字</h2><p><code>this</code> 代表「<strong>當前物件本身</strong>」，用來區分參數和屬性。</p>
+<h3 id="問題：參數和屬性同名怎麼辦"><a href="#問題：參數和屬性同名怎麼辦" class="headerlink" title="問題：參數和屬性同名怎麼辦"></a>問題：參數和屬性同名怎麼辦</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    Student(String name, <span class="type">int</span> age) &#123;</span><br><span class="line">        name = name; <span class="comment">// ❌ 錯誤！都是指參數</span></span><br><span class="line">        age = age;   <span class="comment">// ❌ 錯誤！都是指參數</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>問題</strong>：Java 分不清楚你要的是「屬性」還是「參數」，預設會使用「參數」。</p>
+<h3 id="解決方案：使用-this"><a href="#解決方案：使用-this" class="headerlink" title="解決方案：使用 this"></a>解決方案：使用 this</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    Student(String name, <span class="type">int</span> age) &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name; <span class="comment">// ✅ 屬性 = 參數</span></span><br><span class="line">        <span class="built_in">this</span>.age = age;   <span class="comment">// ✅ 屬性 = 參數</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>解釋</strong>：</p>
+<ul>
+<li><code>this.name</code> &#x3D; 物件的屬性</li>
+<li><code>name</code> &#x3D; 建構子的參數</li>
+</ul>
+<p><br><br></p>
+<h2 id="this-的三種用法"><a href="#this-的三種用法" class="headerlink" title="this 的三種用法"></a>this 的三種用法</h2><h3 id="1-區分屬性和參數（最常用）"><a href="#1-區分屬性和參數（最常用）" class="headerlink" title="1. 區分屬性和參數（最常用）"></a>1. 區分屬性和參數（最常用）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String name)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-呼叫其他方法"><a href="#2-呼叫其他方法" class="headerlink" title="2. 呼叫其他方法"></a>2. 呼叫其他方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">introduce</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.printName(); <span class="comment">// 可省略 this</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-呼叫其他建構子"><a href="#3-呼叫其他建構子" class="headerlink" title="3. 呼叫其他建構子"></a>3. 呼叫其他建構子</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String name)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>(name, <span class="number">18</span>); <span class="comment">// 呼叫另一個建構子</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="完整範例"><a href="#完整範例" class="headerlink" title="完整範例"></a>完整範例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 建構子</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name; <span class="comment">// 區分屬性和參數</span></span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">introduce</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;我是 &quot;</span> + <span class="built_in">this</span>.name + <span class="string">&quot;，&quot;</span> + <span class="built_in">this</span>.age + <span class="string">&quot; 歲&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="重點"><a href="#重點" class="headerlink" title="重點"></a>重點</h3><ul>
+<li><code>this</code> &#x3D; 當前物件</li>
+<li>主要用來解決「同名衝突」</li>
+<li>讓程式碼更清楚易讀</li>
+</ul>
+<p><br><br></p>
+<h2 id="常見錯誤觀念澄清"><a href="#常見錯誤觀念澄清" class="headerlink" title="常見錯誤觀念澄清"></a>常見錯誤觀念澄清</h2><table>
+<thead>
+<tr>
+<th>錯誤觀念</th>
+<th>正確觀念</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>物件等於類別</td>
+<td>❌ 物件是由類別產生的實體</td>
+</tr>
+<tr>
+<td>類別不能有同名方法</td>
+<td>❌ 可以「多載 overload」</td>
+</tr>
+<tr>
+<td>屬性不用初始化</td>
+<td>❌ 建議在建構子中初始化</td>
+</tr>
+<tr>
+<td>this 是 Java 保留變數</td>
+<td>✅ 是參考「自己的」關鍵字</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="重點整理"><a href="#重點整理" class="headerlink" title="重點整理"></a>重點整理</h2><ul>
+<li>自訂類別就是自創一種資料型別（描述屬性＋行為）  </li>
+<li>類別是藍圖，物件是實體（用 <code>new</code> 建立）  </li>
+<li>資料放在 Heap，變數位址放在 Stack  </li>
+<li>建構子在建立物件時自動執行  </li>
+<li><code>this</code> 代表目前物件本身，常用來解決命名衝突</li>
+</ul>
+<p><br><br></p>
+<h2 id="什麼是方法"><a href="#什麼是方法" class="headerlink" title="什麼是方法"></a>什麼是方法</h2><p>Java 中，「方法」是<strong>物件的功能、動作、行為</strong>。</p>
+<p><br><br></p>
+<h2 id="方法基本語法"><a href="#方法基本語法" class="headerlink" title="方法基本語法"></a>方法基本語法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">回傳型別 方法名稱(參數列表) &#123;</span><br><span class="line">    <span class="comment">// 方法內容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="範例："><a href="#範例：" class="headerlink" title="範例："></a>範例：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">sayHi</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Hi!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="有參數的方法"><a href="#有參數的方法" class="headerlink" title="有參數的方法"></a>有參數的方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">sayHiTo</span><span class="params">(String name)</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Hi, &quot;</span> + name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="有回傳值的方法"><a href="#有回傳值的方法" class="headerlink" title="有回傳值的方法"></a>有回傳值的方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="有參數-有回傳值"><a href="#有參數-有回傳值" class="headerlink" title="有參數 + 有回傳值"></a>有參數 + 有回傳值</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> <span class="title function_">bmi</span><span class="params">(<span class="type">double</span> w, <span class="type">double</span> h)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> w / (h * h);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="方法分類"><a href="#方法分類" class="headerlink" title="方法分類"></a>方法分類</h2><table>
+<thead>
+<tr>
+<th>類型</th>
+<th>說明</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>無參數無回傳值</td>
+<td>執行某件事但不給資料</td>
+<td><code>void sayHi()</code></td>
+</tr>
+<tr>
+<td>有參數無回傳值</td>
+<td>根據參數做事但不回資料</td>
+<td><code>void sayHiTo(String name)</code></td>
+</tr>
+<tr>
+<td>無參數有回傳值</td>
+<td>做事後給你一個值</td>
+<td><code>int getAge()</code></td>
+</tr>
+<tr>
+<td>有參數有回傳值</td>
+<td>根據參數做事並回傳結果</td>
+<td><code>double bmi(double w, h)</code></td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="物件呼叫方法"><a href="#物件呼叫方法" class="headerlink" title="物件呼叫方法"></a>物件呼叫方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    Student(String n, <span class="type">int</span> a) &#123;</span><br><span class="line">        name = n;</span><br><span class="line">        age = a;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">sayHi</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;我是 &quot;</span> + name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;小華&quot;</span>, <span class="number">17</span>);</span><br><span class="line">        s.sayHi();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="return-是什麼"><a href="#return-是什麼" class="headerlink" title="return 是什麼"></a>return 是什麼</h2><p><code>return</code> 把結果「丟回去」給呼叫的人。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> doubleNum(<span class="number">5</span>); <span class="comment">// 呼叫方法</span></span><br><span class="line">        System.out.println(result); <span class="comment">// 輸出結果</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">doubleNum</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x * <span class="number">2</span>; <span class="comment">// 回傳值</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       </div>
 

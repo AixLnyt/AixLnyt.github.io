@@ -20,15 +20,15 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="陣列 Array特性 固定大小：建立時需指定大小，後續不可變更。 從 0 開始索引：第一個元素為索引 0，最後一個為 length - 1。 同一資料型別：陣列內元素皆須為相同類型。  宣告與初始化1234567&#x2F;&#x2F; 宣告int[] nums;String[] names;&#x2F;&#x2F; 初始化int[] scores &#x3D; new int[5];int[] ages &#x3D; &#123;18, 20, 22&amp;#">
+  <meta name="description" content="什麼是陣列？陣列是一種儲存多個相同型別資料的容器。當我們需要儲存許多數字或字串時，可以使用陣列一次性地管理它們。  ✅ 方便儲存多筆資料 ✅ 可以用索引快速存取每一筆資料  舉例：如果有五位學生的成績：90、85、78、92、88，可以使用陣列： 1int[] scores &#x3D; &#123;90, 85, 78, 92, 88&#125;;   陣列的基本特性   特性 說明    固定大小">
 <meta property="og:type" content="website">
 <meta property="og:title" content="第七章：陣列">
 <meta property="og:url" content="https://aixlnyt.github.io/java/basic/ch07">
 <meta property="og:site_name" content="虎头鯨">
-<meta property="og:description" content="陣列 Array特性 固定大小：建立時需指定大小，後續不可變更。 從 0 開始索引：第一個元素為索引 0，最後一個為 length - 1。 同一資料型別：陣列內元素皆須為相同類型。  宣告與初始化1234567&#x2F;&#x2F; 宣告int[] nums;String[] names;&#x2F;&#x2F; 初始化int[] scores &#x3D; new int[5];int[] ages &#x3D; &#123;18, 20, 22&amp;#">
+<meta property="og:description" content="什麼是陣列？陣列是一種儲存多個相同型別資料的容器。當我們需要儲存許多數字或字串時，可以使用陣列一次性地管理它們。  ✅ 方便儲存多筆資料 ✅ 可以用索引快速存取每一筆資料  舉例：如果有五位學生的成績：90、85、78、92、88，可以使用陣列： 1int[] scores &#x3D; &#123;90, 85, 78, 92, 88&#125;;   陣列的基本特性   特性 說明    固定大小">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2025-06-24T15:49:57.190Z">
-<meta property="article:modified_time" content="2025-06-11T09:02:36.000Z">
+<meta property="article:published_time" content="2025-07-18T14:45:57.166Z">
+<meta property="article:modified_time" content="2025-07-18T14:45:57.166Z">
 <meta property="article:author" content="虎头鲸">
 <meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
 <meta name="twitter:card" content="summary">
@@ -146,11 +146,6 @@
     <div class="widget">
       <h3 class="widget-title">分類</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
-                標記語言
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/%E9%A1%AF%E5%8D%A1/">
                 顯卡
                 <div class="category-count">1</div>
@@ -159,6 +154,11 @@
             <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/">
                 程式語言
                 <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
+                標記語言
+                <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
@@ -221,15 +221,15 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
-            <div class="recent-link-text">
-              Java 教學目錄
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/06/05/SSD_menu/" title="硬碟與固態硬碟" >
             <div class="recent-link-text">
               硬碟與固態硬碟
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
+            <div class="recent-link-text">
+              Java 教學目錄
             </div>
           </a>
         
@@ -264,7 +264,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-06-24T15:49:57.190Z" itemprop="datePublished">2025-06-24</time>
+  <time class="dt-published" datetime="2025-07-18T14:45:57.166Z" itemprop="datePublished">2025-07-18</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -275,7 +275,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            2.5k 字 
+            1.4k 字 
           </div>
         </div>
         
@@ -283,114 +283,75 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h2 id="陣列-Array"><a href="#陣列-Array" class="headerlink" title="陣列 Array"></a>陣列 Array</h2><h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
-<li><strong>固定大小</strong>：建立時需指定大小，後續不可變更。</li>
-<li><strong>從 0 開始索引</strong>：第一個元素為索引 <code>0</code>，最後一個為 <code>length - 1</code>。</li>
-<li><strong>同一資料型別</strong>：陣列內元素皆須為相同類型。</li>
-</ul>
-<h3 id="宣告與初始化"><a href="#宣告與初始化" class="headerlink" title="宣告與初始化"></a>宣告與初始化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 宣告</span></span><br><span class="line"><span class="type">int</span>[] nums;</span><br><span class="line">String[] names;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line"><span class="type">int</span>[] scores = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">5</span>];</span><br><span class="line"><span class="type">int</span>[] ages = &#123;<span class="number">18</span>, <span class="number">20</span>, <span class="number">22</span>&#125;;</span><br></pre></td></tr></table></figure>
+          <br>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String[] fruits = <span class="keyword">new</span> <span class="title class_">String</span>[<span class="number">3</span>];</span><br><span class="line">fruits[<span class="number">0</span>] = <span class="string">&quot;Apple&quot;</span>;</span><br><span class="line">fruits[<span class="number">1</span>] = <span class="string">&quot;Banana&quot;</span>;</span><br><span class="line">fruits[<span class="number">2</span>] = <span class="string">&quot;Cherry&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="元素存取與修改"><a href="#元素存取與修改" class="headerlink" title="元素存取與修改"></a>元素存取與修改</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(scores[<span class="number">1</span>]);  <span class="comment">// 讀取第 2 個</span></span><br><span class="line">scores[<span class="number">2</span>] = <span class="number">90</span>;                 <span class="comment">// 修改第 3 個</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="陣列遍歷"><a href="#陣列遍歷" class="headerlink" title="陣列遍歷"></a>陣列遍歷</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 傳統 for 迴圈</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; scores.length; i++) &#123;</span><br><span class="line">    System.out.println(scores[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 增強型 for-each</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> score : scores) &#123;</span><br><span class="line">    System.out.println(score);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="常見操作"><a href="#常見操作" class="headerlink" title="常見操作"></a>常見操作</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(scores.length); <span class="comment">// 陣列長度</span></span><br><span class="line"></span><br><span class="line">Arrays.sort(scores);               <span class="comment">// 排序</span></span><br><span class="line">Arrays.binarySearch(scores, <span class="number">90</span>);   <span class="comment">// 二分搜尋</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="多維陣列（Matrix）"><a href="#多維陣列（Matrix）" class="headerlink" title="多維陣列（Matrix）"></a>多維陣列（Matrix）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[][] matrix = &#123;</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;,</span><br><span class="line">    &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
+<h2 id="什麼是陣列？"><a href="#什麼是陣列？" class="headerlink" title="什麼是陣列？"></a>什麼是陣列？</h2><p>陣列是一種<strong>儲存多個相同型別資料</strong>的容器。當我們需要儲存許多數字或字串時，可以使用陣列一次性地管理它們。</p>
 <ul>
-<li>存取：<code>matrix[0][1]</code> → 2</li>
-<li>修改：<code>matrix[1][2] = 9;</code></li>
+<li>✅ 方便儲存多筆資料</li>
+<li>✅ 可以用索引快速存取每一筆資料</li>
 </ul>
-<h3 id="遍歷方式："><a href="#遍歷方式：" class="headerlink" title="遍歷方式："></a>遍歷方式：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; matrix.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; matrix[i].length; j++) &#123;</span><br><span class="line">        System.out.print(matrix[i][j] + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="舉例："><a href="#舉例：" class="headerlink" title="舉例："></a>舉例：</h3><p>如果有五位學生的成績：90、85、78、92、88，<br>可以使用陣列：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] scores = &#123;<span class="number">90</span>, <span class="number">85</span>, <span class="number">78</span>, <span class="number">92</span>, <span class="number">88</span>&#125;;</span><br></pre></td></tr></table></figure>
 
-<hr>
-<h2 id="字元陣列與字串轉換"><a href="#字元陣列與字串轉換" class="headerlink" title="字元陣列與字串轉換"></a>字元陣列與字串轉換</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>[] chars = &#123;<span class="string">&#x27;H&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span>&#125;;</span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(chars);  <span class="comment">// 轉字串</span></span><br><span class="line"></span><br><span class="line"><span class="type">char</span>[] letters = <span class="string">&quot;World&quot;</span>.toCharArray(); <span class="comment">// 字串轉字元陣列</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="陣列實作範例"><a href="#陣列實作範例" class="headerlink" title="陣列實作範例"></a>陣列實作範例</h2><h3 id="計算平均："><a href="#計算平均：" class="headerlink" title="計算平均："></a>計算平均：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> score : scores) sum += score;</span><br><span class="line"><span class="type">double</span> <span class="variable">avg</span> <span class="operator">=</span> (<span class="type">double</span>) sum / scores.length;</span><br></pre></td></tr></table></figure>
-
-<h3 id="找最大值："><a href="#找最大值：" class="headerlink" title="找最大值："></a>找最大值：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> scores[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> s : scores) &#123;</span><br><span class="line">    <span class="keyword">if</span> (s &gt; max) max = s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="判斷迴文："><a href="#判斷迴文：" class="headerlink" title="判斷迴文："></a>判斷迴文：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="variable">isPalindrome</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; word.length / <span class="number">2</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (word[i] != word[word.length - <span class="number">1</span> - i]) &#123;</span><br><span class="line">        isPalindrome = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="List-差異比較表"><a href="#List-差異比較表" class="headerlink" title="List 差異比較表"></a>List 差異比較表</h2><table>
+<p><br><br></p>
+<h2 id="陣列的基本特性"><a href="#陣列的基本特性" class="headerlink" title="陣列的基本特性"></a>陣列的基本特性</h2><table>
 <thead>
 <tr>
 <th>特性</th>
-<th>ArrayList</th>
-<th>LinkedList</th>
+<th>說明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>底層結構</td>
-<td>動態陣列</td>
-<td>雙向鏈結串列</td>
+<td>固定大小</td>
+<td>陣列大小在建立後不能更改</td>
 </tr>
 <tr>
-<td>隨機存取效率</td>
-<td>✅ 高（O(1)）</td>
-<td>❌ 低（O(n)）</td>
+<td>索引從 0 開始</td>
+<td>第一個元素是 index 0，最後一個是 length - 1</td>
 </tr>
 <tr>
-<td>插入&#x2F;刪除效率</td>
-<td>❌ 中間慢（O(n)）</td>
-<td>✅ 快（O(1)）若在頭尾</td>
-</tr>
-<tr>
-<td>記憶體使用</td>
-<td>節省</td>
-<td>較多開銷（指標）</td>
-</tr>
-<tr>
-<td>適用場景</td>
-<td>查找頻繁</td>
-<td>插入刪除頻繁</td>
+<td>相同型別</td>
+<td>陣列中所有資料必須是同一種類型（int、String 等）</td>
 </tr>
 </tbody></table>
-<hr>
-<h2 id="List-常見語法"><a href="#List-常見語法" class="headerlink" title="List 常見語法"></a>List 常見語法</h2><h3 id="匯入與宣告"><a href="#匯入與宣告" class="headerlink" title="匯入與宣告"></a>匯入與宣告</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; arrayList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">List&lt;String&gt; linkedList = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scores = &#123;<span class="number">90</span>, <span class="number">85</span>, <span class="number">78</span>, <span class="number">92</span>, <span class="number">88</span>&#125; (長度為 <span class="number">5</span>)</span><br><span class="line">           ↑   ↑   ↑   ↑   ↑</span><br><span class="line">          [<span class="number">0</span>] [<span class="number">1</span>] [<span class="number">2</span>] [<span class="number">3</span>] [<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
 
-<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">list.add(<span class="string">&quot;Apple&quot;</span>);         <span class="comment">// 加入元素</span></span><br><span class="line">list.add(<span class="number">1</span>, <span class="string">&quot;Orange&quot;</span>);     <span class="comment">// 插入特定位置</span></span><br><span class="line">list.remove(<span class="string">&quot;Apple&quot;</span>);      <span class="comment">// 移除值</span></span><br><span class="line">list.remove(<span class="number">0</span>);            <span class="comment">// 根據 index 移除</span></span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">item</span> <span class="operator">=</span> list.get(<span class="number">0</span>); <span class="comment">// 取得元素</span></span><br><span class="line"><span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> list.size();    <span class="comment">// 取得長度</span></span><br><span class="line"><span class="type">boolean</span> <span class="variable">has</span> <span class="operator">=</span> list.contains(<span class="string">&quot;Apple&quot;</span>); <span class="comment">// 是否包含</span></span><br></pre></td></tr></table></figure>
+<p><br><br></p>
+<h2 id="如何建立陣列"><a href="#如何建立陣列" class="headerlink" title="如何建立陣列"></a>如何建立陣列</h2><h3 id="1-宣告陣列"><a href="#1-宣告陣列" class="headerlink" title="1. 宣告陣列"></a>1. 宣告陣列</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] numbers;       <span class="comment">// 整數陣列</span></span><br><span class="line">String[] names;      <span class="comment">// 字串陣列</span></span><br></pre></td></tr></table></figure>
 
-<hr>
-<h2 id="List-遍歷方式"><a href="#List-遍歷方式" class="headerlink" title="List 遍歷方式"></a>List 遍歷方式</h2><h3 id="增強型-for-迴圈"><a href="#增強型-for-迴圈" class="headerlink" title="增強型 for 迴圈"></a>增強型 for 迴圈</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (String s : list) &#123;</span><br><span class="line">    System.out.println(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-初始化陣列（給大小）"><a href="#2-初始化陣列（給大小）" class="headerlink" title="2. 初始化陣列（給大小）"></a>2. 初始化陣列（給大小）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] scores = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">5</span>];  <span class="comment">// 建立 5 格空間的整數陣列</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="使用-Iterator（可安全移除）"><a href="#使用-Iterator（可安全移除）" class="headerlink" title="使用 Iterator（可安全移除）"></a>使用 Iterator（可安全移除）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;String&gt; it = list.iterator();</span><br><span class="line"><span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">item</span> <span class="operator">=</span> it.next();</span><br><span class="line">    <span class="keyword">if</span> (item.equals(<span class="string">&quot;Apple&quot;</span>)) &#123;</span><br><span class="line">        it.remove();  <span class="comment">// 安全刪除</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-宣告-指定值"><a href="#3-宣告-指定值" class="headerlink" title="3. 宣告 + 指定值"></a>3. 宣告 + 指定值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] ages = &#123;<span class="number">18</span>, <span class="number">20</span>, <span class="number">22</span>&#125;;</span><br><span class="line">String[] fruits = &#123;<span class="string">&quot;Apple&quot;</span>, <span class="string">&quot;Banana&quot;</span>, <span class="string">&quot;Cherry&quot;</span>&#125;;</span><br></pre></td></tr></table></figure>
 
-<hr>
-<h2 id="LinkedList-特有方法"><a href="#LinkedList-特有方法" class="headerlink" title="LinkedList 特有方法"></a>LinkedList 特有方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LinkedList&lt;String&gt; ll = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">ll.addFirst(<span class="string">&quot;Head&quot;</span>);</span><br><span class="line">ll.addLast(<span class="string">&quot;Tail&quot;</span>);</span><br><span class="line">ll.removeFirst();</span><br><span class="line">ll.removeLast();</span><br></pre></td></tr></table></figure>
+<p><br><br></p>
+<h2 id="存取與修改陣列資料"><a href="#存取與修改陣列資料" class="headerlink" title="存取與修改陣列資料"></a>存取與修改陣列資料</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(ages[<span class="number">1</span>]);  <span class="comment">// 讀取第 2 筆：20</span></span><br><span class="line">ages[<span class="number">0</span>] = <span class="number">19</span>;                 <span class="comment">// 改第 1 筆為 19</span></span><br></pre></td></tr></table></figure>
 
-<hr>
-<h2 id="使用建議"><a href="#使用建議" class="headerlink" title="使用建議"></a>使用建議</h2><table>
-<thead>
-<tr>
-<th>使用情境</th>
-<th>建議使用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>大量隨機存取</td>
-<td>✅ ArrayList</td>
-</tr>
-<tr>
-<td>頻繁插入&#x2F;刪除</td>
-<td>✅ LinkedList</td>
-</tr>
-<tr>
-<td>小量順序操作</td>
-<td>✅ ArrayList</td>
-</tr>
-<tr>
-<td>要當作 Stack &#x2F; Queue</td>
-<td>✅ LinkedList</td>
-</tr>
-</tbody></table>
+<blockquote>
+<p><strong>索引從 0 開始，超出邊界會發生錯誤！</strong></p>
+</blockquote>
+<p><br><br></p>
+<h2 id="陣列的常見用途"><a href="#陣列的常見用途" class="headerlink" title="陣列的常見用途"></a>陣列的常見用途</h2><h3 id="1-陣列遍歷（for-迴圈）"><a href="#1-陣列遍歷（for-迴圈）" class="headerlink" title="1. 陣列遍歷（for 迴圈）"></a>1. 陣列遍歷（for 迴圈）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; scores.length; i++) &#123;</span><br><span class="line">    System.out.println(scores[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="2-陣列遍歷（for-each）"><a href="#2-陣列遍歷（for-each）" class="headerlink" title="2. 陣列遍歷（for-each）"></a>2. 陣列遍歷（for-each）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> s : scores) &#123;</span><br><span class="line">    System.out.println(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-計算平均值"><a href="#3-計算平均值" class="headerlink" title="3. 計算平均值"></a>3. 計算平均值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">total</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> s : scores) &#123;</span><br><span class="line">    total += s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">double</span> <span class="variable">avg</span> <span class="operator">=</span> (<span class="type">double</span>) total / scores.length;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-找出最大值"><a href="#4-找出最大值" class="headerlink" title="4. 找出最大值"></a>4. 找出最大值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> scores[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> s : scores) &#123;</span><br><span class="line">    <span class="keyword">if</span> (s &gt; max) max = s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="字串與字元陣列"><a href="#字串與字元陣列" class="headerlink" title="字串與字元陣列"></a>字串與字元陣列</h2><h3 id="字元陣列-→-字串"><a href="#字元陣列-→-字串" class="headerlink" title="字元陣列 → 字串"></a>字元陣列 → 字串</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>[] letters = &#123;<span class="string">&#x27;H&#x27;</span>, <span class="string">&#x27;i&#x27;</span>&#125;;</span><br><span class="line"><span class="type">String</span> <span class="variable">word</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(letters); <span class="comment">// &quot;Hi&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="字串-→-字元陣列"><a href="#字串-→-字元陣列" class="headerlink" title="字串 → 字元陣列"></a>字串 → 字元陣列</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span>[] chars = <span class="string">&quot;Java&quot;</span>.toCharArray();</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="多維陣列簡介（了解即可）"><a href="#多維陣列簡介（了解即可）" class="headerlink" title="多維陣列簡介（了解即可）"></a>多維陣列簡介（了解即可）</h2><p>多維陣列其實是「陣列裡面裝陣列」，可以想成表格或矩陣。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[][] table = &#123;</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;,</span><br><span class="line">    &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>存取：<code>table[0][1]</code> → 2</li>
+<li>修改：<code>table[1][2] = 9;</code></li>
+</ul>
+<h3 id="遍歷："><a href="#遍歷：" class="headerlink" title="遍歷："></a>遍歷：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; table.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; table[i].length; j++) &#123;</span><br><span class="line">        System.out.print(table[i][j] + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
       </div>
 

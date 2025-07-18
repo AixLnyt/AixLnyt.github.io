@@ -20,15 +20,15 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="虎头鲸 - blog">
+  <meta name="description" content="例外處理概述在 Java 中，例外（Exception）是指在程式執行過程中發生的異常情況。例外處理是一種機制，用來捕捉和處理這些異常情況，確保程式的正常運行。  例外的種類Java 中的例外主要分為兩類：  檢查型例外（Checked Exception）：在編譯時必須處理的例外，例如 IOException 和 SQLException。 非檢查型例外（Unchecked Exceptio">
 <meta property="og:type" content="website">
 <meta property="og:title" content="第九章：例外處理">
 <meta property="og:url" content="https://aixlnyt.github.io/java/advance/ch09">
 <meta property="og:site_name" content="虎头鯨">
-<meta property="og:description" content="虎头鲸 - blog">
+<meta property="og:description" content="例外處理概述在 Java 中，例外（Exception）是指在程式執行過程中發生的異常情況。例外處理是一種機制，用來捕捉和處理這些異常情況，確保程式的正常運行。  例外的種類Java 中的例外主要分為兩類：  檢查型例外（Checked Exception）：在編譯時必須處理的例外，例如 IOException 和 SQLException。 非檢查型例外（Unchecked Exceptio">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2025-06-24T15:49:57.134Z">
-<meta property="article:modified_time" content="2025-06-11T14:15:14.000Z">
+<meta property="article:published_time" content="2025-07-18T15:47:09.502Z">
+<meta property="article:modified_time" content="2025-07-18T15:47:09.502Z">
 <meta property="article:author" content="虎头鲸">
 <meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
 <meta name="twitter:card" content="summary">
@@ -146,11 +146,6 @@
     <div class="widget">
       <h3 class="widget-title">分類</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
-                標記語言
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/%E9%A1%AF%E5%8D%A1/">
                 顯卡
                 <div class="category-count">1</div>
@@ -159,6 +154,11 @@
             <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/">
                 程式語言
                 <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
+                標記語言
+                <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
@@ -221,15 +221,15 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
-            <div class="recent-link-text">
-              Java 教學目錄
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/06/05/SSD_menu/" title="硬碟與固態硬碟" >
             <div class="recent-link-text">
               硬碟與固態硬碟
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
+            <div class="recent-link-text">
+              Java 教學目錄
             </div>
           </a>
         
@@ -264,7 +264,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-06-24T15:49:57.134Z" itemprop="datePublished">2025-06-24</time>
+  <time class="dt-published" datetime="2025-07-18T15:47:09.502Z" itemprop="datePublished">2025-07-18</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -275,7 +275,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            0 字 
+            4.8k 字 
           </div>
         </div>
         
@@ -283,7 +283,194 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          
+          <br>
+
+<h2 id="例外處理概述"><a href="#例外處理概述" class="headerlink" title="例外處理概述"></a>例外處理概述</h2><p>在 Java 中，例外（Exception）是指在程式執行過程中發生的異常情況。例外處理是一種機制，用來捕捉和處理這些異常情況，確保程式的正常運行。</p>
+<p><br><br></p>
+<h2 id="例外的種類"><a href="#例外的種類" class="headerlink" title="例外的種類"></a>例外的種類</h2><p>Java 中的例外主要分為兩類：</p>
+<ol>
+<li><strong>檢查型例外（Checked Exception）</strong>：在編譯時必須處理的例外，例如 <code>IOException</code> 和 <code>SQLException</code>。</li>
+<li><strong>非檢查型例外（Unchecked Exception）</strong>：在運行時可能發生的例外，例如 <code>NullPointerException</code> 和 <code>ArrayIndexOutOfBoundsException</code>。</li>
+</ol>
+<p><br><br></p>
+<h2 id="例外處理的基本語法"><a href="#例外處理的基本語法" class="headerlink" title="例外處理的基本語法"></a>例外處理的基本語法</h2><p>Java 提供了 <code>try-catch</code> 語句來捕捉和處理例外。基本語法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 可能會發生例外的程式碼</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (ExceptionType e) &#123;</span><br><span class="line">    <span class="comment">// 處理例外的程式碼</span></span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">    <span class="comment">// 無論是否發生例外都會執行的程式碼</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="使用-try-catch-進行例外處理"><a href="#使用-try-catch-進行例外處理" class="headerlink" title="使用 try-catch 進行例外處理"></a>使用 <code>try-catch</code> 進行例外處理</h2><p>以下是一個例子，示範如何使用 <code>try-catch</code> 來處理例外：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ExceptionExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">int</span>[] numbers = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line">            System.out.println(numbers[<span class="number">3</span>]); <span class="comment">// 會拋出 ArrayIndexOutOfBoundsException</span></span><br><span class="line">        &#125; <span class="keyword">catch</span> (ArrayIndexOutOfBoundsException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;例外類型：&quot;</span> + e.getClass().getName()); <span class="comment">// 印出例外類別</span></span><br><span class="line">            System.out.println(<span class="string">&quot;錯誤訊息：&quot;</span> + e.getMessage());          <span class="comment">// 印出錯誤訊息</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="最終區塊-finally"><a href="#最終區塊-finally" class="headerlink" title="最終區塊 finally"></a>最終區塊 <code>finally</code></h2><p><code>finally</code> 區塊用於執行清理工作，如關閉檔案或釋放資源。無論是否發生例外，<code>finally</code> 區塊中的程式碼都會執行。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">FinallyExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> <span class="number">10</span> / <span class="number">0</span>; <span class="comment">// 會拋出 ArithmeticException</span></span><br><span class="line">        &#125; <span class="keyword">catch</span> (ArithmeticException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;除以零的錯誤：&quot;</span> + e.getMessage());</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;這個區塊會執行。&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="自訂例外"><a href="#自訂例外" class="headerlink" title="自訂例外"></a>自訂例外</h2><p>可以透過繼承 <code>Exception</code> 類別來創建自訂例外。以下是一個簡單的範例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自訂例外類別，繼承 Exception</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyException</span> <span class="keyword">extends</span> <span class="title class_">Exception</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 建構子：接收錯誤訊息，傳給父類別 Exception 處理</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyException</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(message); <span class="comment">// 將訊息傳給 Exception 類別儲存</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 測試主程式</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CustomExceptionExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 主動丟出自訂例外</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">MyException</span>(<span class="string">&quot;這是一個自訂例外！&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (MyException e) &#123;</span><br><span class="line">            <span class="comment">// 印出例外訊息（來自 Exception 的 getMessage()）</span></span><br><span class="line">            System.out.println(e.getMessage()); <span class="comment">// 輸出：這是一個自訂例外！</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="補充展開："><a href="#補充展開：" class="headerlink" title="補充展開："></a>補充展開：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. Throwable 類別（Java 原始碼簡化）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Throwable</span> <span class="keyword">implements</span> <span class="title class_">java</span>.io.Serializable &#123;</span><br><span class="line">    <span class="keyword">private</span> String detailMessage; <span class="comment">// 儲存錯誤訊息的欄位</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Throwable</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        detailMessage = message;  <span class="comment">// 將參數存進來</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getMessage</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> detailMessage;     <span class="comment">// 回傳訊息</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. Exception 類別（繼承 Throwable）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Exception</span> <span class="keyword">extends</span> <span class="title class_">Throwable</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Exception</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(message); <span class="comment">// 呼叫 Throwable 的建構子，把 message 傳進去</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. MyException 類別（繼承 Exception）</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyException</span> <span class="keyword">extends</span> <span class="title class_">Exception</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyException</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(message); <span class="comment">// 把訊息再往上傳給 Exception → Throwable</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4. 測試主程式</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CustomExceptionExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">MyException</span>(<span class="string">&quot;這是一個自訂例外！&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (MyException e) &#123;</span><br><span class="line">            System.out.println(e.getMessage());  <span class="comment">// 輸出：這是一個自訂例外！</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Throwable</span><br><span class="line">├── Exception</span><br><span class="line">│   ├── RuntimeException (運行時異常/非檢查異常)</span><br><span class="line">│   │   ├── ArithmeticException</span><br><span class="line">│   │   ├── ArrayIndexOutOfBoundsException  </span><br><span class="line">│   │   └── InputMismatchException</span><br><span class="line">│   └── IOException (檢查異常)</span><br><span class="line">└── Error</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="例外的傳遞"><a href="#例外的傳遞" class="headerlink" title="例外的傳遞"></a>例外的傳遞</h2><p>當一個方法拋出例外時，可以選擇將例外傳遞給呼叫者。透過 <code>throws</code> 關鍵字來實現：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ThrowExample</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">mayThrowException</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Exception</span>(<span class="string">&quot;可能發生的例外&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            mayThrowException();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;捕捉到例外：&quot;</span> + e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="程式流程"><a href="#程式流程" class="headerlink" title="程式流程"></a>程式流程</h3><ol>
+<li><code>try</code> 裡呼叫 <code>mayThrowException()</code>。</li>
+<li><code>mayThrowException()</code> 主動丟出一個新的 <code>Exception</code>，訊息是 “可能發生的例外”。</li>
+<li>這個 <code>Exception</code> 立刻「拋出」回呼叫它的地方，也就是 <code>try</code>。</li>
+<li>因為 <code>try</code> 內程式丟出 <code>Exception</code>，會直接跳到 <code>catch(Exception e)</code> 來捕捉這個錯誤。</li>
+<li><code>catch</code> 裡用 <code>e.getMessage()</code> 取得這個例外的訊息並印出。</li>
+</ol>
+<p><br><br></p>
+<h2 id="例外處理的建議"><a href="#例外處理的建議" class="headerlink" title="例外處理的建議"></a>例外處理的建議</h2><ul>
+<li>儘量使用 <code>try-catch</code> 來處理可能發生的例外。</li>
+<li>只捕捉需要處理的例外，不要使用 <code>catch (Exception e)</code> 捕捉所有例外。</li>
+<li>在 <code>finally</code> 區塊中釋放資源。</li>
+<li>自訂例外時，提供有意義的錯誤訊息。</li>
+</ul>
+<p><br><br></p>
+<h2 id="常見-Exception-與-Error-對照表"><a href="#常見-Exception-與-Error-對照表" class="headerlink" title="常見 Exception 與 Error 對照表"></a>常見 Exception 與 Error 對照表</h2><table>
+<thead>
+<tr>
+<th>類型</th>
+<th>說明 &#x2F; 觸發時機</th>
+<th>範例程式碼（簡略）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>ArithmeticException</strong></td>
+<td>數學錯誤，如除以零</td>
+<td><code>int x = 10 / 0;</code></td>
+</tr>
+<tr>
+<td><strong>ArrayIndexOutOfBoundsException</strong></td>
+<td>陣列索引超出範圍</td>
+<td><code>arr[3] = 5;</code></td>
+</tr>
+<tr>
+<td><strong>ClassCastException</strong></td>
+<td>錯誤的類型轉型</td>
+<td><code>(Integer)(Object)&quot;abc&quot;;</code></td>
+</tr>
+<tr>
+<td><strong>ConcurrentModificationException</strong></td>
+<td>遍歷時修改集合</td>
+<td><code>for-each + remove()</code></td>
+</tr>
+<tr>
+<td><strong>EOFException</strong></td>
+<td>資料讀取超過結尾（串流）</td>
+<td><code>readObject();</code></td>
+</tr>
+<tr>
+<td><strong>FileNotFoundException</strong></td>
+<td>檔案不存在</td>
+<td><code>new FileReader(&quot;abc.txt&quot;);</code></td>
+</tr>
+<tr>
+<td><strong>IllegalArgumentException</strong></td>
+<td>傳入非法參數</td>
+<td><code>Thread.sleep(-1);</code></td>
+</tr>
+<tr>
+<td><strong>IllegalStateException</strong></td>
+<td>呼叫不合時機的方法</td>
+<td><code>scanner.nextLine(); // close後</code></td>
+</tr>
+<tr>
+<td><strong>IndexOutOfBoundsException</strong></td>
+<td>索引越界（泛用）</td>
+<td><code>list.get(99);</code></td>
+</tr>
+<tr>
+<td><strong>InputMismatchException</strong></td>
+<td>輸入與預期型別不符</td>
+<td><code>scanner.nextInt(); // 輸入abc</code></td>
+</tr>
+<tr>
+<td><strong>InterruptedException</strong></td>
+<td>執行緒睡眠或等待時被中斷</td>
+<td><code>Thread.sleep(1000);</code></td>
+</tr>
+<tr>
+<td><strong>IOException</strong></td>
+<td>I&#x2F;O 錯誤（讀檔、寫檔）</td>
+<td><code>reader.readLine();</code></td>
+</tr>
+<tr>
+<td><strong>NegativeArraySizeException</strong></td>
+<td>建立負長度陣列</td>
+<td><code>new int[-3];</code></td>
+</tr>
+<tr>
+<td><strong>NoSuchElementException</strong></td>
+<td>無元素可讀取</td>
+<td><code>scanner.nextLine(); // 無輸入</code></td>
+</tr>
+<tr>
+<td><strong>NullPointerException</strong></td>
+<td>呼叫 null 物件的方法或欄位</td>
+<td><code>s.length(); // s 是 null</code></td>
+</tr>
+<tr>
+<td><strong>NumberFormatException</strong></td>
+<td>字串無法轉成數字</td>
+<td><code>Integer.parseInt(&quot;abc&quot;);</code></td>
+</tr>
+<tr>
+<td><strong>SecurityException</strong></td>
+<td>違反安全管理（例如反射）</td>
+<td><code>System.setSecurityManager(...)</code></td>
+</tr>
+<tr>
+<td><strong>StackOverflowError</strong> <em>(非 Exception)</em></td>
+<td>遞迴過深導致堆疊爆炸</td>
+<td><code>infiniteRecursion();</code></td>
+</tr>
+<tr>
+<td><strong>StringIndexOutOfBoundsException</strong></td>
+<td>字串索引錯誤</td>
+<td><code>&quot;abc&quot;.charAt(5);</code></td>
+</tr>
+<tr>
+<td><strong>UnsupportedOperationException</strong></td>
+<td>呼叫未支援的方法</td>
+<td><code>List.of(1,2).add(3);</code></td>
+</tr>
+<tr>
+<td><strong>OutOfMemoryError</strong> <em>(非 Exception)</em></td>
+<td>記憶體不足</td>
+<td><code>while(true) list.add(new int[999999]);</code></td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="類型區分補充："><a href="#類型區分補充：" class="headerlink" title="類型區分補充："></a>類型區分補充：</h2><table>
+<thead>
+<tr>
+<th>類型分類</th>
+<th>說明</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Checked Exception</strong></td>
+<td>編譯時需處理，用 <code>try-catch</code> 或 <code>throws</code></td>
+<td><code>IOException</code>, <code>FileNotFoundException</code></td>
+</tr>
+<tr>
+<td><strong>Unchecked Exception</strong></td>
+<td>執行時錯誤，編譯器不強制處理</td>
+<td><code>NullPointerException</code>, <code>ArithmeticException</code></td>
+</tr>
+<tr>
+<td><strong>Error</strong></td>
+<td>嚴重錯誤，通常不處理</td>
+<td><code>StackOverflowError</code>, <code>OutOfMemoryError</code></td>
+</tr>
+</tbody></table>
+
         
       </div>
 

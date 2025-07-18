@@ -20,15 +20,15 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="虎头鲸 - blog">
+  <meta name="description" content="什麼是「參考資料形態」在 Java 中，資料型別可以分為兩大類：    分類 名稱（英文） 內容是什麼？ 範例    基本資料型別 Primitive Data Types 儲存「實際的值」 int, double, char, boolean   參考資料型別 Reference Data Types 儲存「記憶體位置」 String, 陣列、類別、物件等    基本型別：直接存資料1234">
 <meta property="og:type" content="website">
 <meta property="og:title" content="第八章：參考資料形態">
 <meta property="og:url" content="https://aixlnyt.github.io/java/advance/ch08">
 <meta property="og:site_name" content="虎头鯨">
-<meta property="og:description" content="虎头鲸 - blog">
+<meta property="og:description" content="什麼是「參考資料形態」在 Java 中，資料型別可以分為兩大類：    分類 名稱（英文） 內容是什麼？ 範例    基本資料型別 Primitive Data Types 儲存「實際的值」 int, double, char, boolean   參考資料型別 Reference Data Types 儲存「記憶體位置」 String, 陣列、類別、物件等    基本型別：直接存資料1234">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2025-06-24T15:49:57.131Z">
-<meta property="article:modified_time" content="2025-06-11T14:14:52.000Z">
+<meta property="article:published_time" content="2025-07-18T14:55:52.428Z">
+<meta property="article:modified_time" content="2025-07-18T14:55:52.428Z">
 <meta property="article:author" content="虎头鲸">
 <meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
 <meta name="twitter:card" content="summary">
@@ -146,11 +146,6 @@
     <div class="widget">
       <h3 class="widget-title">分類</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
-                標記語言
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/%E9%A1%AF%E5%8D%A1/">
                 顯卡
                 <div class="category-count">1</div>
@@ -159,6 +154,11 @@
             <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/">
                 程式語言
                 <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
+                標記語言
+                <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
@@ -221,15 +221,15 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
-            <div class="recent-link-text">
-              Java 教學目錄
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/06/05/SSD_menu/" title="硬碟與固態硬碟" >
             <div class="recent-link-text">
               硬碟與固態硬碟
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
+            <div class="recent-link-text">
+              Java 教學目錄
             </div>
           </a>
         
@@ -264,7 +264,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-06-24T15:49:57.131Z" itemprop="datePublished">2025-06-24</time>
+  <time class="dt-published" datetime="2025-07-18T14:55:52.428Z" itemprop="datePublished">2025-07-18</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -275,7 +275,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            0 字 
+            1.7k 字 
           </div>
         </div>
         
@@ -283,7 +283,143 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          
+          <br>
+
+<h2 id="什麼是「參考資料形態」"><a href="#什麼是「參考資料形態」" class="headerlink" title="什麼是「參考資料形態」"></a>什麼是「參考資料形態」</h2><p>在 Java 中，資料型別可以分為兩大類：</p>
+<table>
+<thead>
+<tr>
+<th>分類</th>
+<th>名稱（英文）</th>
+<th>內容是什麼？</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>基本資料型別</td>
+<td>Primitive Data Types</td>
+<td>儲存「實際的值」</td>
+<td><code>int</code>, <code>double</code>, <code>char</code>, <code>boolean</code></td>
+</tr>
+<tr>
+<td>參考資料型別</td>
+<td>Reference Data Types</td>
+<td>儲存「記憶體位置」</td>
+<td><code>String</code>, 陣列、類別、物件等</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="基本型別：直接存資料"><a href="#基本型別：直接存資料" class="headerlink" title="基本型別：直接存資料"></a>基本型別：直接存資料</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> a;</span><br><span class="line">b = <span class="number">20</span>;</span><br><span class="line">System.out.println(a); <span class="comment">// 輸出：10</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>變數 <code>b</code> 是複製 <code>a</code> 的值，兩者互不影響。</p>
+</blockquote>
+<p><br><br></p>
+<h2 id="參考型別：存的是記憶體地址"><a href="#參考型別：存的是記憶體地址" class="headerlink" title="參考型別：存的是記憶體地址"></a>參考型別：存的是記憶體地址</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] arr1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line"><span class="type">int</span>[] arr2 = arr1;</span><br><span class="line">arr2[<span class="number">0</span>] = <span class="number">99</span>;</span><br><span class="line">System.out.println(arr1[<span class="number">0</span>]); <span class="comment">// 輸出：99</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>arr1</code> 和 <code>arr2</code> 指向<strong>同一個陣列記憶體位址</strong>。</p>
+</blockquote>
+<p><br><br></p>
+<h2 id="String-字串"><a href="#String-字串" class="headerlink" title="String 字串"></a>String 字串</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;Alice&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>String</code> 是一種 <strong>不可變物件（immutable）</strong></li>
+<li>雖然使用上像基本型別，但其實是物件</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;Hi&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">b</span> <span class="operator">=</span> a;</span><br><span class="line">b = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">System.out.println(a); <span class="comment">// ➜ Hi（因為 b 指向新字串，不會改變 a）</span></span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="陣列-Array"><a href="#陣列-Array" class="headerlink" title="陣列 Array"></a>陣列 Array</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] nums = &#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>&#125;;</span><br><span class="line">String[] names = &#123;<span class="string">&quot;Tom&quot;</span>, <span class="string">&quot;Jerry&quot;</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>陣列是物件！</li>
+<li>用 <code>new</code> 關鍵字建立時，自動配置記憶體於 Heap 區</li>
+</ul>
+<p><br><br></p>
+<h2 id="類別與物件-Class-Object"><a href="#類別與物件-Class-Object" class="headerlink" title="類別與物件 Class &amp; Object"></a>類別與物件 Class &amp; Object</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">Dog</span> <span class="variable">d1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">d1.name = <span class="string">&quot;Bingo&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>d1</code> 是參考變數，指向 Heap 中的 Dog 物件</li>
+</ul>
+<p><br><br></p>
+<h2 id="記憶體位置解析（Stack-vs-Heap）"><a href="#記憶體位置解析（Stack-vs-Heap）" class="headerlink" title="記憶體位置解析（Stack vs Heap）"></a>記憶體位置解析（Stack vs Heap）</h2><table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>放什麼？</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stack</td>
+<td>基本資料型別、參考位址</td>
+<td>程式碼執行時快速配置</td>
+</tr>
+<tr>
+<td>Heap</td>
+<td>物件內容（實體資料）</td>
+<td>建立物件時存放的區域</td>
+</tr>
+</tbody></table>
+<h3 id="簡圖說明："><a href="#簡圖說明：" class="headerlink" title="簡圖說明："></a>簡圖說明：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Dog</span> <span class="variable">d</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br></pre></td></tr></table></figure>
+
+<p>記憶體狀況如下：</p>
+<ul>
+<li><code>d</code> 存在 Stack（存放記憶體地址）</li>
+<li><code>new Dog()</code> 則是 Dog 物件在 Heap（物件真正內容）</li>
+</ul>
+<p><br><br></p>
+<h2 id="傳基本型別-➜-傳值（值複製一份）"><a href="#傳基本型別-➜-傳值（值複製一份）" class="headerlink" title="傳基本型別 ➜ 傳值（值複製一份）"></a>傳基本型別 ➜ 傳值（值複製一份）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">addOne</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    x = x + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="傳參考型別-➜-傳位址（會改到原物件）"><a href="#傳參考型別-➜-傳位址（會改到原物件）" class="headerlink" title="傳參考型別 ➜ 傳位址（會改到原物件）"></a>傳參考型別 ➜ 傳位址（會改到原物件）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">changeName</span><span class="params">(Dog d)</span> &#123;</span><br><span class="line">    d.name = <span class="string">&quot;Coco&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="練習小測驗"><a href="#練習小測驗" class="headerlink" title="練習小測驗"></a>練習小測驗</h2><h3 id="Q1：以下輸出是？"><a href="#Q1：以下輸出是？" class="headerlink" title="Q1：以下輸出是？"></a>Q1：以下輸出是？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="string">&quot;Hi&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> str1;</span><br><span class="line">str2 = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line">System.out.println(str1); </span><br></pre></td></tr></table></figure>
+
+<p><strong>答案：</strong> <code>Hi</code></p>
+<hr>
+<h3 id="Q2：這段程式碼的輸出是？"><a href="#Q2：這段程式碼的輸出是？" class="headerlink" title="Q2：這段程式碼的輸出是？"></a>Q2：這段程式碼的輸出是？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] x = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;;</span><br><span class="line"><span class="type">int</span>[] y = x;</span><br><span class="line">y[<span class="number">1</span>] = <span class="number">100</span>;</span><br><span class="line">System.out.println(x[<span class="number">1</span>]);</span><br></pre></td></tr></table></figure>
+
+<p><strong>答案：</strong> <code>100</code></p>
+<p><br><br></p>
+<h2 id="常見錯誤觀念澄清"><a href="#常見錯誤觀念澄清" class="headerlink" title="常見錯誤觀念澄清"></a>常見錯誤觀念澄清</h2><table>
+<thead>
+<tr>
+<th>誤解</th>
+<th>正解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>String</code> 是基本型別</td>
+<td>❌ 錯，它是參考型別，但不可變（immutable）</td>
+</tr>
+<tr>
+<td>陣列不是物件</td>
+<td>❌ 錯，陣列是物件，會存在 Heap 中</td>
+</tr>
+<tr>
+<td>方法參數傳物件時，是複製一份</td>
+<td>❌ 錯，是傳「記憶體位置參考」</td>
+</tr>
+<tr>
+<td><code>==</code> 比較的是字串內容</td>
+<td>❌ 錯，是比記憶體位置，用 <code>.equals()</code> 比內容</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="補充：如何比較兩個字串內容？"><a href="#補充：如何比較兩個字串內容？" class="headerlink" title="補充：如何比較兩個字串內容？"></a>補充：如何比較兩個字串內容？</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;Hi&quot;</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;Hi&quot;</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(a == b);         <span class="comment">// false，記憶體位址不同</span></span><br><span class="line">System.out.println(a.equals(b));    <span class="comment">// true，內容相同</span></span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="快速複習"><a href="#快速複習" class="headerlink" title="快速複習"></a>快速複習</h2><ul>
+<li>Java 資料型別分成「基本」與「參考」  </li>
+<li>參考資料會記住「位址」，指向物件內容（堆積區）  </li>
+<li>物件或陣列傳入方法時，會<strong>改變原物件</strong>內容  </li>
+<li>記憶體有 Stack 和 Heap！  </li>
+<li><code>.equals()</code> 才能比字串或物件內容，不要用 <code>==</code></li>
+</ul>
+
         
       </div>
 
