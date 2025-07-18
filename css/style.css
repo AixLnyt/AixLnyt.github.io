@@ -376,6 +376,7 @@ body {
   #main-grid #content-body {
     grid-column-start: 1;
     grid-column-end: 3;
+    overflow-x: auto;
   }
   #main-grid #footer-wrapper {
     grid-row: 4;
@@ -1359,15 +1360,27 @@ a.article-title:active {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  display: block;
+  overflow-x: auto;
 }
 .article-entry th {
   font-weight: bold;
   border-bottom: 3px solid #ddd;
-  padding-bottom: 0.5em;
+  padding: 16px 12px;
+}
+@media screen and (max-width: 767px) {
+  .article-entry th {
+    padding: 20px 16px;
+  }
 }
 .article-entry td {
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  padding: 16px 12px;
+}
+@media screen and (max-width: 767px) {
+  .article-entry td {
+    padding: 20px 16px;
+  }
 }
 .article-entry blockquote {
   background: var(--blockquote-bg);
