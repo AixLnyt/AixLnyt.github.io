@@ -14,21 +14,21 @@
   
 
   
-  <title>第十二章：抽象類別和介面 | 虎头鯨</title>
+  <title>第十二章：繼承 | 虎头鯨</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="虎头鲸 - blog">
+  <meta name="description" content="什麼是「繼承」繼承是 Java 的物件導向三大特性之一，讓子類別（Subclass）可以**重複使用父類別（Superclass）**的屬性和方法，避免重複撰寫程式碼。  類別繼承關係   名稱 說明 關鍵字 範例    父類別（超類別） 被繼承的類別 super class Animal &#123;&#125;   子類別（衍生類別） 繼承的類別 extends class Dog ext">
 <meta property="og:type" content="website">
-<meta property="og:title" content="第十二章：抽象類別和介面">
-<meta property="og:url" content="https://aixlnyt.github.io/java/advance/ch12">
+<meta property="og:title" content="第十二章：繼承">
+<meta property="og:url" content="https://aixlnyt.github.io/Java/Advance/ch12">
 <meta property="og:site_name" content="虎头鯨">
-<meta property="og:description" content="虎头鲸 - blog">
+<meta property="og:description" content="什麼是「繼承」繼承是 Java 的物件導向三大特性之一，讓子類別（Subclass）可以**重複使用父類別（Superclass）**的屬性和方法，避免重複撰寫程式碼。  類別繼承關係   名稱 說明 關鍵字 範例    父類別（超類別） 被繼承的類別 super class Animal &#123;&#125;   子類別（衍生類別） 繼承的類別 extends class Dog ext">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2025-06-24T15:49:57.144Z">
-<meta property="article:modified_time" content="2025-06-11T14:17:54.000Z">
+<meta property="article:published_time" content="2025-07-19T08:41:49.779Z">
+<meta property="article:modified_time" content="2025-07-19T08:41:49.779Z">
 <meta property="article:author" content="虎头鲸">
 <meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
 <meta name="twitter:card" content="summary">
@@ -151,9 +151,34 @@
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/">
-                程式語言
-                <div class="category-count">2</div>
+            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
+                硬體
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Markdown/">
+                Markdown
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Java/">
+                Java
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
+                顯示器
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89/">
+                國際認證
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Python/">
+                Python
+                <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
@@ -161,8 +186,8 @@
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
-                標記語言
+            <a class="category-link" href="/categories/%E8%BB%9F%E9%AB%94/">
+                軟體
                 <div class="category-count">1</div>
             </a>
         </div>
@@ -175,7 +200,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">標籤</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A1%AC%E9%AB%94/" rel="tag">硬體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%BB%E8%85%A6/" rel="tag">電腦</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/" rel="tag">標記語言</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A1%AC%E9%AB%94/" rel="tag">硬體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/" rel="tag">程式語言</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AD%89%E7%85%A7/" rel="tag">證照</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%BB%9F%E9%AB%94/" rel="tag">軟體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%BB%E8%85%A6/" rel="tag">電腦</a></li></ul>
     </div>
   </div>
 
@@ -187,9 +212,19 @@
       <h3 class="widget-title">彙整</h3>
       
       
+        <a class="archive-link" href="/archives/2025/07 ">
+          七月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
         <a class="archive-link" href="/archives/2025/06 ">
           六月 2025 
-          <div class="archive-count">5 </div>
+          <div class="archive-count">7 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2024/01 ">
+          一月 2024 
+          <div class="archive-count">1 </div>
         </a>
       
     </div>
@@ -203,9 +238,9 @@
       <h3 class="widget-title">最新文章</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/06/07/Python_menu/" title="Python 教學目錄" >
+          <a class="recent-link" href="/2025/07/19/ICDL_menu/" title="ICDL 考科目錄" >
             <div class="recent-link-text">
-              Python 教學目錄
+              ICDL 考科目錄
             </div>
           </a>
         
@@ -215,21 +250,21 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/06/05/GPU_menu/" title="顯示卡介紹" >
+          <a class="recent-link" href="/2025/06/05/GPU_menu/" title="顯示卡目錄" >
             <div class="recent-link-text">
-              顯示卡介紹
+              顯示卡目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Hardware_menu/" title="硬體相關目錄" >
+            <div class="recent-link-text">
+              硬體相關目錄
             </div>
           </a>
         
           <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
             <div class="recent-link-text">
               Java 教學目錄
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/06/05/SSD_menu/" title="硬碟與固態硬碟" >
-            <div class="recent-link-text">
-              硬碟與固態硬碟
             </div>
           </a>
         
@@ -256,7 +291,7 @@
   
     
       <h1 class="p-name article-title" itemprop="headline name">
-        第十二章：抽象類別和介面
+        第十二章：繼承
       </h1>
     
   
@@ -264,7 +299,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-06-24T15:49:57.144Z" itemprop="datePublished">2025-06-24</time>
+  <time class="dt-published" datetime="2025-07-19T08:41:49.779Z" itemprop="datePublished">2025-07-19</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -275,7 +310,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            0 字 
+            4.7k 字 
           </div>
         </div>
         
@@ -283,7 +318,224 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          
+          <br>
+
+<h2 id="什麼是「繼承」"><a href="#什麼是「繼承」" class="headerlink" title="什麼是「繼承」"></a>什麼是「繼承」</h2><p><strong>繼承</strong>是 Java 的物件導向三大特性之一，讓子類別（Subclass）可以**重複使用父類別（Superclass）**的屬性和方法，避免重複撰寫程式碼。</p>
+<p><br><br></p>
+<h2 id="類別繼承關係"><a href="#類別繼承關係" class="headerlink" title="類別繼承關係"></a>類別繼承關係</h2><table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>說明</th>
+<th>關鍵字</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>父類別（超類別）</td>
+<td>被繼承的類別</td>
+<td><code>super</code></td>
+<td><code>class Animal &#123;&#125;</code></td>
+</tr>
+<tr>
+<td>子類別（衍生類別）</td>
+<td>繼承的類別</td>
+<td><code>extends</code></td>
+<td><code>class Dog extends Animal &#123;&#125;</code></td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="基本語法：使用-extends"><a href="#基本語法：使用-extends" class="headerlink" title="基本語法：使用 extends"></a>基本語法：使用 <code>extends</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot; 正在吃飯&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">bark</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(name + <span class="string">&quot; 汪汪叫&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Dog</span> <span class="variable">d</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br><span class="line">d.name = <span class="string">&quot;Bingo&quot;</span>;</span><br><span class="line">d.eat();  <span class="comment">// 繼承來的</span></span><br><span class="line">d.bark(); <span class="comment">// 自己的</span></span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="記憶體結構（Stack-Heap）"><a href="#記憶體結構（Stack-Heap）" class="headerlink" title="記憶體結構（Stack &amp; Heap）"></a>記憶體結構（Stack &amp; Heap）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Dog</span> <span class="variable">d</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Dog</span>();</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>區域</th>
+<th>儲存什麼</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stack</td>
+<td>變數 d（記憶體位置）</td>
+</tr>
+<tr>
+<td>Heap</td>
+<td><code>Dog</code> 物件（有 <code>Dog</code> 和繼承自 <code>Animal</code> 的欄位與方法）</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="方法覆寫（Override）"><a href="#方法覆寫（Override）" class="headerlink" title="方法覆寫（Override）"></a>方法覆寫（Override）</h2><p>子類別可以<strong>改寫</strong>父類別的方法，稱為「覆寫」。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;正在吃飯&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span> <span class="comment">// 可寫可不寫</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;貓在吃魚&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Cat</span> <span class="variable">c</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cat</span>();</span><br><span class="line">c.eat(); <span class="comment">// 輸出：貓在吃魚</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>加上 <code>@Override</code> 註解可讓編譯器檢查是否正確覆寫</li>
+<li>必須「方法名稱、參數、回傳型別」都一致！</li>
+</ul>
+<p><br><br></p>
+<h2 id="super-關鍵字用法"><a href="#super-關鍵字用法" class="headerlink" title="super 關鍵字用法"></a>super 關鍵字用法</h2><p><code>super</code> 表示「<strong>父類別（超類別）的參考</strong>」。</p>
+<h3 id="範例-1"><a href="#範例-1" class="headerlink" title="範例 1"></a>範例 1</h3><table>
+<thead>
+<tr>
+<th>用法</th>
+<th>說明</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>super.方法()</code></td>
+<td>呼叫父類別的方法</td>
+<td><code>super.eat()</code></td>
+</tr>
+<tr>
+<td><code>super.屬性</code></td>
+<td>存取父類別的變數</td>
+<td><code>super.name</code></td>
+</tr>
+<tr>
+<td><code>super(...)</code></td>
+<td>呼叫父類別建構子</td>
+<td><code>super(&quot;Bingo&quot;)</code></td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    String name;</span><br><span class="line">    Animal(String name) &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    Dog(String name) &#123;</span><br><span class="line">        <span class="built_in">super</span>(name); <span class="comment">// 呼叫父類別的建構子</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="範例-2"><a href="#範例-2" class="headerlink" title="範例 2"></a>範例 2</h3><table>
+<thead>
+<tr>
+<th>用途</th>
+<th>範例</th>
+<th>解釋</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>呼叫父類別的建構子</td>
+<td><code>super();</code></td>
+<td>通常放在子類別建構子的第一行</td>
+</tr>
+<tr>
+<td>呼叫父類別的方法</td>
+<td><code>super.printInfo();</code></td>
+<td>被子類別覆寫後仍可呼叫原方法</td>
+</tr>
+<tr>
+<td>取得父類別的成員變數</td>
+<td><code>super.name</code></td>
+<td>當子類別與父類別變數重名時使用</td>
+</tr>
+</tbody></table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;Default&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Person: &quot;</span> + name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">extends</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;Student&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(); <span class="comment">// 呼叫父類別的建構子</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.printInfo(); <span class="comment">// 呼叫父類別方法</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Student: &quot;</span> + <span class="built_in">this</span>.name); <span class="comment">// this 是子類別自己</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// ✅ 建立 Student 物件</span></span><br><span class="line">        <span class="type">Student</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        s1.printInfo();</span><br><span class="line"></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// ✅ 使用父類別參考指向子類別物件（多型）</span></span><br><span class="line">        <span class="type">Person</span> <span class="variable">p1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        p1.printInfo(); <span class="comment">// 只會呼叫覆寫後的方法（動態綁定）</span></span><br><span class="line"></span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// ✅ 建立父類別物件</span></span><br><span class="line">        <span class="type">Person</span> <span class="variable">p2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>();</span><br><span class="line">        p2.printInfo();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="this-vs-super-對照表"><a href="#this-vs-super-對照表" class="headerlink" title="this vs super 對照表"></a><code>this</code> vs <code>super</code> 對照表</h2><table>
+<thead>
+<tr>
+<th>比較項目</th>
+<th><code>this</code>（這個物件）</th>
+<th><code>super</code>（父類別）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>基本用途</strong></td>
+<td>指向目前類別建立的物件</td>
+<td>指向目前類別的父類別所建立的物件</td>
+</tr>
+<tr>
+<td><strong>變數使用</strong></td>
+<td>訪問目前類別的屬性，常用於參數與成員變數重名時（<code>this.name = name;</code>）</td>
+<td>訪問父類別的屬性（如：<code>super.name</code>）</td>
+</tr>
+<tr>
+<td><strong>方法使用</strong></td>
+<td>呼叫同一類別中其他方法（如：<code>this.printInfo()</code>）</td>
+<td>呼叫父類別的方法（如：<code>super.printInfo()</code>）</td>
+</tr>
+<tr>
+<td><strong>建構子使用</strong></td>
+<td>呼叫<strong>同一類別中的其他建構子</strong>（如：<code>this(&quot;Tom&quot;);</code>）</td>
+<td>呼叫<strong>父類別的建構子</strong>（如：<code>super(&quot;Tom&quot;);</code>）</td>
+</tr>
+<tr>
+<td><strong>使用限制</strong></td>
+<td>只能用在方法或建構子中<br><code>this(...)</code> 必須在建構子第一行</td>
+<td>只能用在子類別中<br><code>super(...)</code> 也必須在建構子第一行</td>
+</tr>
+<tr>
+<td><strong>是否能同時用</strong></td>
+<td>✅ 可以在同一方法或建構子中使用（但 <code>this()</code> 與 <code>super()</code> 不能同時存在建構子第一行）</td>
+<td>✅ 可以在方法中混用，但建構子中兩者不能同時用</td>
+</tr>
+<tr>
+<td><strong>常見用途</strong></td>
+<td>區分參數與成員變數<br>內部方法呼叫<br>建構子間呼叫</td>
+<td>使用父類別成員（屬性與方法）<br>呼叫父類別建構子</td>
+</tr>
+<tr>
+<td><strong>隱含對象</strong></td>
+<td>當前子類別的物件實體</td>
+<td>子類別中的父類別物件實體</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="常見錯誤"><a href="#常見錯誤" class="headerlink" title="常見錯誤"></a>常見錯誤</h2><ul>
+<li><code>this()</code> 與 <code>super()</code> <strong>只能出現在建構子的第一行</strong>，不能同時存在。</li>
+<li>混淆了 <code>this.name</code> 與 <code>super.name</code>：要看你是要指自己的變數還是繼承來的。</li>
+</ul>
+<h3 id="詳細說明："><a href="#詳細說明：" class="headerlink" title="詳細說明："></a>詳細說明：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;PersonName&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">extends</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;StudentName&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printNames</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;this.name: &quot;</span> + <span class="built_in">this</span>.name);   <span class="comment">// 子類別的 name</span></span><br><span class="line">        System.out.println(<span class="string">&quot;super.name: &quot;</span> + <span class="built_in">super</span>.name); <span class="comment">// 父類別的 name</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        s.printNames();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="實作題範例"><a href="#實作題範例" class="headerlink" title="實作題範例"></a>實作題範例</h2><ul>
+<li>父類別為 <code>Person</code>，有屬性 <code>name</code>，方法 <code>printInfo()</code>。</li>
+<li>子類別為 <code>Student</code>，有自己的 <code>name</code> 屬性，覆寫 <code>printInfo()</code> 方法，並使用 <code>super</code> 呼叫父類別的 <code>printInfo()</code>。</li>
+<li>在 <code>main()</code> 方法中建立一個 <code>Student</code> 物件並呼叫 <code>printInfo()</code> 方法。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;Default&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Person: &quot;</span> + name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">extends</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;Student&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.printInfo(); <span class="comment">// 呼叫父類別的 printInfo()</span></span><br><span class="line">        System.out.println(<span class="string">&quot;Student: &quot;</span> + <span class="built_in">this</span>.name); <span class="comment">// this 指的是子類別自己的 name</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Student</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>();</span><br><span class="line">        s.printInfo();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="其它-回傳練習"><a href="#其它-回傳練習" class="headerlink" title="其它 - 回傳練習"></a>其它 - 回傳練習</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 無參數建構子</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Person</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>(<span class="string">&quot;匿名&quot;</span>, <span class="number">18</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 只給年齡</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Person</span><span class="params">(Integer age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>(<span class="string">&quot;匿名&quot;</span>, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 只給名字</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Person</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>(name, <span class="number">18</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 全部給</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Person</span><span class="params">(String name, Integer age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 顯示資訊用的方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;姓名：&quot;</span> + name + <span class="string">&quot;，年齡：&quot;</span> + age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 主程式</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Person</span> <span class="variable">p1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>();                  <span class="comment">// 匿名, 18</span></span><br><span class="line">        <span class="type">Person</span> <span class="variable">p2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="number">25</span>);                <span class="comment">// 匿名, 25</span></span><br><span class="line">        <span class="type">Person</span> <span class="variable">p3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&quot;小明&quot;</span>);             <span class="comment">// 小明, 18</span></span><br><span class="line">        <span class="type">Person</span> <span class="variable">p4</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&quot;小美&quot;</span>, <span class="number">20</span>);         <span class="comment">// 小美, 20</span></span><br><span class="line"></span><br><span class="line">        p1.printInfo();</span><br><span class="line">        p2.printInfo();</span><br><span class="line">        p3.printInfo();</span><br><span class="line">        p4.printInfo();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="錯誤觀念澄清"><a href="#錯誤觀念澄清" class="headerlink" title="錯誤觀念澄清"></a>錯誤觀念澄清</h2><table>
+<thead>
+<tr>
+<th>❌錯誤觀念</th>
+<th>✅正確觀念</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Java 不支援繼承</td>
+<td>Java 支援單一繼承</td>
+</tr>
+<tr>
+<td>子類別無法使用父類方法</td>
+<td>只要沒被 <code>private</code> 修飾都能繼承</td>
+</tr>
+<tr>
+<td>父類別的建構子不會執行</td>
+<td>子類別建構子會自動先呼叫父類別建構子</td>
+</tr>
+<tr>
+<td>方法覆寫時，回傳型別可以不同</td>
+<td>覆寫時方法簽章必須相同</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="重點整理"><a href="#重點整理" class="headerlink" title="重點整理"></a>重點整理</h2><ul>
+<li>繼承讓子類別 <code>extends</code> 父類別，節省程式碼  </li>
+<li>子類別能使用父類別的屬性與方法  </li>
+<li>可以使用 <code>@Override</code> 改寫方法內容  </li>
+<li><code>super()</code> 能呼叫父類別建構子與成員  </li>
+<li>只有單一繼承，但可用**介面（interface）**實現多型（多種行為）</li>
+</ul>
+
         
       </div>
 

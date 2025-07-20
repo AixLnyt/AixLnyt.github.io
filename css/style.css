@@ -1357,11 +1357,19 @@ a.article-title:active {
   border: none;
 }
 .article-entry table {
-  width: 100%;
+  width: auto;
+  min-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   display: block;
   overflow-x: auto;
+  white-space: nowrap;
+}
+@media screen and (max-width: 767px) {
+  .article-entry table {
+    width: auto;
+    min-width: 100%;
+  }
 }
 .article-entry th {
   font-weight: bold;

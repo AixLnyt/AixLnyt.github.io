@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="true" >
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>IT Security 資訊安全 | 虎头鯨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="資訊安全基本概念CIA三要素 機密性 (Confidentiality): 確保資訊只能被授權人員存取 完整性 (Integrity): 確保資訊的準確性和完整性，防止未授權的修改 可用性 (Availability): 確保資訊系統隨時可用  機密性威脅與防護 威脅包括翻垃圾桶獲取資訊(dumpster diving) 和 網路嗅探(sniffing)和側錄 防護方式包括資料加密、存取控制等">
+<meta property="og:type" content="website">
+<meta property="og:title" content="IT Security 資訊安全">
+<meta property="og:url" content="https://aixlnyt.github.io/ICDL/Security">
+<meta property="og:site_name" content="虎头鯨">
+<meta property="og:description" content="資訊安全基本概念CIA三要素 機密性 (Confidentiality): 確保資訊只能被授權人員存取 完整性 (Integrity): 確保資訊的準確性和完整性，防止未授權的修改 可用性 (Availability): 確保資訊系統隨時可用  機密性威脅與防護 威脅包括翻垃圾桶獲取資訊(dumpster diving) 和 網路嗅探(sniffing)和側錄 防護方式包括資料加密、存取控制等">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-07-19T13:31:23.273Z">
+<meta property="article:modified_time" content="2025-07-19T12:41:07.924Z">
+<meta property="article:author" content="虎头鲸">
+<meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="虎头鯨" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/img/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+  
+    
+<div id="banner" class="">
+  <img src="/img/banner.png" itemprop="image">
+  <div id="banner-dim"></div>
+</div>
+ 
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>虎头鯨 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">首頁</a>
+    
+      <a class="main-nav-link" href="/archives">彙整</a>
+    
+      <a class="main-nav-link" href="/about">關於</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">首頁</a>
+    
+      <a class="nav-dropdown-link" href="/archives">彙整</a>
+    
+      <a class="nav-dropdown-link" href="/about">關於</a>
+    
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/img/avatar.png></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">虎头鯨 </div>
+      <div class="dot"></div>
+      <div class="subtitle">PU CSIM </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://discordapp.com/users/975001678350811206" title="Discord"><i class="fa-brands fa-discord"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://steamcommunity.com/id/DEVlenient/" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/AixLnyt" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分類</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E9%A1%AF%E5%8D%A1/">
+                顯卡
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
+                硬體
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Markdown/">
+                Markdown
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Java/">
+                Java
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
+                顯示器
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89/">
+                國際認證
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Python/">
+                Python
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
+                硬碟
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E8%BB%9F%E9%AB%94/">
+                軟體
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">標籤</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/" rel="tag">標記語言</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A1%AC%E9%AB%94/" rel="tag">硬體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/" rel="tag">程式語言</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AD%89%E7%85%A7/" rel="tag">證照</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%BB%9F%E9%AB%94/" rel="tag">軟體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%BB%E8%85%A6/" rel="tag">電腦</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">彙整</h3>
+      
+      
+        <a class="archive-link" href="/archives/2025/07 ">
+          七月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/06 ">
+          六月 2025 
+          <div class="archive-count">7 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2024/01 ">
+          一月 2024 
+          <div class="archive-count">1 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <a class="recent-link" href="/2025/07/19/ICDL_menu/" title="ICDL 考科目錄" >
+            <div class="recent-link-text">
+              ICDL 考科目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/06/Markdown_menu/" title="Markdown 教學目錄" >
+            <div class="recent-link-text">
+              Markdown 教學目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/GPU_menu/" title="顯示卡目錄" >
+            <div class="recent-link-text">
+              顯示卡目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Hardware_menu/" title="硬體相關目錄" >
+            <div class="recent-link-text">
+              硬體相關目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
+            <div class="recent-link-text">
+              Java 教學目錄
+            </div>
+          </a>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        IT Security 資訊安全
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-19T13:31:23.273Z" itemprop="datePublished">2025-07-19</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分類
+  
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.2k 字 
+          </div>
+        </div>
+        
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <br>
+
+<h2 id="資訊安全基本概念"><a href="#資訊安全基本概念" class="headerlink" title="資訊安全基本概念"></a>資訊安全基本概念</h2><h3 id="CIA三要素"><a href="#CIA三要素" class="headerlink" title="CIA三要素"></a><span style="color:#46A3FF;">CIA三要素</span></h3><ul>
+<li><strong><span style="color:#aed581;">機密性 (Confidentiality)</span></strong>: 確保資訊只能被授權人員存取</li>
+<li><strong><span style="color:#aed581;">完整性 (Integrity)</span></strong>: 確保資訊的準確性和完整性，防止未授權的修改</li>
+<li><strong><span style="color:#aed581;">可用性 (Availability)</span></strong>: 確保資訊系統隨時可用</li>
+</ul>
+<h3 id="機密性威脅與防護"><a href="#機密性威脅與防護" class="headerlink" title="機密性威脅與防護"></a>機密性威脅與防護</h3><ul>
+<li><span style="color:#f46363ff;">威脅</span>包括翻垃圾桶獲取資訊(dumpster diving) 和 網路嗅探(sniffing)和側錄</li>
+<li><span style="color:#aed581;">防護方式</span>包括資料加密、存取控制等</li>
+</ul>
+<h3 id="完整性威脅與防護"><a href="#完整性威脅與防護" class="headerlink" title="完整性威脅與防護"></a>完整性威脅與防護</h3><ul>
+<li><span style="color:#f46363ff;">威脅</span>包括資料竄改和釣魚(phishing)</li>
+<li><span style="color:#aed581;">防護方式</span>包括數位簽章、不可否認性技術</li>
+</ul>
+<h3 id="可用性威脅與防護"><a href="#可用性威脅與防護" class="headerlink" title="可用性威脅與防護"></a>可用性威脅與防護</h3><ul>
+<li>最大<span style="color:#f46363ff;">威脅</span>為阻斷服務攻擊(denial-of-service, DoS)</li>
+<li><span style="color:#aed581;">防護措施</span>包括備份系統、容錯機制、RAID磁碟陣列等</li>
+</ul>
+<h2 id="資料防護"><a href="#資料防護" class="headerlink" title="資料防護"></a>資料防護</h2><ul>
+<li>資料保護分為三類：<span style="color:#46A3FF;">實體保護、技術保護、組織保護</span></li>
+<li><span style="color:#46A3FF;">實體保護</span>包括鎖、保全系統、門禁、監視器等</li>
+<li><span style="color:#46A3FF;">技術保護</span>包括資料加密、密碼保護等</li>
+<li><span style="color:#46A3FF;">組織保護</span>包括制定安全政策、員工培訓等</li>
+<li>重要資料應進行備份，建議使用<span style="color:#aed581;">RAID 1鏡像技術</span></li>
+</ul>
+<h2 id="個資隱私威脅"><a href="#個資隱私威脅" class="headerlink" title="個資隱私威脅"></a>個資隱私威脅</h2><ul>
+<li>1997年台灣曾發生個資洩露案例</li>
+<li>2003年個資法修訂補充前一版本不足部分</li>
+<li><span style="color:#f46363ff;">釣魚攻擊(Phishing)</span>嚴重威脅個資安全</li>
+<li><span style="color:#f46363ff;">身份竊取方式</span>包括垃圾桶搜尋(Dumpster diving)和肩膀窺視(Shoulder surfing)</li>
+<li><span style="color:#f46363ff;">網路霸凌(Cyberbullying)</span>是一種透過電子媒介的騷擾行為</li>
+</ul>
+<h2 id="惡意軟體-Malware-類型"><a href="#惡意軟體-Malware-類型" class="headerlink" title="惡意軟體(Malware)類型"></a>惡意軟體(Malware)類型</h2><p>（中略，同樣完成替換）</p>
+<h2 id="防毒軟體-Anti-virus-Software"><a href="#防毒軟體-Anti-virus-Software" class="headerlink" title="防毒軟體(Anti-virus Software)"></a>防毒軟體(Anti-virus Software)</h2><ul>
+<li><span style="color:#aed581;">功能</span>：掃描、隔離和刪除惡意軟體</li>
+<li><span style="color:#46A3FF;">主要防護方式</span>：特徵碼比對、啟發式掃描、行為分析</li>
+<li><span style="color:#46A3FF;">掃描範圍</span>應包括USB裝置、下載檔案和電子郵件</li>
+<li>需<span style="color:#ffd54f;">定期更新</span>病毒碼庫和進行系統掃描</li>
+</ul>
+<h2 id="資訊安全防護技術"><a href="#資訊安全防護技術" class="headerlink" title="資訊安全防護技術"></a>資訊安全防護技術</h2><ul>
+<li><strong><span style="color:#aed581;">防火牆(Firewall)</span></strong>：過濾網路流量，阻擋惡意連線</li>
+<li><strong><span style="color:#aed581;">SQL注入防護</span></strong>：防止透過輸入欄位攻擊資料庫</li>
+<li><strong><span style="color:#aed581;">密碼破解防護</span></strong>：採用強密碼政策</li>
+</ul>
+<h2 id="身份驗證概念"><a href="#身份驗證概念" class="headerlink" title="身份驗證概念"></a>身份驗證概念</h2><ul>
+<li><strong><span style="color:#46A3FF;">識別(identification)</span></strong>：提供使用者名稱</li>
+<li><strong><span style="color:#46A3FF;">認證(authentication)</span></strong>：驗證身份，如密碼、PIN碼</li>
+<li><strong><span style="color:#46A3FF;">授權(authorization)</span></strong>：賦予適當權限</li>
+</ul>
+<h2 id="密碼安全管理"><a href="#密碼安全管理" class="headerlink" title="密碼安全管理"></a>密碼安全管理</h2><ul>
+<li><span style="color:#aed581;">強密碼</span>應為8-12個字元，包含大小寫字母、數字和特殊符號</li>
+<li>避免使用<span style="color:#f46363ff;">常見密碼</span>如123456、password等</li>
+<li>考慮使用<span style="color:#aed581;">一次性密碼(OTP)</span>增加安全性</li>
+<li>使用<span style="color:#aed581;">密碼管理工具</span>如Dashlane、LastPass或KeePass</li>
+</ul>
+<h2 id="系統安全管理"><a href="#系統安全管理" class="headerlink" title="系統安全管理"></a>系統安全管理</h2><ul>
+<li><span style="color:#ffd54f;">定期更新</span>作業系統和應用程式</li>
+<li>及時修補已知的<span style="color:#f46363ff;">安全漏洞</span></li>
+<li>避免使用<span style="color:#f46363ff;">admin、root、password</span>等預設帳號密碼</li>
+</ul>
+<h2 id="網路類型與安全"><a href="#網路類型與安全" class="headerlink" title="網路類型與安全"></a>網路類型與安全</h2><ul>
+<li><strong><span style="color:#ba68c8;">區域網路(LAN)</span></strong>：覆蓋局部區域的網路</li>
+<li><strong><span style="color:#ba68c8;">都會區域網路(MAN)</span></strong>：覆蓋城市範圍的網路</li>
+<li><strong><span style="color:#ba68c8;">廣域網路(WAN)</span></strong>：跨地區的大型網路</li>
+<li><strong><span style="color:#FF60AF;">無線個人網路(WPAN)</span></strong>：如藍牙、ZigBee</li>
+<li><strong><span style="color:#FF60AF;">無線區域網路(WLAN)</span></strong>：如Wi-Fi</li>
+<li><strong><span style="color:#FF60AF;">無線都會區網路</span></strong>：如WiMAX</li>
+<li><strong><span style="color:#FF60AF;">行動通訊網路</span></strong>：如GSM全球行動通訊系統</li>
+</ul>
+<h2 id="防火牆"><a href="#防火牆" class="headerlink" title="防火牆"></a>防火牆</h2><ul>
+<li><strong><span style="color:#aed581;">限制</span></strong>：病毒、攻擊、監控</li>
+<li><strong><span style="color:#ba68c8;">位置</span></strong>：控制台 &gt; 系統及安全性（英文：System and security）&gt;Windows defender 防火牆</li>
+</ul>
+<h2 id="無線網路安全威脅"><a href="#無線網路安全威脅" class="headerlink" title="無線網路安全威脅"></a>無線網路安全威脅</h2><ul>
+<li><strong><span style="color:#f46363ff;">竊聽(eavesdropping)</span></strong>：截取無線通訊</li>
+<li><strong><span style="color:#f46363ff;">冒充(spoofing)</span></strong>：偽裝身份</li>
+<li><strong><span style="color:#f46363ff;">中間人攻擊(Middle Attack)</span></strong>：攔截並可能更改通訊內容</li>
+<li><strong><span style="color:#f46363ff;">阻斷服務(DoS)</span></strong>：使網路服務不可用</li>
+</ul>
+<h2 id="無線網路安全措施"><a href="#無線網路安全措施" class="headerlink" title="無線網路安全措施"></a>無線網路安全措施</h2><ul>
+<li><strong><span style="color:#ffd54f;">WEP加密</span></strong>：早期加密標準，安全性較低</li>
+<li><strong><span style="color:#aed581;">WPA&#x2F;WPA2加密</span></strong>：改進的無線加密協議</li>
+<li><strong><span style="color:#aed581;">MAC位址過濾</span></strong>：限制連線裝置</li>
+<li><strong><span style="color:#aed581;">隱藏SSID</span></strong>：不廣播網路名稱</li>
+</ul>
+<h2 id="瀏覽器安全"><a href="#瀏覽器安全" class="headerlink" title="瀏覽器安全"></a>瀏覽器安全</h2><ul>
+<li>了解瀏覽器組件：<span style="color:#ba68c8;">傳輸協議(HTTP, SSL)、web伺服器(IIS, Apache)</span>等</li>
+<li><span style="color:#aed581;">檢查網站真實性</span>：關注URL、HTTPS連線、憑證</li>
+<li><span style="color:#ffd54f;">謹慎處理Cookies</span>：了解其追蹤功能</li>
+<li><span style="color:#ba68c8;">配置Internet Explorer安全設定</span>：一般、安全、隱私、內容、連線、程式、進階</li>
+</ul>
+<h2 id="識別釣魚網站"><a href="#識別釣魚網站" class="headerlink" title="識別釣魚網站"></a>識別釣魚網站</h2><ul>
+<li><span style="color:#f46363ff;">檢查URL拼寫錯誤</span>(如Amaz0n.net、yhaoo.com)</li>
+<li>使用<span style="color:#aed581;">whois查詢</span>網站註冊資訊</li>
+<li>利用<span style="color:#aed581;">Google安全瀏覽</span>檢查可疑網站</li>
+</ul>
+<h2 id="社群媒體安全"><a href="#社群媒體安全" class="headerlink" title="社群媒體安全"></a>社群媒體安全</h2><ul>
+<li>管理<span style="color:#ba68c8;">Facebook隱私設定</span>：時間軸、位置標記、應用程式和網站連結等</li>
+<li>防範<span style="color:#f46363ff;">網路誘拐(grooming)</span>：兒童受害風險</li>
+<li><span style="color:#aed581;">保護個人資訊</span>，避免過度分享</li>
+</ul>
+<h2 id="社交工程-Social-Engineering"><a href="#社交工程-Social-Engineering" class="headerlink" title="社交工程(Social Engineering)"></a>社交工程(Social Engineering)</h2><ul>
+<li>定義：<span style="color:#f46363ff;">利用人性弱點騙取資訊或進行詐欺</span></li>
+<li><span style="color:#f46363ff;">常見手法</span>：偽裝權威、製造緊急感、建立信任</li>
+<li><span style="color:#aed581;">防範方式</span>：提高警覺、確認請求真實性、不隨意提供敏感資訊</li>
+</ul>
+<h2 id="釣魚攻擊-Phishing"><a href="#釣魚攻擊-Phishing" class="headerlink" title="釣魚攻擊(Phishing)"></a>釣魚攻擊(Phishing)</h2><ul>
+<li>透過<span style="color:#f46363ff;">偽裝成可信實體的電子郵件</span>騙取資訊</li>
+<li><span style="color:#f46363ff;">常見詐騙特徵</span>：假冒電子郵件地址、錯別字、要求緊急行動</li>
+<li><span style="color:#aed581;">防範方式</span>：不點擊可疑連結、不下載未知附件、確認寄件人真實性</li>
+</ul>
+<h2 id="電子郵件安全"><a href="#電子郵件安全" class="headerlink" title="電子郵件安全"></a>電子郵件安全</h2><ul>
+<li>防範<span style="color:#f46363ff;">垃圾郵件(spam mail)</span>：使用垃圾郵件過濾器</li>
+<li>警惕<span style="color:#f46363ff;">來路不明的附件</span>，尤其是可執行檔</li>
+<li>注意某些國家&#x2F;地區常見的<span style="color:#f46363ff;">詐騙信件</span></li>
+<li>小心<span style="color:#f46363ff;">勒索軟體(Ransomware)</span>：如Locky、Petya等</li>
+</ul>
+<h2 id="安全購物與通訊"><a href="#安全購物與通訊" class="headerlink" title="安全購物與通訊"></a>安全購物與通訊</h2><ul>
+<li><span style="color:#aed581;">網路購物安全</span>：只在可信網站購物，使用安全付款方式</li>
+<li>留意<span style="color:#ffd54f;">隱藏成本和詐騙徵兆</span></li>
+<li>注意<span style="color:#ffd54f;">VoIP(網路電話)</span>通訊的安全風險</li>
+</ul>
+<h2 id="行動裝置安全"><a href="#行動裝置安全" class="headerlink" title="行動裝置安全"></a>行動裝置安全</h2><ul>
+<li>了解<span style="color:#ffd54f;">GPS定位</span>的隱私風險</li>
+<li><span style="color:#ffd54f;">謹慎使用公共Wi-Fi網路</span></li>
+<li>利用<span style="color:#aed581;">加密連線</span>保護資料傳輸</li>
+<li>使用<span style="color:#aed581;">VPN</span>增強安全性</li>
+<li><span style="color:#aed581;">定期備份</span>行動裝置資料</li>
+<li>遺失裝置時使用<span style="color:#aed581;">遠端鎖定或擦除功能</span></li>
+</ul>
+<h2 id="資料備份與復原"><a href="#資料備份與復原" class="headerlink" title="資料備份與復原"></a>資料備份與復原</h2><ul>
+<li><span style="color:#aed581;">定期備份重要資料</span>：本地備份、雲端備份</li>
+<li>使用<span style="color:#ba68c8;">Windows內建備份功能</span></li>
+<li><span style="color:#ba68c8;">資料永久刪除</span>：磁碟抹除(Degaussing)或專用軟體</li>
+<li><span style="color:#aed581;">妥善保存備份媒體</span>：CD、DVD等</li>
+</ul>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+
+  
+</article>
+
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer" style="padding: 20px 0;">
+  
+  <div id="footer-info" class="inner" style="text-align:center; width:100%; max-width:900px; margin: 0 auto;">
+    
+    
+    &copy; 2024 - 2025 by 虎头鯨<br>
+    框架 <a href="https://hexo.io/" target="_blank">Hexo</a> | 主題 <a href="https://github.com/saicaca/hexo-theme-vivia" target="_blank">Vivia</a>
+
+    <div id="site-runtime" style="margin-top: 2px; font-size: 15px; color: var(--neut-L50);"></div>
+  </div>
+  <script>
+    // 設定網站啟用日期（請依實際上線日調整）
+    var siteLaunchDate = new Date('2024-11-20T00:00:00');
+    var sessionStart = new Date();
+    function formatSessionRuntime(ms) {
+      var seconds = Math.floor(ms / 1000) % 60;
+      var minutes = Math.floor(ms / 1000 / 60) % 60;
+      var hours = Math.floor(ms / 1000 / 60 / 60) % 24;
+      var days = Math.floor(ms / 1000 / 60 / 60 / 24);
+      return `${days} 天 ${hours} 時 ${minutes} 分 ${seconds} 秒`;
+    }
+    function formatSiteRuntime(from, to) {
+      var years = to.getFullYear() - from.getFullYear();
+      var months = to.getMonth() - from.getMonth();
+      var days = to.getDate() - from.getDate();
+      var hours = to.getHours() - from.getHours();
+      var minutes = to.getMinutes() - from.getMinutes();
+      var seconds = to.getSeconds() - from.getSeconds();
+      if (seconds < 0) { seconds += 60; minutes--; }
+      if (minutes < 0) { minutes += 60; hours--; }
+      if (hours < 0) { hours += 24; days--; }
+      if (days < 0) {
+        var prevMonth = new Date(to.getFullYear(), to.getMonth(), 0);
+        days += prevMonth.getDate();
+        months--;
+      }
+      if (months < 0) { months += 12; years--; }
+      return `${years} 年 ${months} 個月 ${days} 天 ${hours} 時 ${minutes} 分 ${seconds} 秒`;
+    }
+    function updateSiteRuntime() {
+      var now = new Date();
+      var sessionDiff = now - sessionStart;
+      var text = `瀏覽已運行：${formatSessionRuntime(sessionDiff)}\n網站已運行：${formatSiteRuntime(siteLaunchDate, now)}`;
+      document.getElementById('site-runtime').innerText = text;
+    }
+    updateSiteRuntime();
+    setInterval(updateSiteRuntime, 1000);
+  </script>
+</footer>
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>

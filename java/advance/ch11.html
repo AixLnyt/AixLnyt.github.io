@@ -14,21 +14,21 @@
   
 
   
-  <title>第十一章：繼承 | 虎头鯨</title>
+  <title>第十一章：修飾子總整理 | 虎头鯨</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="虎头鲸 - blog">
+  <meta name="description" content="存取修飾子（Access Modifiers）   修飾子 適用範圍 可見範圍說明    public 類別、方法、變數 任何地方都可以用   protected 方法、變數 自己 + 同包 + 子類別可以用   (default) 類別、方法、變數 同一包才可以用（沒寫就是 default）   private 方法、變數 只有自己類別內部可以用    口訣：公保包私 → public →">
 <meta property="og:type" content="website">
-<meta property="og:title" content="第十一章：繼承">
-<meta property="og:url" content="https://aixlnyt.github.io/java/advance/ch11">
+<meta property="og:title" content="第十一章：修飾子總整理">
+<meta property="og:url" content="https://aixlnyt.github.io/Java/Advance/ch11">
 <meta property="og:site_name" content="虎头鯨">
-<meta property="og:description" content="虎头鲸 - blog">
+<meta property="og:description" content="存取修飾子（Access Modifiers）   修飾子 適用範圍 可見範圍說明    public 類別、方法、變數 任何地方都可以用   protected 方法、變數 自己 + 同包 + 子類別可以用   (default) 類別、方法、變數 同一包才可以用（沒寫就是 default）   private 方法、變數 只有自己類別內部可以用    口訣：公保包私 → public →">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2025-06-24T15:49:57.141Z">
-<meta property="article:modified_time" content="2025-06-11T14:17:44.000Z">
+<meta property="article:published_time" content="2025-07-19T08:50:10.750Z">
+<meta property="article:modified_time" content="2025-07-19T08:50:10.750Z">
 <meta property="article:author" content="虎头鲸">
 <meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
 <meta name="twitter:card" content="summary">
@@ -151,9 +151,34 @@
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/">
-                程式語言
-                <div class="category-count">2</div>
+            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
+                硬體
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Markdown/">
+                Markdown
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Java/">
+                Java
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
+                顯示器
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89/">
+                國際認證
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Python/">
+                Python
+                <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
@@ -161,8 +186,8 @@
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/">
-                標記語言
+            <a class="category-link" href="/categories/%E8%BB%9F%E9%AB%94/">
+                軟體
                 <div class="category-count">1</div>
             </a>
         </div>
@@ -175,7 +200,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">標籤</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A1%AC%E9%AB%94/" rel="tag">硬體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%BB%E8%85%A6/" rel="tag">電腦</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/" rel="tag">標記語言</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A1%AC%E9%AB%94/" rel="tag">硬體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/" rel="tag">程式語言</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AD%89%E7%85%A7/" rel="tag">證照</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%BB%9F%E9%AB%94/" rel="tag">軟體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%BB%E8%85%A6/" rel="tag">電腦</a></li></ul>
     </div>
   </div>
 
@@ -187,9 +212,19 @@
       <h3 class="widget-title">彙整</h3>
       
       
+        <a class="archive-link" href="/archives/2025/07 ">
+          七月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
         <a class="archive-link" href="/archives/2025/06 ">
           六月 2025 
-          <div class="archive-count">5 </div>
+          <div class="archive-count">7 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2024/01 ">
+          一月 2024 
+          <div class="archive-count">1 </div>
         </a>
       
     </div>
@@ -203,9 +238,9 @@
       <h3 class="widget-title">最新文章</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/06/07/Python_menu/" title="Python 教學目錄" >
+          <a class="recent-link" href="/2025/07/19/ICDL_menu/" title="ICDL 考科目錄" >
             <div class="recent-link-text">
-              Python 教學目錄
+              ICDL 考科目錄
             </div>
           </a>
         
@@ -215,21 +250,21 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/06/05/GPU_menu/" title="顯示卡介紹" >
+          <a class="recent-link" href="/2025/06/05/GPU_menu/" title="顯示卡目錄" >
             <div class="recent-link-text">
-              顯示卡介紹
+              顯示卡目錄
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/06/05/Hardware_menu/" title="硬體相關目錄" >
+            <div class="recent-link-text">
+              硬體相關目錄
             </div>
           </a>
         
           <a class="recent-link" href="/2025/06/05/Java_menu/" title="Java 教學目錄" >
             <div class="recent-link-text">
               Java 教學目錄
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/06/05/SSD_menu/" title="硬碟與固態硬碟" >
-            <div class="recent-link-text">
-              硬碟與固態硬碟
             </div>
           </a>
         
@@ -256,7 +291,7 @@
   
     
       <h1 class="p-name article-title" itemprop="headline name">
-        第十一章：繼承
+        第十一章：修飾子總整理
       </h1>
     
   
@@ -264,7 +299,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-06-24T15:49:57.141Z" itemprop="datePublished">2025-06-24</time>
+  <time class="dt-published" datetime="2025-07-19T08:50:10.750Z" itemprop="datePublished">2025-07-19</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -275,7 +310,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            0 字 
+            1.8k 字 
           </div>
         </div>
         
@@ -283,7 +318,200 @@
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          
+          <br>
+
+<h2 id="存取修飾子（Access-Modifiers）"><a href="#存取修飾子（Access-Modifiers）" class="headerlink" title="存取修飾子（Access Modifiers）"></a>存取修飾子（Access Modifiers）</h2><table>
+<thead>
+<tr>
+<th>修飾子</th>
+<th>適用範圍</th>
+<th>可見範圍說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public</code></td>
+<td>類別、方法、變數</td>
+<td><strong>任何地方</strong>都可以用</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>方法、變數</td>
+<td><strong>自己 + 同包 + 子類別</strong>可以用</td>
+</tr>
+<tr>
+<td>(default)</td>
+<td>類別、方法、變數</td>
+<td><strong>同一包</strong>才可以用（沒寫就是 default）</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>方法、變數</td>
+<td><strong>只有自己類別內部</strong>可以用</td>
+</tr>
+</tbody></table>
+<ul>
+<li>口訣：<code>公保包私</code> → <code>public</code> → <code>protected</code> → <code>default</code> → <code>private</code>（從開放到封閉）</li>
+</ul>
+<h3 id="補充："><a href="#補充：" class="headerlink" title="補充："></a>補充：</h3><ul>
+<li>default 不是關鍵字，但如果沒寫修飾子就是 default 權限。</li>
+<li>類別只能是 <code>public</code> 或 (default)，不能是 <code>private</code> 或 <code>protected</code>。</li>
+</ul>
+<p><br><br></p>
+<h2 id="非存取修飾子（Non-access-Modifiers）"><a href="#非存取修飾子（Non-access-Modifiers）" class="headerlink" title="非存取修飾子（Non-access Modifiers）"></a>非存取修飾子（Non-access Modifiers）</h2><table>
+<thead>
+<tr>
+<th>修飾子</th>
+<th>可用於</th>
+<th>說明與作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>static</code></td>
+<td>變數、方法</td>
+<td>屬於<strong>類別</strong>本身，不需要建立物件就可以使用</td>
+</tr>
+<tr>
+<td><code>final</code></td>
+<td>類別、方法、變數</td>
+<td>類別：不能被繼承；方法：不能被覆寫；變數：成為常數（值不可改變）</td>
+</tr>
+<tr>
+<td><code>abstract</code></td>
+<td>類別、方法</td>
+<td>抽象類別不可實體化；抽象方法沒有實作內容（需由子類別實作）</td>
+</tr>
+<tr>
+<td><code>synchronized</code></td>
+<td>方法、區塊</td>
+<td>多執行緒存取控制，確保同一時間只有一個執行緒存取（鎖）</td>
+</tr>
+<tr>
+<td><code>volatile</code></td>
+<td>變數</td>
+<td>變數直接從主記憶體讀取，確保多執行緒時資料一致性（同步記憶體）</td>
+</tr>
+<tr>
+<td><code>transient</code></td>
+<td>變數</td>
+<td>在物件序列化時（如寫入檔案），<strong>此變數會被忽略</strong></td>
+</tr>
+<tr>
+<td><code>native</code></td>
+<td>方法</td>
+<td>使用 C&#x2F;C++ 等<strong>原生語言</strong>實作的方法</td>
+</tr>
+<tr>
+<td><code>strictfp</code></td>
+<td>類別、方法</td>
+<td>限制浮點數運算符合 IEEE 754 標準（確保不同平台結果一致）</td>
+</tr>
+</tbody></table>
+<p><br><br></p>
+<h2 id="常見修飾子搭配範例"><a href="#常見修飾子搭配範例" class="headerlink" title="常見修飾子搭配範例"></a>常見修飾子搭配範例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 抽象類別，不能 new，但可以有已實作或抽象方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span>; <span class="comment">// 抽象方法，子類必須實作</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Animal is eating.&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子類別繼承並實作抽象方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">makeSound</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Bark!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="靜態與常數變數示範"><a href="#靜態與常數變數示範" class="headerlink" title="靜態與常數變數示範"></a>靜態與常數變數示範</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MathUtil</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">double</span> <span class="variable">PI</span> <span class="operator">=</span> <span class="number">3.14159</span>; <span class="comment">// 常數</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">doubleNumber</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> x * <span class="number">2</span>; <span class="comment">// 靜態方法可直接用類別名呼叫</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用範例："><a href="#使用範例：" class="headerlink" title="使用範例："></a>使用範例：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(MathUtil.PI); <span class="comment">// 3.14159</span></span><br><span class="line">        System.out.println(MathUtil.doubleNumber(<span class="number">5</span>)); <span class="comment">// 10</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="synchronized-與-volatile-示範（之後學即可）"><a href="#synchronized-與-volatile-示範（之後學即可）" class="headerlink" title="synchronized 與 volatile 示範（之後學即可）"></a>synchronized 與 volatile 示範（之後學即可）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Counter</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">increment</span><span class="params">()</span> &#123;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getCount</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong><code>volatile</code> 確保讀到最新值；<code>synchronized</code> 確保同時只有一個執行緒可以進入方法。</strong></li>
+</ul>
+<p><br><br></p>
+<h2 id="transient-示例（之後學即可）"><a href="#transient-示例（之後學即可）" class="headerlink" title="transient 示例（之後學即可）"></a>transient 示例（之後學即可）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">User</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">transient</span> String password; <span class="comment">// 此欄位不會被序列化</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 建構子與其他方法略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h2 id="修飾子使用限制整理"><a href="#修飾子使用限制整理" class="headerlink" title="修飾子使用限制整理"></a>修飾子使用限制整理</h2><table>
+<thead>
+<tr>
+<th>修飾子</th>
+<th>類別</th>
+<th>方法</th>
+<th>變數</th>
+<th>區塊</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>private</code></td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>protected</code></td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>final</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>abstract</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>synchronized</code></td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>volatile</code></td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>transient</code></td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>native</code></td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>strictfp</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody></table>
+
         
       </div>
 
