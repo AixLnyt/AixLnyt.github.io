@@ -59,27 +59,6 @@
   </entry>
   
   <entry>
-    <title>Java 教學目錄</title>
-    <link href="https://aixlnyt.github.io/2025/06/05/Java_menu/"/>
-    <id>https://aixlnyt.github.io/2025/06/05/Java_menu/</id>
-    <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T01:28:52.326Z</updated>
-    
-    <content type="html"><![CDATA[<p>Java 是一種跨平台的物件導向程式語言，常用於開發桌面應用、網站後端及 Android App。基本語法包括變數、條件判斷、迴圈、方法與類別等，進階可學繼承、多型、例外處理與資料結構。Java 擁有強大的標準庫，如 ArrayList、HashMap、Scanner 等，並支援檔案處理與多執行緒，是入門與進階都很實用的語言。</p><hr><br><h2 id="Java-基礎概念"><a href="#Java-基礎概念" class="headerlink" title="Java 基礎概念:"></a>Java 基礎概念:</h2><h3 id="➤-第一章：電腦程式語言介紹"><a href="#➤-第一章：電腦程式語言介紹" class="headerlink" title="➤ 第一章：電腦程式語言介紹"></a>➤ 第一章：電腦程式語言介紹</h3><p>👉 <a href="/java/basic/ch01.html">點我閱讀</a></p><h3 id="➤-第二章：基本資料型態"><a href="#➤-第二章：基本資料型態" class="headerlink" title="➤ 第二章：基本資料型態"></a>➤ 第二章：基本資料型態</h3><p>👉 <a href="/java/basic/ch02.html">點我閱讀</a></p><h3 id="➤-第三章：基本輸出方法及輸入方法"><a href="#➤-第三章：基本輸出方法及輸入方法" class="headerlink" title="➤ 第三章：基本輸出方法及輸入方法"></a>➤ 第三章：基本輸出方法及輸入方法</h3><p>👉 <a href="/java/basic/ch03.html">點我閱讀</a></p><h3 id="➤-第四章：選擇結構"><a href="#➤-第四章：選擇結構" class="headerlink" title="➤ 第四章：選擇結構"></a>➤ 第四章：選擇結構</h3><p>👉 <a href="/java/basic/ch04.html">點我閱讀</a></p><h3 id="➤-第五章：迴圈結構"><a href="#➤-第五章：迴圈結構" class="headerlink" title="➤ 第五章：迴圈結構"></a>➤ 第五章：迴圈結構</h3><p>👉 <a href="/java/basic/ch05.html">點我閱讀</a></p><h3 id="➤-第六章：內建類別"><a href="#➤-第六章：內建類別" class="headerlink" title="➤ 第六章：內建類別"></a>➤ 第六章：內建類別</h3><p>👉 <a href="/java/basic/ch06.html">點我閱讀</a></p><h3 id="➤-第七章：陣列"><a href="#➤-第七章：陣列" class="headerlink" title="➤ 第七章：陣列"></a>➤ 第七章：陣列</h3><p>👉 <a href="/java/basic/ch07.html">點我閱讀</a></p><p><br><br></p><h2 id="Java-進階概念"><a href="#Java-進階概念" class="headerlink" title="Java 進階概念:"></a>Java 進階概念:</h2><h3 id="➤-第八章：參考資料形態"><a href="#➤-第八章：參考資料形態" class="headerlink" title="➤ 第八章：參考資料形態"></a>➤ 第八章：參考資料形態</h3><p>👉 <a href="/java/advance/ch08.html">點我閱讀</a></p><h3 id="➤-第九章：例外處理"><a href="#➤-第九章：例外處理" class="headerlink" title="➤ 第九章：例外處理"></a>➤ 第九章：例外處理</h3><p>👉 <a href="/java/advance/ch09.html">點我閱讀</a></p><h3 id="➤-第十章：自訂類別與方法"><a href="#➤-第十章：自訂類別與方法" class="headerlink" title="➤ 第十章：自訂類別與方法"></a>➤ 第十章：自訂類別與方法</h3><p>👉 <a href="/java/advance/ch10.html">點我閱讀</a></p><h3 id="➤-第十一章：修飾子"><a href="#➤-第十一章：修飾子" class="headerlink" title="➤ 第十一章：修飾子"></a>➤ 第十一章：修飾子</h3><p>👉 <a href="/java/advance/ch11.html">點我閱讀</a></p><h3 id="➤-第十二章：繼承"><a href="#➤-第十二章：繼承" class="headerlink" title="➤ 第十二章：繼承"></a>➤ 第十二章：繼承</h3><p>👉 <a href="/java/advance/ch12.html">點我閱讀</a></p><h3 id="➤-第十三章：抽象類別和介面"><a href="#➤-第十三章：抽象類別和介面" class="headerlink" title="➤ 第十三章：抽象類別和介面"></a>➤ 第十三章：抽象類別和介面</h3><p>👉 <a href="/java/advance/ch13.html">點我閱讀</a></p><h3 id="➤-第十四章：檔案處理"><a href="#➤-第十四章：檔案處理" class="headerlink" title="➤ 第十四章：檔案處理"></a>➤ 第十四章：檔案處理</h3><p>👉 <a href="/java/advance/ch14.html">點我閱讀</a></p><h3 id="➤-第十五章：套件"><a href="#➤-第十五章：套件" class="headerlink" title="➤ 第十五章：套件"></a>➤ 第十五章：套件</h3><p>👉 <a href="/java/advance/ch15.html">點我閱讀</a></p><h3 id="➤-第十六章：多執行緒"><a href="#➤-第十六章：多執行緒" class="headerlink" title="➤ 第十六章：多執行緒"></a>➤ 第十六章：多執行緒</h3><p>👉 <a href="/java/advance/ch16.html">點我閱讀</a></p><h3 id="➤-第十七章：資料結構"><a href="#➤-第十七章：資料結構" class="headerlink" title="➤ 第十七章：資料結構"></a>➤ 第十七章：資料結構</h3><p>👉 <a href="/java/advance/ch17.html">點我閱讀</a></p><h3 id="➤-第十八章：泛型"><a href="#➤-第十八章：泛型" class="headerlink" title="➤ 第十八章：泛型"></a>➤ 第十八章：泛型</h3><p>👉 <a href="/java/advance/ch18.html">點我閱讀</a></p><h3 id="➤-第十九章：集合"><a href="#➤-第十九章：集合" class="headerlink" title="➤ 第十九章：集合"></a>➤ 第十九章：集合</h3><p>👉 <a href="/java/advance/ch19.html">點我閱讀</a></p><p><br><br></p><h2 id="Java-概念延伸或補充筆記"><a href="#Java-概念延伸或補充筆記" class="headerlink" title="Java 概念延伸或補充筆記:"></a>Java 概念延伸或補充筆記:</h2><h3 id="➤-大小寫字母對應-ASCII"><a href="#➤-大小寫字母對應-ASCII" class="headerlink" title="➤ 大小寫字母對應 ASCII"></a>➤ 大小寫字母對應 ASCII</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-進制轉換教學"><a href="#➤-進制轉換教學" class="headerlink" title="➤ 進制轉換教學"></a>➤ 進制轉換教學</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-多型與變數宣告"><a href="#➤-多型與變數宣告" class="headerlink" title="➤ 多型與變數宣告"></a>➤ 多型與變數宣告</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-建構式特別注意"><a href="#➤-建構式特別注意" class="headerlink" title="➤ 建構式特別注意"></a>➤ 建構式特別注意</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-修飾子總整理"><a href="#➤-修飾子總整理" class="headerlink" title="➤ 修飾子總整理"></a>➤ 修飾子總整理</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-常見-Exception-與-Error"><a href="#➤-常見-Exception-與-Error" class="headerlink" title="➤ 常見 Exception 與 Error"></a>➤ 常見 Exception 與 Error</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-費波那契數列"><a href="#➤-費波那契數列" class="headerlink" title="➤ 費波那契數列"></a>➤ 費波那契數列</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-Character-類"><a href="#➤-Character-類" class="headerlink" title="➤ Character 類"></a>➤ Character 類</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-final-教學"><a href="#➤-final-教學" class="headerlink" title="➤ final 教學"></a>➤ final 教學</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-String-類"><a href="#➤-String-類" class="headerlink" title="➤ String 類"></a>➤ String 類</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><p><br><br></p><h2 id="Java-題目題型"><a href="#Java-題目題型" class="headerlink" title="Java 題目題型:"></a>Java 題目題型:</h2>]]></content>
-    
-    
-    <summary type="html">Java是一種廣泛使用的電腦程式設計語言，擁有跨平台、物件導向、泛型程式設計的特性，廣泛應用於企業級Web應用開發和行動應用開發。</summary>
-    
-    
-    
-    <category term="Java" scheme="https://aixlnyt.github.io/categories/Java/"/>
-    
-    
-    <category term="程式語言" scheme="https://aixlnyt.github.io/tags/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>顯示卡目錄</title>
     <link href="https://aixlnyt.github.io/2025/06/05/GPU_menu/"/>
     <id>https://aixlnyt.github.io/2025/06/05/GPU_menu/</id>
@@ -103,27 +82,48 @@
   </entry>
   
   <entry>
-    <title>硬體相關目錄</title>
-    <link href="https://aixlnyt.github.io/2025/06/05/Hardware_menu/"/>
-    <id>https://aixlnyt.github.io/2025/06/05/Hardware_menu/</id>
+    <title>Java 教學目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/Java_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/Java_menu/</id>
     <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T01:15:53.976Z</updated>
+    <updated>2025-07-21T01:28:52.326Z</updated>
     
-    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。</p><hr><br><h3 id="➤-XXXX"><a href="#➤-XXXX" class="headerlink" title="➤ XXXX"></a>➤ XXXX</h3><p>👉 <a href="/technology/software/XXXX.html">點我閱讀</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Java 是一種跨平台的物件導向程式語言，常用於開發桌面應用、網站後端及 Android App。基本語法包括變數、條件判斷、迴圈、方法與類別等，進階可學繼承、多型、例外處理與資料結構。Java 擁有強大的標準庫，如 ArrayList、HashMap、Scanner 等，並支援檔案處理與多執行緒，是入門與進階都很實用的語言。</p><hr><br><h2 id="Java-基礎概念"><a href="#Java-基礎概念" class="headerlink" title="Java 基礎概念:"></a>Java 基礎概念:</h2><h3 id="➤-第一章：電腦程式語言介紹"><a href="#➤-第一章：電腦程式語言介紹" class="headerlink" title="➤ 第一章：電腦程式語言介紹"></a>➤ 第一章：電腦程式語言介紹</h3><p>👉 <a href="/java/basic/ch01.html">點我閱讀</a></p><h3 id="➤-第二章：基本資料型態"><a href="#➤-第二章：基本資料型態" class="headerlink" title="➤ 第二章：基本資料型態"></a>➤ 第二章：基本資料型態</h3><p>👉 <a href="/java/basic/ch02.html">點我閱讀</a></p><h3 id="➤-第三章：基本輸出方法及輸入方法"><a href="#➤-第三章：基本輸出方法及輸入方法" class="headerlink" title="➤ 第三章：基本輸出方法及輸入方法"></a>➤ 第三章：基本輸出方法及輸入方法</h3><p>👉 <a href="/java/basic/ch03.html">點我閱讀</a></p><h3 id="➤-第四章：選擇結構"><a href="#➤-第四章：選擇結構" class="headerlink" title="➤ 第四章：選擇結構"></a>➤ 第四章：選擇結構</h3><p>👉 <a href="/java/basic/ch04.html">點我閱讀</a></p><h3 id="➤-第五章：迴圈結構"><a href="#➤-第五章：迴圈結構" class="headerlink" title="➤ 第五章：迴圈結構"></a>➤ 第五章：迴圈結構</h3><p>👉 <a href="/java/basic/ch05.html">點我閱讀</a></p><h3 id="➤-第六章：內建類別"><a href="#➤-第六章：內建類別" class="headerlink" title="➤ 第六章：內建類別"></a>➤ 第六章：內建類別</h3><p>👉 <a href="/java/basic/ch06.html">點我閱讀</a></p><h3 id="➤-第七章：陣列"><a href="#➤-第七章：陣列" class="headerlink" title="➤ 第七章：陣列"></a>➤ 第七章：陣列</h3><p>👉 <a href="/java/basic/ch07.html">點我閱讀</a></p><p><br><br></p><h2 id="Java-進階概念"><a href="#Java-進階概念" class="headerlink" title="Java 進階概念:"></a>Java 進階概念:</h2><h3 id="➤-第八章：參考資料形態"><a href="#➤-第八章：參考資料形態" class="headerlink" title="➤ 第八章：參考資料形態"></a>➤ 第八章：參考資料形態</h3><p>👉 <a href="/java/advance/ch08.html">點我閱讀</a></p><h3 id="➤-第九章：例外處理"><a href="#➤-第九章：例外處理" class="headerlink" title="➤ 第九章：例外處理"></a>➤ 第九章：例外處理</h3><p>👉 <a href="/java/advance/ch09.html">點我閱讀</a></p><h3 id="➤-第十章：自訂類別與方法"><a href="#➤-第十章：自訂類別與方法" class="headerlink" title="➤ 第十章：自訂類別與方法"></a>➤ 第十章：自訂類別與方法</h3><p>👉 <a href="/java/advance/ch10.html">點我閱讀</a></p><h3 id="➤-第十一章：修飾子"><a href="#➤-第十一章：修飾子" class="headerlink" title="➤ 第十一章：修飾子"></a>➤ 第十一章：修飾子</h3><p>👉 <a href="/java/advance/ch11.html">點我閱讀</a></p><h3 id="➤-第十二章：繼承"><a href="#➤-第十二章：繼承" class="headerlink" title="➤ 第十二章：繼承"></a>➤ 第十二章：繼承</h3><p>👉 <a href="/java/advance/ch12.html">點我閱讀</a></p><h3 id="➤-第十三章：抽象類別和介面"><a href="#➤-第十三章：抽象類別和介面" class="headerlink" title="➤ 第十三章：抽象類別和介面"></a>➤ 第十三章：抽象類別和介面</h3><p>👉 <a href="/java/advance/ch13.html">點我閱讀</a></p><h3 id="➤-第十四章：檔案處理"><a href="#➤-第十四章：檔案處理" class="headerlink" title="➤ 第十四章：檔案處理"></a>➤ 第十四章：檔案處理</h3><p>👉 <a href="/java/advance/ch14.html">點我閱讀</a></p><h3 id="➤-第十五章：套件"><a href="#➤-第十五章：套件" class="headerlink" title="➤ 第十五章：套件"></a>➤ 第十五章：套件</h3><p>👉 <a href="/java/advance/ch15.html">點我閱讀</a></p><h3 id="➤-第十六章：多執行緒"><a href="#➤-第十六章：多執行緒" class="headerlink" title="➤ 第十六章：多執行緒"></a>➤ 第十六章：多執行緒</h3><p>👉 <a href="/java/advance/ch16.html">點我閱讀</a></p><h3 id="➤-第十七章：資料結構"><a href="#➤-第十七章：資料結構" class="headerlink" title="➤ 第十七章：資料結構"></a>➤ 第十七章：資料結構</h3><p>👉 <a href="/java/advance/ch17.html">點我閱讀</a></p><h3 id="➤-第十八章：泛型"><a href="#➤-第十八章：泛型" class="headerlink" title="➤ 第十八章：泛型"></a>➤ 第十八章：泛型</h3><p>👉 <a href="/java/advance/ch18.html">點我閱讀</a></p><h3 id="➤-第十九章：集合"><a href="#➤-第十九章：集合" class="headerlink" title="➤ 第十九章：集合"></a>➤ 第十九章：集合</h3><p>👉 <a href="/java/advance/ch19.html">點我閱讀</a></p><p><br><br></p><h2 id="Java-概念延伸或補充筆記"><a href="#Java-概念延伸或補充筆記" class="headerlink" title="Java 概念延伸或補充筆記:"></a>Java 概念延伸或補充筆記:</h2><h3 id="➤-大小寫字母對應-ASCII"><a href="#➤-大小寫字母對應-ASCII" class="headerlink" title="➤ 大小寫字母對應 ASCII"></a>➤ 大小寫字母對應 ASCII</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-進制轉換教學"><a href="#➤-進制轉換教學" class="headerlink" title="➤ 進制轉換教學"></a>➤ 進制轉換教學</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-多型與變數宣告"><a href="#➤-多型與變數宣告" class="headerlink" title="➤ 多型與變數宣告"></a>➤ 多型與變數宣告</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-建構式特別注意"><a href="#➤-建構式特別注意" class="headerlink" title="➤ 建構式特別注意"></a>➤ 建構式特別注意</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-修飾子總整理"><a href="#➤-修飾子總整理" class="headerlink" title="➤ 修飾子總整理"></a>➤ 修飾子總整理</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-常見-Exception-與-Error"><a href="#➤-常見-Exception-與-Error" class="headerlink" title="➤ 常見 Exception 與 Error"></a>➤ 常見 Exception 與 Error</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-費波那契數列"><a href="#➤-費波那契數列" class="headerlink" title="➤ 費波那契數列"></a>➤ 費波那契數列</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-Character-類"><a href="#➤-Character-類" class="headerlink" title="➤ Character 類"></a>➤ Character 類</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-final-教學"><a href="#➤-final-教學" class="headerlink" title="➤ final 教學"></a>➤ final 教學</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-String-類"><a href="#➤-String-類" class="headerlink" title="➤ String 類"></a>➤ String 類</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><p><br><br></p><h2 id="Java-題目題型"><a href="#Java-題目題型" class="headerlink" title="Java 題目題型:"></a>Java 題目題型:</h2>]]></content>
+    
+    
+    <summary type="html">Java是一種廣泛使用的電腦程式設計語言，擁有跨平台、物件導向、泛型程式設計的特性，廣泛應用於企業級Web應用開發和行動應用開發。</summary>
+    
+    
+    
+    <category term="Java" scheme="https://aixlnyt.github.io/categories/Java/"/>
+    
+    
+    <category term="程式語言" scheme="https://aixlnyt.github.io/tags/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>硬碟與固態硬碟</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/SSD_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/SSD_menu/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-07-21T03:48:32.774Z</updated>
+    
+    <content type="html"><![CDATA[<p>硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。</p><hr><br><h3 id="➤-SSD-系統碟推薦"><a href="#➤-SSD-系統碟推薦" class="headerlink" title="➤ SSD 系統碟推薦"></a>➤ SSD 系統碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/system.html">點我閱讀</a></p><h3 id="➤-SSD-遊戲碟推薦"><a href="#➤-SSD-遊戲碟推薦" class="headerlink" title="➤ SSD 遊戲碟推薦"></a>➤ SSD 遊戲碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/game.html">點我閱讀</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 
-&lt;h3 id=&quot;➤-X</summary>
+&lt;h3</summary>
       
     
     
     
-    <category term="硬體" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E9%AB%94/"/>
+    <category term="硬碟" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E7%A2%9F/"/>
     
     
     <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
@@ -156,27 +156,27 @@
   </entry>
   
   <entry>
-    <title>硬碟與固態硬碟</title>
-    <link href="https://aixlnyt.github.io/2025/06/05/SSD_menu/"/>
-    <id>https://aixlnyt.github.io/2025/06/05/SSD_menu/</id>
+    <title>硬體相關目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/Hardware_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/Hardware_menu/</id>
     <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T03:48:32.774Z</updated>
+    <updated>2025-07-21T01:15:53.976Z</updated>
     
-    <content type="html"><![CDATA[<p>硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。</p><hr><br><h3 id="➤-SSD-系統碟推薦"><a href="#➤-SSD-系統碟推薦" class="headerlink" title="➤ SSD 系統碟推薦"></a>➤ SSD 系統碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/system.html">點我閱讀</a></p><h3 id="➤-SSD-遊戲碟推薦"><a href="#➤-SSD-遊戲碟推薦" class="headerlink" title="➤ SSD 遊戲碟推薦"></a>➤ SSD 遊戲碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/game.html">點我閱讀</a></p>]]></content>
+    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。</p><hr><br><h3 id="➤-XXXX"><a href="#➤-XXXX" class="headerlink" title="➤ XXXX"></a>➤ XXXX</h3><p>👉 <a href="/technology/software/XXXX.html">點我閱讀</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 
-&lt;h3</summary>
+&lt;h3 id=&quot;➤-X</summary>
       
     
     
     
-    <category term="硬碟" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E7%A2%9F/"/>
+    <category term="硬體" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E9%AB%94/"/>
     
     
     <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
