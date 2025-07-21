@@ -80,29 +80,6 @@
   </entry>
   
   <entry>
-    <title>顯示卡目錄</title>
-    <link href="https://aixlnyt.github.io/2025/06/05/GPU_menu/"/>
-    <id>https://aixlnyt.github.io/2025/06/05/GPU_menu/</id>
-    <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T01:14:37.918Z</updated>
-    
-    <content type="html"><![CDATA[<p>想知道該選哪張顯示卡？這篇文章幫你快速搞懂 NVIDIA 和 AMD 的產品系列、差異和選購建議！</p><hr><br><h2 id="NVIDIA-系列"><a href="#NVIDIA-系列" class="headerlink" title="NVIDIA 系列"></a>NVIDIA 系列</h2><h3 id="➤-GeForce-900-系列"><a href="#➤-GeForce-900-系列" class="headerlink" title="➤ GeForce 900 系列"></a>➤ GeForce 900 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/900_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-10-系列"><a href="#➤-GeForce-10-系列" class="headerlink" title="➤ GeForce 10 系列"></a>➤ GeForce 10 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/10_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-16-系列"><a href="#➤-GeForce-16-系列" class="headerlink" title="➤ GeForce 16 系列"></a>➤ GeForce 16 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/16_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-20-系列"><a href="#➤-GeForce-20-系列" class="headerlink" title="➤ GeForce 20 系列"></a>➤ GeForce 20 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/20_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-30-系列"><a href="#➤-GeForce-30-系列" class="headerlink" title="➤ GeForce 30 系列"></a>➤ GeForce 30 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/30_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-40-系列"><a href="#➤-GeForce-40-系列" class="headerlink" title="➤ GeForce 40 系列"></a>➤ GeForce 40 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/40_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-50-系列"><a href="#➤-GeForce-50-系列" class="headerlink" title="➤ GeForce 50 系列"></a>➤ GeForce 50 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/50_Series.html">點我閱讀</a></p><h3 id="➤-VRAM-介紹"><a href="#➤-VRAM-介紹" class="headerlink" title="➤ VRAM 介紹"></a>➤ VRAM 介紹</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/VRAM.html">點我閱讀</a></p><p><br><br></p><h2 id="AMD-系列"><a href="#AMD-系列" class="headerlink" title="AMD 系列"></a>AMD 系列</h2><h3 id="➤-Radeon-RX-400-系列"><a href="#➤-Radeon-RX-400-系列" class="headerlink" title="➤ Radeon RX 400 系列"></a>➤ Radeon RX 400 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx400.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-500-系列"><a href="#➤-Radeon-RX-500-系列" class="headerlink" title="➤ Radeon RX 500 系列"></a>➤ Radeon RX 500 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx500.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-Vega-系列"><a href="#➤-Radeon-RX-Vega-系列" class="headerlink" title="➤ Radeon RX Vega 系列"></a>➤ Radeon RX Vega 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/vega.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-5000-系列"><a href="#➤-Radeon-RX-5000-系列" class="headerlink" title="➤ Radeon RX 5000 系列"></a>➤ Radeon RX 5000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx5000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-6000-系列"><a href="#➤-Radeon-RX-6000-系列" class="headerlink" title="➤ Radeon RX 6000 系列"></a>➤ Radeon RX 6000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx6000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-7000-系列"><a href="#➤-Radeon-RX-7000-系列" class="headerlink" title="➤ Radeon RX 7000 系列"></a>➤ Radeon RX 7000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx7000.html">點我閱讀</a></p>]]></content>
-    
-    
-    <summary type="html">顯示卡是電腦中負責處理圖形和影像的硬體設備，主要分為集成顯示卡和獨立顯示卡。集成顯示卡通常與主機板集成，性能較低但成本低廉；獨立顯示卡則擁有更強的性能和更多的記憶體，適合遊戲和專業圖形處理。</summary>
-    
-    
-    
-    <category term="顯卡" scheme="https://aixlnyt.github.io/categories/%E9%A1%AF%E5%8D%A1/"/>
-    
-    
-    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
-    
-    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
-    
-  </entry>
-  
-  <entry>
     <title>顯示器目錄</title>
     <link href="https://aixlnyt.github.io/2025/06/05/Monitor_menu/"/>
     <id>https://aixlnyt.github.io/2025/06/05/Monitor_menu/</id>
@@ -117,6 +94,29 @@
     
     
     <category term="顯示器" scheme="https://aixlnyt.github.io/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/"/>
+    
+    
+    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>顯示卡目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/GPU_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/GPU_menu/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-07-21T01:14:37.918Z</updated>
+    
+    <content type="html"><![CDATA[<p>想知道該選哪張顯示卡？這篇文章幫你快速搞懂 NVIDIA 和 AMD 的產品系列、差異和選購建議！</p><hr><br><h2 id="NVIDIA-系列"><a href="#NVIDIA-系列" class="headerlink" title="NVIDIA 系列"></a>NVIDIA 系列</h2><h3 id="➤-GeForce-900-系列"><a href="#➤-GeForce-900-系列" class="headerlink" title="➤ GeForce 900 系列"></a>➤ GeForce 900 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/900_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-10-系列"><a href="#➤-GeForce-10-系列" class="headerlink" title="➤ GeForce 10 系列"></a>➤ GeForce 10 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/10_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-16-系列"><a href="#➤-GeForce-16-系列" class="headerlink" title="➤ GeForce 16 系列"></a>➤ GeForce 16 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/16_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-20-系列"><a href="#➤-GeForce-20-系列" class="headerlink" title="➤ GeForce 20 系列"></a>➤ GeForce 20 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/20_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-30-系列"><a href="#➤-GeForce-30-系列" class="headerlink" title="➤ GeForce 30 系列"></a>➤ GeForce 30 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/30_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-40-系列"><a href="#➤-GeForce-40-系列" class="headerlink" title="➤ GeForce 40 系列"></a>➤ GeForce 40 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/40_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-50-系列"><a href="#➤-GeForce-50-系列" class="headerlink" title="➤ GeForce 50 系列"></a>➤ GeForce 50 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/50_Series.html">點我閱讀</a></p><h3 id="➤-VRAM-介紹"><a href="#➤-VRAM-介紹" class="headerlink" title="➤ VRAM 介紹"></a>➤ VRAM 介紹</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/VRAM.html">點我閱讀</a></p><p><br><br></p><h2 id="AMD-系列"><a href="#AMD-系列" class="headerlink" title="AMD 系列"></a>AMD 系列</h2><h3 id="➤-Radeon-RX-400-系列"><a href="#➤-Radeon-RX-400-系列" class="headerlink" title="➤ Radeon RX 400 系列"></a>➤ Radeon RX 400 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx400.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-500-系列"><a href="#➤-Radeon-RX-500-系列" class="headerlink" title="➤ Radeon RX 500 系列"></a>➤ Radeon RX 500 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx500.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-Vega-系列"><a href="#➤-Radeon-RX-Vega-系列" class="headerlink" title="➤ Radeon RX Vega 系列"></a>➤ Radeon RX Vega 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/vega.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-5000-系列"><a href="#➤-Radeon-RX-5000-系列" class="headerlink" title="➤ Radeon RX 5000 系列"></a>➤ Radeon RX 5000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx5000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-6000-系列"><a href="#➤-Radeon-RX-6000-系列" class="headerlink" title="➤ Radeon RX 6000 系列"></a>➤ Radeon RX 6000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx6000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-7000-系列"><a href="#➤-Radeon-RX-7000-系列" class="headerlink" title="➤ Radeon RX 7000 系列"></a>➤ Radeon RX 7000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx7000.html">點我閱讀</a></p>]]></content>
+    
+    
+    <summary type="html">顯示卡是電腦中負責處理圖形和影像的硬體設備，主要分為集成顯示卡和獨立顯示卡。集成顯示卡通常與主機板集成，性能較低但成本低廉；獨立顯示卡則擁有更強的性能和更多的記憶體，適合遊戲和專業圖形處理。</summary>
+    
+    
+    
+    <category term="顯卡" scheme="https://aixlnyt.github.io/categories/%E9%A1%AF%E5%8D%A1/"/>
     
     
     <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
@@ -190,9 +190,9 @@
     <link href="https://aixlnyt.github.io/2025/06/05/Software_meun/"/>
     <id>https://aixlnyt.github.io/2025/06/05/Software_meun/</id>
     <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T03:48:04.334Z</updated>
+    <updated>2025-07-21T04:02:26.627Z</updated>
     
-    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與軟體相關的資源，涵蓋程式、應用軟體、開發工具及各類輔助工具，內容主要基於我對各種軟體相關知識的整理與認知。目的是方便使用者快速尋找、下載、管理及學習所需的軟體產品與技術，提升工作與學習效率。</p><hr><br><h2 id="➤-FFmpeg-安裝教學"><a href="#➤-FFmpeg-安裝教學" class="headerlink" title="➤ FFmpeg 安裝教學"></a>➤ FFmpeg 安裝教學</h2><div style="display: flex; align-items: center; margin-bottom: 20px; background: rgba(30, 41, 59, 0.8); border-radius: 20px; padding: 30px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); color: #e2e8f0;"> <div style="flex: 1;">   <p style="color: #cbd5e1;">FFmpeg 是一套免費又開放原始碼的軟體，它主要用來處理影音檔案。你可以用它來錄影、轉換影片格式、剪輯影片，甚至可以用來直播或串流影片。它功能很強大但操作起來也比較偏命令列，適合有點基礎想進階學習影音處理的學生。</p>   <p>👉 <a href="/technology/software/ffmpeg.html" style="color: #60a5fa; text-decoration: none; font-weight: 500;">點我閱讀</a></p> </div> <img src="/img/FFmpeg/FFmpeg.png" alt="FFmpeg" style="width: 200px; margin-left: 20px; border-radius: 12px;"></div><br>]]></content>
+    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與軟體相關的資源，涵蓋程式、應用軟體、開發工具及各類輔助工具，內容主要基於我對各種軟體相關知識的整理與認知。目的是方便使用者快速尋找、下載、管理及學習所需的軟體產品與技術，提升工作與學習效率。</p><hr><br><h2 id="➤-FFmpeg-安裝教學"><a href="#➤-FFmpeg-安裝教學" class="headerlink" title="➤ FFmpeg 安裝教學"></a>➤ FFmpeg 安裝教學</h2><div style="display: flex; align-items: center; margin-bottom: 20px; background: rgba(30, 41, 59, 0.8); border-radius: 20px; padding: 30px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px); color: #e2e8f0;"> <div style="flex: 1;">   <p style="color: #cbd5e1;">FFmpeg 是一套免費又開放原始碼的軟體，它主要用來處理影音檔案。你可以用它來錄影、轉換影片格式、剪輯影片，甚至可以用來直播或串流影片。它功能很強大但操作起來也比較偏命令列，適合有點基礎想進階學習影音處理的學生。</p>   <p>👉 <a href="/technology/software/FFMPEG.html" style="color: #60a5fa; text-decoration: none; font-weight: 500;">點我閱讀</a></p> </div> <img src="/img/FFmpeg/FFmpeg.png" alt="FFmpeg" style="width: 200px; margin-left: 20px; border-radius: 12px;"></div><br>]]></content>
     
     
       
