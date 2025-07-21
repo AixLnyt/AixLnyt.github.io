@@ -42,9 +42,9 @@
     <link href="https://aixlnyt.github.io/2025/06/06/Markdown_menu/"/>
     <id>https://aixlnyt.github.io/2025/06/06/Markdown_menu/</id>
     <published>2025-06-05T16:00:00.000Z</published>
-    <updated>2025-07-21T01:18:34.796Z</updated>
+    <updated>2025-07-21T02:12:36.230Z</updated>
     
-    <content type="html"><![CDATA[<p>Markdown 是一種輕量級標記式語言，由約翰·格魯伯創建，它使用純文字格式編寫文件，並可轉換成 HTML 等格式。Markdown 的設計使其易於閱讀和編寫，且常用於網路內容創作。Markdown 的參考式連結功能讓文件更像瀏覽器最終的結果，使你能夠將標記相關的資訊移至段落文字之外，增進文章的可讀性。</p><hr><br><h3 id="➤-Markdown-顏色教學"><a href="#➤-Markdown-顏色教學" class="headerlink" title="➤ Markdown 顏色教學"></a>➤ Markdown 顏色教學</h3><p>👉 <a href="/markdown/Color.html">點我閱讀</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Markdown 是一種輕量級標記式語言，由約翰·格魯伯創建，它使用純文字格式編寫文件，並可轉換成 HTML 等格式。Markdown 的設計使其易於閱讀和編寫，且常用於網路內容創作。Markdown 的參考式連結功能讓文件更像瀏覽器最終的結果，使你能夠將標記相關的資訊移至段落文字之外，增進文章的可讀性。</p><hr><br><h3 id="➤-Markdown-顏色教學"><a href="#➤-Markdown-顏色教學" class="headerlink" title="➤ Markdown 顏色教學"></a>➤ Markdown 顏色教學</h3><p>👉 <a href="/markdown/color.html">點我閱讀</a></p>]]></content>
     
     
     <summary type="html">Markdown是一種輕量級標記式語言，允許使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML文件。這種語言吸收了很多在電子郵件中已有的純文字標記的特性。</summary>
@@ -73,36 +73,6 @@
     
     
     <category term="顯卡" scheme="https://aixlnyt.github.io/categories/%E9%A1%AF%E5%8D%A1/"/>
-    
-    
-    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
-    
-    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>硬體相關目錄</title>
-    <link href="https://aixlnyt.github.io/2025/06/05/Hardware_menu/"/>
-    <id>https://aixlnyt.github.io/2025/06/05/Hardware_menu/</id>
-    <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T01:15:53.976Z</updated>
-    
-    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。</p><hr><br><h3 id="➤-XXXX"><a href="#➤-XXXX" class="headerlink" title="➤ XXXX"></a>➤ XXXX</h3><p>👉 <a href="/technology/software/XXXX.html">點我閱讀</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。&lt;/p&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;h3 id=&quot;➤-X</summary>
-      
-    
-    
-    
-    <category term="硬體" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E9%AB%94/"/>
     
     
     <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
@@ -156,13 +126,43 @@
   </entry>
   
   <entry>
+    <title>硬體相關目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/Hardware_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/Hardware_menu/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-07-21T01:15:53.976Z</updated>
+    
+    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。</p><hr><br><h3 id="➤-XXXX"><a href="#➤-XXXX" class="headerlink" title="➤ XXXX"></a>➤ XXXX</h3><p>👉 <a href="/technology/software/XXXX.html">點我閱讀</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h3 id=&quot;➤-X</summary>
+      
+    
+    
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E9%AB%94/"/>
+    
+    
+    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>硬碟與固態硬碟</title>
     <link href="https://aixlnyt.github.io/2025/06/05/SSD_menu/"/>
     <id>https://aixlnyt.github.io/2025/06/05/SSD_menu/</id>
     <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T01:19:55.400Z</updated>
+    <updated>2025-07-21T02:12:27.249Z</updated>
     
-    <content type="html"><![CDATA[<p>硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。</p><hr><br><h3 id="➤-SSD-系統碟推薦"><a href="#➤-SSD-系統碟推薦" class="headerlink" title="➤ SSD 系統碟推薦"></a>➤ SSD 系統碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/SSD_system.html">點我閱讀</a></p><h3 id="➤-SSD-遊戲碟推薦"><a href="#➤-SSD-遊戲碟推薦" class="headerlink" title="➤ SSD 遊戲碟推薦"></a>➤ SSD 遊戲碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/SSD_game.html">點我閱讀</a></p>]]></content>
+    <content type="html"><![CDATA[<p>硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。</p><hr><br><h3 id="➤-SSD-系統碟推薦"><a href="#➤-SSD-系統碟推薦" class="headerlink" title="➤ SSD 系統碟推薦"></a>➤ SSD 系統碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/ssd_system.html">點我閱讀</a></p><h3 id="➤-SSD-遊戲碟推薦"><a href="#➤-SSD-遊戲碟推薦" class="headerlink" title="➤ SSD 遊戲碟推薦"></a>➤ SSD 遊戲碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/ssd_game.html">點我閱讀</a></p>]]></content>
     
     
       
