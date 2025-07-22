@@ -59,20 +59,27 @@
   </entry>
   
   <entry>
-    <title>顯示卡目錄</title>
-    <link href="https://aixlnyt.github.io/2025/06/05/GPU_menu/"/>
-    <id>https://aixlnyt.github.io/2025/06/05/GPU_menu/</id>
+    <title>硬體相關目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/Hardware_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/Hardware_menu/</id>
     <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T01:14:37.918Z</updated>
+    <updated>2025-07-21T01:15:53.976Z</updated>
     
-    <content type="html"><![CDATA[<p>想知道該選哪張顯示卡？這篇文章幫你快速搞懂 NVIDIA 和 AMD 的產品系列、差異和選購建議！</p><hr><br><h2 id="NVIDIA-系列"><a href="#NVIDIA-系列" class="headerlink" title="NVIDIA 系列"></a>NVIDIA 系列</h2><h3 id="➤-GeForce-900-系列"><a href="#➤-GeForce-900-系列" class="headerlink" title="➤ GeForce 900 系列"></a>➤ GeForce 900 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/900_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-10-系列"><a href="#➤-GeForce-10-系列" class="headerlink" title="➤ GeForce 10 系列"></a>➤ GeForce 10 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/10_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-16-系列"><a href="#➤-GeForce-16-系列" class="headerlink" title="➤ GeForce 16 系列"></a>➤ GeForce 16 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/16_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-20-系列"><a href="#➤-GeForce-20-系列" class="headerlink" title="➤ GeForce 20 系列"></a>➤ GeForce 20 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/20_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-30-系列"><a href="#➤-GeForce-30-系列" class="headerlink" title="➤ GeForce 30 系列"></a>➤ GeForce 30 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/30_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-40-系列"><a href="#➤-GeForce-40-系列" class="headerlink" title="➤ GeForce 40 系列"></a>➤ GeForce 40 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/40_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-50-系列"><a href="#➤-GeForce-50-系列" class="headerlink" title="➤ GeForce 50 系列"></a>➤ GeForce 50 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/50_Series.html">點我閱讀</a></p><h3 id="➤-VRAM-介紹"><a href="#➤-VRAM-介紹" class="headerlink" title="➤ VRAM 介紹"></a>➤ VRAM 介紹</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/VRAM.html">點我閱讀</a></p><p><br><br></p><h2 id="AMD-系列"><a href="#AMD-系列" class="headerlink" title="AMD 系列"></a>AMD 系列</h2><h3 id="➤-Radeon-RX-400-系列"><a href="#➤-Radeon-RX-400-系列" class="headerlink" title="➤ Radeon RX 400 系列"></a>➤ Radeon RX 400 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx400.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-500-系列"><a href="#➤-Radeon-RX-500-系列" class="headerlink" title="➤ Radeon RX 500 系列"></a>➤ Radeon RX 500 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx500.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-Vega-系列"><a href="#➤-Radeon-RX-Vega-系列" class="headerlink" title="➤ Radeon RX Vega 系列"></a>➤ Radeon RX Vega 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/vega.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-5000-系列"><a href="#➤-Radeon-RX-5000-系列" class="headerlink" title="➤ Radeon RX 5000 系列"></a>➤ Radeon RX 5000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx5000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-6000-系列"><a href="#➤-Radeon-RX-6000-系列" class="headerlink" title="➤ Radeon RX 6000 系列"></a>➤ Radeon RX 6000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx6000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-7000-系列"><a href="#➤-Radeon-RX-7000-系列" class="headerlink" title="➤ Radeon RX 7000 系列"></a>➤ Radeon RX 7000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx7000.html">點我閱讀</a></p>]]></content>
-    
-    
-    <summary type="html">顯示卡是電腦中負責處理圖形和影像的硬體設備，主要分為集成顯示卡和獨立顯示卡。集成顯示卡通常與主機板集成，性能較低但成本低廉；獨立顯示卡則擁有更強的性能和更多的記憶體，適合遊戲和專業圖形處理。</summary>
+    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。</p><hr><br><h3 id="➤-XXXX"><a href="#➤-XXXX" class="headerlink" title="➤ XXXX"></a>➤ XXXX</h3><p>👉 <a href="/technology/software/XXXX.html">點我閱讀</a></p>]]></content>
     
     
+      
+      
+    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h3 id=&quot;➤-X</summary>
+      
     
-    <category term="顯卡" scheme="https://aixlnyt.github.io/categories/%E9%A1%AF%E5%8D%A1/"/>
+    
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E9%AB%94/"/>
     
     
     <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
@@ -103,27 +110,20 @@
   </entry>
   
   <entry>
-    <title>硬碟與固態硬碟</title>
-    <link href="https://aixlnyt.github.io/2025/06/05/SSD_menu/"/>
-    <id>https://aixlnyt.github.io/2025/06/05/SSD_menu/</id>
+    <title>顯示卡目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/GPU_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/GPU_menu/</id>
     <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T03:48:32.774Z</updated>
+    <updated>2025-07-21T01:14:37.918Z</updated>
     
-    <content type="html"><![CDATA[<p>硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。</p><hr><br><h3 id="➤-SSD-系統碟推薦"><a href="#➤-SSD-系統碟推薦" class="headerlink" title="➤ SSD 系統碟推薦"></a>➤ SSD 系統碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/system.html">點我閱讀</a></p><h3 id="➤-SSD-遊戲碟推薦"><a href="#➤-SSD-遊戲碟推薦" class="headerlink" title="➤ SSD 遊戲碟推薦"></a>➤ SSD 遊戲碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/game.html">點我閱讀</a></p>]]></content>
+    <content type="html"><![CDATA[<p>想知道該選哪張顯示卡？這篇文章幫你快速搞懂 NVIDIA 和 AMD 的產品系列、差異和選購建議！</p><hr><br><h2 id="NVIDIA-系列"><a href="#NVIDIA-系列" class="headerlink" title="NVIDIA 系列"></a>NVIDIA 系列</h2><h3 id="➤-GeForce-900-系列"><a href="#➤-GeForce-900-系列" class="headerlink" title="➤ GeForce 900 系列"></a>➤ GeForce 900 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/900_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-10-系列"><a href="#➤-GeForce-10-系列" class="headerlink" title="➤ GeForce 10 系列"></a>➤ GeForce 10 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/10_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-16-系列"><a href="#➤-GeForce-16-系列" class="headerlink" title="➤ GeForce 16 系列"></a>➤ GeForce 16 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/16_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-20-系列"><a href="#➤-GeForce-20-系列" class="headerlink" title="➤ GeForce 20 系列"></a>➤ GeForce 20 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/20_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-30-系列"><a href="#➤-GeForce-30-系列" class="headerlink" title="➤ GeForce 30 系列"></a>➤ GeForce 30 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/30_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-40-系列"><a href="#➤-GeForce-40-系列" class="headerlink" title="➤ GeForce 40 系列"></a>➤ GeForce 40 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/40_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-50-系列"><a href="#➤-GeForce-50-系列" class="headerlink" title="➤ GeForce 50 系列"></a>➤ GeForce 50 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/50_Series.html">點我閱讀</a></p><h3 id="➤-VRAM-介紹"><a href="#➤-VRAM-介紹" class="headerlink" title="➤ VRAM 介紹"></a>➤ VRAM 介紹</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/VRAM.html">點我閱讀</a></p><p><br><br></p><h2 id="AMD-系列"><a href="#AMD-系列" class="headerlink" title="AMD 系列"></a>AMD 系列</h2><h3 id="➤-Radeon-RX-400-系列"><a href="#➤-Radeon-RX-400-系列" class="headerlink" title="➤ Radeon RX 400 系列"></a>➤ Radeon RX 400 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx400.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-500-系列"><a href="#➤-Radeon-RX-500-系列" class="headerlink" title="➤ Radeon RX 500 系列"></a>➤ Radeon RX 500 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx500.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-Vega-系列"><a href="#➤-Radeon-RX-Vega-系列" class="headerlink" title="➤ Radeon RX Vega 系列"></a>➤ Radeon RX Vega 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/vega.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-5000-系列"><a href="#➤-Radeon-RX-5000-系列" class="headerlink" title="➤ Radeon RX 5000 系列"></a>➤ Radeon RX 5000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx5000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-6000-系列"><a href="#➤-Radeon-RX-6000-系列" class="headerlink" title="➤ Radeon RX 6000 系列"></a>➤ Radeon RX 6000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx6000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-7000-系列"><a href="#➤-Radeon-RX-7000-系列" class="headerlink" title="➤ Radeon RX 7000 系列"></a>➤ Radeon RX 7000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx7000.html">點我閱讀</a></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。&lt;/p&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;h3</summary>
-      
+    <summary type="html">顯示卡是電腦中負責處理圖形和影像的硬體設備，主要分為集成顯示卡和獨立顯示卡。集成顯示卡通常與主機板集成，性能較低但成本低廉；獨立顯示卡則擁有更強的性能和更多的記憶體，適合遊戲和專業圖形處理。</summary>
     
     
     
-    <category term="硬碟" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E7%A2%9F/"/>
+    <category term="顯卡" scheme="https://aixlnyt.github.io/categories/%E9%A1%AF%E5%8D%A1/"/>
     
     
     <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
@@ -147,36 +147,6 @@
     
     
     <category term="顯示器" scheme="https://aixlnyt.github.io/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/"/>
-    
-    
-    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
-    
-    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>硬體相關目錄</title>
-    <link href="https://aixlnyt.github.io/2025/06/05/Hardware_menu/"/>
-    <id>https://aixlnyt.github.io/2025/06/05/Hardware_menu/</id>
-    <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T01:15:53.976Z</updated>
-    
-    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。</p><hr><br><h3 id="➤-XXXX"><a href="#➤-XXXX" class="headerlink" title="➤ XXXX"></a>➤ XXXX</h3><p>👉 <a href="/technology/software/XXXX.html">點我閱讀</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。&lt;/p&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;h3 id=&quot;➤-X</summary>
-      
-    
-    
-    
-    <category term="硬體" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E9%AB%94/"/>
     
     
     <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
@@ -212,6 +182,36 @@
     <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
     
     <category term="軟體" scheme="https://aixlnyt.github.io/tags/%E8%BB%9F%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>硬碟與固態硬碟</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/SSD_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/SSD_menu/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-07-21T03:48:32.774Z</updated>
+    
+    <content type="html"><![CDATA[<p>硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。</p><hr><br><h3 id="➤-SSD-系統碟推薦"><a href="#➤-SSD-系統碟推薦" class="headerlink" title="➤ SSD 系統碟推薦"></a>➤ SSD 系統碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/system.html">點我閱讀</a></p><h3 id="➤-SSD-遊戲碟推薦"><a href="#➤-SSD-遊戲碟推薦" class="headerlink" title="➤ SSD 遊戲碟推薦"></a>➤ SSD 遊戲碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/game.html">點我閱讀</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h3</summary>
+      
+    
+    
+    
+    <category term="硬碟" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E7%A2%9F/"/>
+    
+    
+    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
     
   </entry>
   
