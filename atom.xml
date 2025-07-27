@@ -204,36 +204,6 @@
   </entry>
   
   <entry>
-    <title>軟體相關目錄</title>
-    <link href="https://aixlnyt.github.io/2025/06/05/Software_meun/"/>
-    <id>https://aixlnyt.github.io/2025/06/05/Software_meun/</id>
-    <published>2025-06-04T16:00:00.000Z</published>
-    <updated>2025-07-21T04:18:31.186Z</updated>
-    
-    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與軟體相關的資源，涵蓋程式、應用軟體、開發工具及各類輔助工具，內容主要基於我對各種軟體相關知識的整理與認知。目的是方便使用者快速尋找、下載、管理及學習所需的軟體產品與技術，提升工作與學習效率。</p><hr><br><h2 id="➤-FFmpeg-安裝教學"><a href="#➤-FFmpeg-安裝教學" class="headerlink" title="➤ FFmpeg 安裝教學"></a>➤ FFmpeg 安裝教學</h2><style>@media (max-width: 768px) {  .ffmpeg-card {    flex-direction: column !important;  }  .ffmpeg-card .img-box {    margin-left: 0 !important;    margin-top: 20px;    align-self: flex-start;  }}/* 針對超小螢幕，如320px以下 */@media (max-width: 360px) {  .ffmpeg-card > div {    min-width: 0 !important;  /* 取消最小寬度限制，讓容器可縮 */  }  .ffmpeg-card .img-box {    max-width: 100% !important; /* 圖片最大寬度為容器寬度 */    margin-left: 0 !important;  }  .ffmpeg-card p {    word-break: break-word; /* 允許長文字換行 */  }}</style><div class="ffmpeg-card" style="  display: flex;  flex-wrap: wrap;  align-items: flex-start;  justify-content: space-between;  margin-bottom: 20px;  background: rgba(30, 41, 59, 0.8);  border-radius: 20px;  padding: 30px;  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);  backdrop-filter: blur(10px);  color: #e2e8f0;">  <div style="flex: 1; min-width: 250px;">    <p style="color: #cbd5e1;">      FFmpeg 是一套免費又開放原始碼的軟體，它主要用來處理影音檔案。你可以用它來錄影、轉換影片格式、剪輯影片，甚至可以用來直播或串流影片。它功能很強大但操作起來也比較偏命令列，適合有點基礎想進階學習影音處理的學生。    </p>    <p style="color: #60a5fa; font-weight: 500;">      👉 <a href="/technology/software/FFmpeg" style="color: #60a5fa; text-decoration: none;">點我閱讀</a>    </p>  </div>  <div class="img-box" style="min-width: 200px; flex-shrink: 0; margin-left: 20px;">    <img src="/img/FFmpeg/FFmpeg.png" alt="FFmpeg" style="width: 100%; max-width: 200px; border-radius: 12px;">  </div></div><br>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與軟體相關的資源，涵蓋程式、應用軟體、開發工具及各類輔助工具，內容主要基於我對各種軟體相關知識的整理與認知。目的是方便使用者快速尋找、下載、管理及學習所需的軟體產品與技術，提升工作與學習效率。&lt;/p&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;h2 id=&quot;➤-FFmp</summary>
-      
-    
-    
-    
-    <category term="軟體" scheme="https://aixlnyt.github.io/categories/%E8%BB%9F%E9%AB%94/"/>
-    
-    
-    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
-    
-    <category term="軟體" scheme="https://aixlnyt.github.io/tags/%E8%BB%9F%E9%AB%94/"/>
-    
-  </entry>
-  
-  <entry>
     <title>硬碟與固態硬碟</title>
     <link href="https://aixlnyt.github.io/2025/06/05/SSD_menu/"/>
     <id>https://aixlnyt.github.io/2025/06/05/SSD_menu/</id>
@@ -260,6 +230,36 @@
     <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
     
     <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>軟體相關目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/Software_meun/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/Software_meun/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-07-21T04:18:31.186Z</updated>
+    
+    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與軟體相關的資源，涵蓋程式、應用軟體、開發工具及各類輔助工具，內容主要基於我對各種軟體相關知識的整理與認知。目的是方便使用者快速尋找、下載、管理及學習所需的軟體產品與技術，提升工作與學習效率。</p><hr><br><h2 id="➤-FFmpeg-安裝教學"><a href="#➤-FFmpeg-安裝教學" class="headerlink" title="➤ FFmpeg 安裝教學"></a>➤ FFmpeg 安裝教學</h2><style>@media (max-width: 768px) {  .ffmpeg-card {    flex-direction: column !important;  }  .ffmpeg-card .img-box {    margin-left: 0 !important;    margin-top: 20px;    align-self: flex-start;  }}/* 針對超小螢幕，如320px以下 */@media (max-width: 360px) {  .ffmpeg-card > div {    min-width: 0 !important;  /* 取消最小寬度限制，讓容器可縮 */  }  .ffmpeg-card .img-box {    max-width: 100% !important; /* 圖片最大寬度為容器寬度 */    margin-left: 0 !important;  }  .ffmpeg-card p {    word-break: break-word; /* 允許長文字換行 */  }}</style><div class="ffmpeg-card" style="  display: flex;  flex-wrap: wrap;  align-items: flex-start;  justify-content: space-between;  margin-bottom: 20px;  background: rgba(30, 41, 59, 0.8);  border-radius: 20px;  padding: 30px;  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);  backdrop-filter: blur(10px);  color: #e2e8f0;">  <div style="flex: 1; min-width: 250px;">    <p style="color: #cbd5e1;">      FFmpeg 是一套免費又開放原始碼的軟體，它主要用來處理影音檔案。你可以用它來錄影、轉換影片格式、剪輯影片，甚至可以用來直播或串流影片。它功能很強大但操作起來也比較偏命令列，適合有點基礎想進階學習影音處理的學生。    </p>    <p style="color: #60a5fa; font-weight: 500;">      👉 <a href="/technology/software/FFmpeg" style="color: #60a5fa; text-decoration: none;">點我閱讀</a>    </p>  </div>  <div class="img-box" style="min-width: 200px; flex-shrink: 0; margin-left: 20px;">    <img src="/img/FFmpeg/FFmpeg.png" alt="FFmpeg" style="width: 100%; max-width: 200px; border-radius: 12px;">  </div></div><br>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與軟體相關的資源，涵蓋程式、應用軟體、開發工具及各類輔助工具，內容主要基於我對各種軟體相關知識的整理與認知。目的是方便使用者快速尋找、下載、管理及學習所需的軟體產品與技術，提升工作與學習效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;➤-FFmp</summary>
+      
+    
+    
+    
+    <category term="軟體" scheme="https://aixlnyt.github.io/categories/%E8%BB%9F%E9%AB%94/"/>
+    
+    
+    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
+    
+    <category term="軟體" scheme="https://aixlnyt.github.io/tags/%E8%BB%9F%E9%AB%94/"/>
     
   </entry>
   
