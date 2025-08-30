@@ -794,8 +794,10 @@
       isExpanded = !isExpanded;
       if (isExpanded) {
         playerContainer.classList.add('expanded');
+        expandBtn.setAttribute('title', '縮小播放器');
       } else {
         playerContainer.classList.remove('expanded');
+        expandBtn.setAttribute('title', '展開播放器');
       }
     }
 
@@ -920,6 +922,7 @@
       updatePlayButtons();
       updateTabIcon();
       updateMarquee();
+      document.querySelector('.cover-img').classList.add('playing');
     });
 
     audioPlayer.addEventListener('pause', function() {
@@ -927,6 +930,7 @@
       updatePlayButtons();
       updateTabIcon();
       updateMarquee();
+      document.querySelector('.cover-img').classList.remove('playing');
     });
 
     // 進度條功能 - 修正版
@@ -1258,19 +1262,72 @@
       }
     });
 
-    // 初始化播放器
-    function initPlayer() {
+    // 自動播放第一首歌曲的函數
+    function autoPlayFirstSong() {
       if (playlist.length > 0) {
         loadSong(0);
+        
+        // 稍微延遲以確保音頻元素準備就緒
+        setTimeout(() => {
+          // 嘗試自動播放
+          const playPromise = audioPlayer.play();
+          
+          if (playPromise !== undefined) {
+            playPromise.then(() => {
+              // 播放成功
+              isPlaying = true;
+              document.querySelector('.cover-img').classList.add('playing');
+              updatePlayButtons();
+              updateTabIcon();
+              updateMarquee();
+              console.log('自動播放成功');
+            }).catch(error => {
+              // 播放失敗（通常是因為瀏覽器的自動播放策略）
+              console.log('自動播放被阻止，等待用戶交互:', error);
+              isPlaying = false;
+              updatePlayButtons();
+              updateTabIcon();
+              
+              // 添加用戶交互監聽器，一旦用戶點擊頁面就開始播放
+              function enableAutoPlay() {
+                audioPlayer.play().then(() => {
+                  isPlaying = true;
+                  document.querySelector('.cover-img').classList.add('playing');
+                  updatePlayButtons();
+                  updateTabIcon();
+                  updateMarquee();
+                  console.log('用戶交互後播放成功');
+                }).catch(err => {
+                  console.error('播放失敗:', err);
+                });
+                
+                // 移除事件監聽器
+                document.removeEventListener('click', enableAutoPlay);
+                document.removeEventListener('keydown', enableAutoPlay);
+              }
+              
+              // 監聽用戶的第一次交互
+              document.addEventListener('click', enableAutoPlay, { once: true });
+              document.addEventListener('keydown', enableAutoPlay, { once: true });
+            });
+          }
+        }, 100);
       }
-      updatePlayButtons();
-      updateTabIcon();
+    }
+
+    // 初始化播放器
+    function initPlayer() {
+      // 設置初始音量
+      audioPlayer.volume = volume;
       updateVolumeDisplay();
       updateVolumeIcon();
       updatePlaylistDisplay();
       
-      // 設置初始音量
-      audioPlayer.volume = volume;
+      // 設置初始的展開按鈕標題
+      expandBtn.setAttribute('title', '展開播放器');
+      
+      // 自動播放第一首歌曲
+      autoPlayFirstSong();
     }
 
     // 啟動播放器
@@ -1528,7 +1585,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     </div>
 
-    <!-- 漢堡選單 -->
+    <!-- 漢堡選單（小螢幕顯示） -->
     <div id="nav-menu-btn" class="nav-icon">
       <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
     <path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/>
@@ -1537,50 +1594,113 @@ document.addEventListener('DOMContentLoaded', function() {
   </nav>
 </navbar>
 
-<!-- 下拉選單 -->
-<div id="nav-dropdown" class="hidden">
-  <div id="dropdown-link-list">
-    
-      <a class="nav-dropdown-link" href="/">首頁</a>
-    
-      <a class="nav-dropdown-link" href="/archives">彙整</a>
-    
-      <a class="nav-dropdown-link" href="/about">關於</a>
-    
-      <a class="nav-dropdown-link" href="/sponsor">贊助</a>
-    
-  </div>
-</div>
-
 <style>
-  /* hue 選擇器容器 */
+  /* 漢堡選單預設隱藏 */
+  #nav-menu-btn {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 小螢幕 1023px 以下顯示漢堡選單 */
+  @media (max-width: 1023px) {
+    #nav-menu-btn {
+      display: flex;
+    }
+
+    #main-nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: 10px;
+      background: rgba(30,30,30,0.95);
+      backdrop-filter: blur(12px);
+      padding: 12px;           /* 上下左右都只留 12px */
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      min-width: 333px;        /* 設定選單寬度，讓背景大 */
+      z-index: 998;
+      align-items: flex-start; /* 讓文字始終靠左 */
+    }
+
+    #main-nav.show {
+      display: flex;
+    }
+
+    #main-nav a {
+      position: relative;        /* 為了能放置 ::before */
+      width: 100%;
+      padding: 2px 0 4px 20px;   /* 左邊留更多空間，給色條用 */
+      color: #fff;
+      text-decoration: none;
+      text-align: left;
+    }
+
+    /* 在文字前面加上色條 */
+    #main-nav a::before {
+      content: "";
+      position: absolute;
+      left: 6px;                 /* 色條靠左 */
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;                /* 跟 hue-bar 一樣 */
+      height: 16px;
+      border-radius: 3px;
+      background: var(--primary, #00bcd4);  /* 用同樣主題色 */
+    }
+  }
+
+  /* 桌面 ≥1024px 隱藏漢堡 */
+  @media (min-width: 1024px) {
+    #nav-menu-btn {
+      display: none;
+    }
+  }
+
+  @media (max-width: 375px) {
+    #main-nav {
+      min-width: 90%;      /* 改用百分比，不會超過螢幕 */
+      right: 5px;          /* 靠右留一點邊距 */
+      left: 5px;           /* 也可以讓它置中 */
+      box-sizing: border-box;
+    }
+
+    #main-nav a {
+      font-size: 14px;     /* 自動縮小字體 */
+      padding: 2px 0 4px 16px; /* 再縮一下間距 */
+    }
+  }
+
+  /* hue-picker */
   #hue-picker {
     position: absolute;
+    top: 85px;
+    right: 10px;
     z-index: 999;
-    background: rgba(30, 30, 30, 0.6);
+    background: rgba(30, 30, 30, 0.95); /* 和 navbar 相同透明度 */
     backdrop-filter: blur(12px);
     padding: 20px 24px;
     border-radius: 14px;
-    top: 85px;
-    right: 10px;
-    box-shadow: 0 2px 8px #0008;
+    min-width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 280px;
-  }
-  #hue-picker.hidden {
-    display: none;
+    box-shadow: 0 2px 8px #0008;
   }
 
-  /* 標題 */
+  #hue-picker.hidden { display: none; }
+
+  /* hue 標題 */
   .hue-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
     width: 100%;
+    margin-bottom: 10px;
   }
+
   .hue-title {
     display: flex;
     align-items: center;
@@ -1590,19 +1710,18 @@ document.addEventListener('DOMContentLoaded', function() {
     color: #fff;
     position: relative;
   }
+
   .hue-bar {
-    display: inline-block;
+    position: absolute;
+    left: -10px;
     width: 4px;
     height: 16px;
     border-radius: 3px;
     background: var(--primary, #00bcd4);
-    position: absolute;
-    left: -10px;
   }
 
   /* 顏色值框 */
   #hue-value-box {
-    background: rgba(0,0,0,0.4);
     width: 46px;
     height: 26px;
     display: flex;
@@ -1613,58 +1732,55 @@ document.addEventListener('DOMContentLoaded', function() {
     font-size: 14px;
     color: #00bcd4;
     border: 1px solid #00bcd4;
+    background: rgba(0,0,0,0.4);
   }
 
+  /* reset 按鈕 */
   #reset-btn {
-      background: rgba(255, 255, 255, 0.075); /* 淡淡灰底 */
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 1em; /* 與文字同高 */
-      font-size: 1em;
-      line-height: 1em;
-      border-radius: 4px;
-      margin-left: 4px;
-      padding: 0 4px; /* 內距略微增加，避免太緊 */
-      opacity: 0.8;
-      transition: 0.2s;
-      transform: translateY(1px); /* 整體下移 2px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1em;
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0 4px;
+    margin-left: 4px;
+    border-radius: 4px;
+    border: none;
+    background: rgba(255,255,255,0.075);
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+    transform: translateY(1px);
   }
 
-  #reset-btn:hover {
-      background: rgba(255, 255, 255, 0.2); /* hover 顏色稍深 */
-      opacity: 1;
-  }
-  #reset-btn.hidden {
-    display: none;
-  }
+  #reset-btn:hover { background: rgba(255,255,255,0.2); opacity: 1; }
+  #reset-btn.hidden { display: none; }
 
   /* 色相漸層條 */
   .hue-slider {
     width: 300px;
     height: 24px;
     padding: 0 4px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
     background: linear-gradient(90deg,
       #ff8a80, #ff80ab, #b388ff, #82b1ff, #80d8ff, #a7ffeb,
       #ccff90, #ffff8d, #ffd180, #ff9e80
     );
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
   }
+
   #hue-range {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     width: 100%;
     background: transparent;
     outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 
-  /* 滑桿拖曳點 - 小長方形 */
   #hue-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 18px;
@@ -1687,6 +1803,20 @@ document.addEventListener('DOMContentLoaded', function() {
 </style>
 
 <script>
+  const navMenuBtn = document.getElementById("nav-menu-btn");
+  const mainNav = document.getElementById("main-nav");
+
+  navMenuBtn.addEventListener("click", () => {
+    mainNav.classList.toggle("show");
+  });
+
+  // 點擊選單自動收起
+  mainNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("show");
+    });
+  });
+
   // 色調控制
   const hueRange = document.getElementById("hue-range");
   const hueValueBox = document.getElementById("hue-value-box");
@@ -1694,24 +1824,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const huePicker = document.getElementById("hue-picker");
   const resetBtn = document.getElementById("reset-btn");
 
-  hueRange.addEventListener("input", (e) => {
+  hueRange.addEventListener("input", e => {
     const value = e.target.value;
     hueValueBox.textContent = value;
     document.documentElement.style.setProperty("--primary-hue", value);
-    
-    // 控制重置按鈕顯示
-    if (value != "250") {
-      resetBtn.classList.remove("hidden");
-    } else {
-      resetBtn.classList.add("hidden");
-    }
+    if (value != "250") resetBtn.classList.remove("hidden");
+    else resetBtn.classList.add("hidden");
   });
 
   hueBtn.addEventListener("click", () => {
     huePicker.classList.toggle("hidden");
   });
 
-  // 重置按鈕
   resetBtn.addEventListener("click", () => {
     hueRange.value = "250";
     hueValueBox.textContent = "250";
@@ -1719,7 +1843,6 @@ document.addEventListener('DOMContentLoaded', function() {
     resetBtn.classList.add("hidden");
   });
 </script>
-
 
     </div>
     <div id="sidebar-wrapper">
@@ -1765,6 +1888,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
+            <a class="category-link" href="/categories/Chrome/">
+                Chrome
+                <div class="category-count">1</div>
+            </a>
+        
             <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
                 硬體
                 <div class="category-count">1</div>
@@ -1790,13 +1918,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/Chrome/">
-                Chrome
-                <div class="category-count">1</div>
-            </a>
-        
-            <a class="category-link" href="/categories/Python/">
-                Python
+            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
+                顯示器
                 <div class="category-count">1</div>
             </a>
         
@@ -1805,13 +1928,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
-                顯示器
+            <a class="category-link" href="/categories/%E8%BB%9F%E9%AB%94/">
+                軟體
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E8%BB%9F%E9%AB%94/">
-                軟體
+            <a class="category-link" href="/categories/Python/">
+                Python
                 <div class="category-count">1</div>
             </a>
         </div>
@@ -1910,7 +2033,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img" rel="gallery_cmeybrppm002sa4sx278par37">
+      <a class="article-gallery-img" rel="gallery_cmeyk514q003zz8sx3erfhla4">
         <img src="/img/python.png" itemprop="image">
       </a>
     
