@@ -156,8 +156,8 @@
         </button>
         <div class="volume-bar-container">
           <div class="volume-bar" id="volumeBar">
-            <div class="volume-fill" style="width: 50%"></div>
-            <div class="volume-handle" style="left: 50%"></div>
+            <div class="volume-fill" style="width: 30%"></div>
+            <div class="volume-handle" style="left: 30%"></div>
           </div>
         </div>
         <button class="icon-btn" id="playlistBtn" title="播放列表">
@@ -764,7 +764,7 @@
     let isMuted = false;
     let isShuffleOn = false;
     let repeatMode = 0; // 0: 不循環, 1: 全部循環, 2: 單曲循環
-    let volume = 0.5;
+    let volume = 0.3;
     let currentSongIndex = 0;
     let isDragging = false;
     let isVolumeDragging = false;
@@ -1262,14 +1262,16 @@
       }
     });
 
-    // 自動播放第一首歌曲的函數
+    // 簡化的自動播放函數 - 在收縮狀態下直接播放
     function autoPlayFirstSong() {
       if (playlist.length > 0) {
+        // 直接載入並播放第一首歌曲，保持播放器收縮狀態
         loadSong(0);
         
-        // 稍微延遲以確保音頻元素準備就緒
-        setTimeout(() => {
-          // 嘗試自動播放
+        // 等待音頻載入完成後自動播放
+        function attemptAutoPlay() {
+          audioPlayer.removeEventListener('canplaythrough', attemptAutoPlay);
+          
           const playPromise = audioPlayer.play();
           
           if (playPromise !== undefined) {
@@ -1282,36 +1284,35 @@
               updateMarquee();
               console.log('自動播放成功');
             }).catch(error => {
-              // 播放失敗（通常是因為瀏覽器的自動播放策略）
+              // 播放失敗（瀏覽器自動播放策略限制）
               console.log('自動播放被阻止，等待用戶交互:', error);
-              isPlaying = false;
-              updatePlayButtons();
-              updateTabIcon();
               
-              // 添加用戶交互監聽器，一旦用戶點擊頁面就開始播放
-              function enableAutoPlay() {
+              // 添加一次性用戶交互監聽器
+              function startPlayOnInteraction() {
                 audioPlayer.play().then(() => {
                   isPlaying = true;
                   document.querySelector('.cover-img').classList.add('playing');
                   updatePlayButtons();
                   updateTabIcon();
                   updateMarquee();
-                  console.log('用戶交互後播放成功');
                 }).catch(err => {
                   console.error('播放失敗:', err);
                 });
-                
-                // 移除事件監聽器
-                document.removeEventListener('click', enableAutoPlay);
-                document.removeEventListener('keydown', enableAutoPlay);
               }
               
-              // 監聽用戶的第一次交互
-              document.addEventListener('click', enableAutoPlay, { once: true });
-              document.addEventListener('keydown', enableAutoPlay, { once: true });
+              // 監聽用戶的任何交互
+              document.addEventListener('click', startPlayOnInteraction, { once: true });
+              document.addEventListener('keydown', startPlayOnInteraction, { once: true });
             });
           }
-        }, 100);
+        }
+        
+        // 當音頻準備好播放時觸發
+        if (audioPlayer.readyState >= 3) {
+          attemptAutoPlay();
+        } else {
+          audioPlayer.addEventListener('canplaythrough', attemptAutoPlay);
+        }
       }
     }
 
@@ -1323,10 +1324,12 @@
       updateVolumeIcon();
       updatePlaylistDisplay();
       
-      // 設置初始的展開按鈕標題
+      // 確保播放器保持收縮狀態
+      isExpanded = false;
+      playerContainer.classList.remove('expanded');
       expandBtn.setAttribute('title', '展開播放器');
       
-      // 自動播放第一首歌曲
+      // 直接自動播放第一首歌曲（不展開播放器）
       autoPlayFirstSong();
     }
 
@@ -1883,18 +1886,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="widget">
       <h3 class="widget-title">分類</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/Certiport/">
-                Certiport
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/Chrome/">
                 Chrome
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
-                硬體
+            <a class="category-link" href="/categories/Certiport/">
+                Certiport
                 <div class="category-count">1</div>
             </a>
         
@@ -1913,18 +1911,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/Markdown/">
-                Markdown
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
                 顯示器
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
-                硬碟
+            <a class="category-link" href="/categories/Markdown/">
+                Markdown
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
+                硬體
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Python/">
+                Python
                 <div class="category-count">1</div>
             </a>
         
@@ -1933,8 +1936,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/Python/">
-                Python
+            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
+                硬碟
                 <div class="category-count">1</div>
             </a>
         </div>
@@ -2009,9 +2012,9 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/06/05/Hardware_menu/" title="硬體相關目錄" >
+          <a class="recent-link" href="/2025/06/05/GPU_menu/" title="顯示卡目錄" >
             <div class="recent-link-text">
-              硬體相關目錄
+              顯示卡目錄
             </div>
           </a>
         
@@ -2033,7 +2036,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img" rel="gallery_cmeyk514o003oz8sxhy96a153">
+      <a class="article-gallery-img" rel="gallery_cmeyl82k5000bfssx22hhh47e">
         <img src="/img/java.png" itemprop="image">
       </a>
     
