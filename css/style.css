@@ -758,7 +758,7 @@ navbar,
   transition: background 0.15s ease-out;
 }
 navbar {
-  height: 72px;
+  height: 76px;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -776,9 +776,14 @@ navbar {
   -webkit-align-items: center;
   align-items: center;
   position: sticky;
-  margin: 0 auto;
-  border-radius: 0 0 16px 16px;
   top: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  transition: background 0.3s ease;
 }
 #title-nav {
   margin-left: 16px;
