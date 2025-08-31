@@ -189,7 +189,7 @@
 </div>
 
 <!-- 隱藏的 Audio 元素 -->
-<audio id="audioPlayer" preload="metadata"></audio>
+<audio id="audioPlayer" preload="auto" autoplay muted></audio>
 
 <style>
   .music-player-widget {
@@ -769,6 +769,7 @@
     let currentSongIndex = 0;
     let isDragging = false;
     let isVolumeDragging = false;
+    let autoPlayAttempted = false;
 
     // 播放列表 - 使用示例音頻文件
     let playlist = [
@@ -785,6 +786,84 @@
         url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
       }
     ];
+
+    // 自動播放函數 - 優化版
+    function autoPlayFirstSong() {
+      if (playlist.length > 0 && !autoPlayAttempted) {
+        autoPlayAttempted = true;
+        
+        // 載入第一首歌曲
+        loadSong(0);
+        
+        // 嘗試自動播放
+        const playPromise = audioPlayer.play();
+        
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            // 自動播放成功
+            console.log('自動播放成功');
+            isPlaying = true;
+            // 立即取消靜音並設置正常音量
+            audioPlayer.muted = false;
+            audioPlayer.volume = volume;
+            isMuted = false;
+            updateUI();
+          }).catch(error => {
+            // 瀏覽器阻止了自動播放
+            console.log('自動播放被阻止，等待用戶交互:', error);
+            
+            // 顯示用戶提示或自動嘗試點擊播放
+            showAutoPlayHint();
+          });
+        }
+      }
+    }
+
+    // 顯示自動播放提示或自動處理
+    function showAutoPlayHint() {
+      // 方案1: 靜默等待用戶交互後自動播放
+      const enableAutoPlay = function() {
+        // 確保音量正常
+        audioPlayer.muted = false;
+        audioPlayer.volume = volume;
+        isMuted = false;
+        
+        audioPlayer.play().then(() => {
+          isPlaying = true;
+          updateUI();
+          console.log('用戶交互後自動播放成功');
+        }).catch(err => {
+          console.error('播放失敗:', err);
+        });
+        
+        // 移除監聽器
+        document.removeEventListener('click', enableAutoPlay);
+        document.removeEventListener('keydown', enableAutoPlay);
+        document.removeEventListener('touchstart', enableAutoPlay);
+      };
+      
+      // 監聽任何用戶交互
+      document.addEventListener('click', enableAutoPlay, { once: true });
+      document.addEventListener('keydown', enableAutoPlay, { once: true });
+      document.addEventListener('touchstart', enableAutoPlay, { once: true });
+      
+      // 方案2: 也可以顯示一個小提示（可選）
+      // console.log('點擊頁面任意位置開始播放音樂');
+    }
+
+    // 更新所有UI元素
+    function updateUI() {
+      updatePlayButtons();
+      updateTabIcon();
+      updateMarquee();
+      updateVolumeDisplay();
+      updateVolumeIcon();
+      if (isPlaying) {
+        document.querySelector('.cover-img').classList.add('playing');
+      } else {
+        document.querySelector('.cover-img').classList.remove('playing');
+      }
+    }
 
     // 展開/收縮功能
     expandBtn.addEventListener('click', function() {
@@ -846,10 +925,14 @@
         if (audioPlayer.src !== window.location.origin + currentSong.url) {
           loadSong(currentSongIndex);
         }
+        // 確保取消靜音
+        audioPlayer.muted = false;
+        audioPlayer.volume = volume;
+        isMuted = false;
+        
         audioPlayer.play().then(() => {
           isPlaying = true;
-          document.querySelector('.cover-img').classList.add('playing');
-          updateMarquee();
+          updateUI();
         }).catch(error => {
           console.error('播放失敗:', error);
           alert('播放失敗，請檢查音頻文件路徑');
@@ -857,11 +940,8 @@
       } else {
         audioPlayer.pause();
         isPlaying = false;
-        document.querySelector('.cover-img').classList.remove('playing');
-        updateMarquee();
+        updateUI();
       }
-      updatePlayButtons();
-      updateTabIcon();
     }
 
     function updatePlayButtons() {
@@ -897,6 +977,28 @@
       }
     }
 
+    // 載入歌曲
+    function loadSong(index) {
+      if (index >= 0 && index < playlist.length) {
+        const song = playlist[index];
+        currentSongIndex = index;
+        
+        // 更新UI
+        const titleTextEl = document.querySelector('.title-text');
+        titleTextEl.textContent = song.title;
+        document.getElementById('songArtist').textContent = song.artist;
+        document.getElementById('coverImg').src = song.cover;
+        
+        // 設置音頻源
+        audioPlayer.src = song.url;
+        audioPlayer.volume = volume;
+        audioPlayer.muted = false; // 確保不是靜音狀態
+        
+        updatePlaylistDisplay();
+        updateMarquee();
+      }
+    }
+
     // 音頻事件監聽
     audioPlayer.addEventListener('loadedmetadata', function() {
       updateProgress();
@@ -915,37 +1017,45 @@
 
     audioPlayer.addEventListener('error', function(e) {
       console.error('音頻加載錯誤:', e);
-      alert('音頻文件無法加載，請檢查文件路徑');
+      // 如果第一首歌載入失敗，嘗試載入下一首
+      if (currentSongIndex === 0 && playlist.length > 1) {
+        console.log('嘗試載入下一首歌曲...');
+        loadSong(1);
+        if (!autoPlayAttempted) {
+          setTimeout(() => {
+            audioPlayer.play().catch(err => console.log('備選歌曲播放失敗:', err));
+          }, 500);
+        }
+      }
     });
 
     audioPlayer.addEventListener('play', function() {
       isPlaying = true;
-      updatePlayButtons();
-      updateTabIcon();
-      updateMarquee();
-      document.querySelector('.cover-img').classList.add('playing');
+      updateUI();
     });
 
     audioPlayer.addEventListener('pause', function() {
       isPlaying = false;
-      updatePlayButtons();
-      updateTabIcon();
-      updateMarquee();
-      document.querySelector('.cover-img').classList.remove('playing');
+      updateUI();
     });
 
-    // 進度條功能 - 修正版
+    // 當音頻載入完成時自動播放
+    audioPlayer.addEventListener('canplaythrough', function() {
+      if (!autoPlayAttempted && currentSongIndex === 0) {
+        autoPlayFirstSong();
+      }
+    });
+
+    // 進度條功能
     const progressBar = document.getElementById('progressBar');
     const progressFill = progressBar.querySelector('.progress-fill');
     const progressHandle = progressBar.querySelector('.progress-handle');
 
-    // 點擊進度條
     progressBar.addEventListener('click', function(e) {
       if (!audioPlayer.duration) return;
       updateProgressFromEvent(e);
     });
 
-    // 拖拽進度條把手
     progressHandle.addEventListener('mousedown', function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -1016,21 +1126,17 @@
         nextSong();
       } else {
         isPlaying = false;
-        updatePlayButtons();
-        updateTabIcon();
-        updateMarquee();
-        document.querySelector('.cover-img').classList.remove('playing');
+        updateUI();
       }
     }
 
-    // 音量控制 - 修正版
+    // 音量控制
     const volumeBar = document.getElementById('volumeBar');
     const volumeFill = volumeBar.querySelector('.volume-fill');
     const volumeHandle = volumeBar.querySelector('.volume-handle');
     const volumeBtn = document.getElementById('volumeBtn');
     let lastVolume = volume;
 
-    // 點擊音量條
     volumeBar.addEventListener('mousedown', function(e) {
       if (e.target === volumeHandle) {
         isVolumeDragging = true;
@@ -1039,7 +1145,6 @@
       updateVolumeFromEvent(e);
     });
 
-    // 拖拽音量把手
     volumeHandle.addEventListener('mousedown', function(e) {
       e.preventDefault();
       isVolumeDragging = true;
@@ -1061,10 +1166,11 @@
       const clickX = Math.max(0, Math.min(rect.width, e.clientX - rect.left));
       volume = clickX / rect.width;
       audioPlayer.volume = volume;
+      audioPlayer.muted = false; // 確保不是靜音
+      isMuted = false;
       updateVolumeDisplay();
       updateVolumeIcon();
       if (volume > 0) {
-        isMuted = false;
         lastVolume = volume;
       }
     }
@@ -1094,11 +1200,13 @@
         isMuted = false;
         volume = lastVolume;
         audioPlayer.volume = volume;
+        audioPlayer.muted = false;
       } else {
         isMuted = true;
         lastVolume = volume;
         volume = 0;
         audioPlayer.volume = 0;
+        audioPlayer.muted = true;
       }
       updateVolumeDisplay();
       updateVolumeIcon();
@@ -1129,26 +1237,6 @@
       loadSong(currentSongIndex);
       if (isPlaying) {
         audioPlayer.play();
-      }
-    }
-
-    function loadSong(index) {
-      if (index >= 0 && index < playlist.length) {
-        const song = playlist[index];
-        currentSongIndex = index;
-        
-        // 更新UI
-        const titleTextEl = document.querySelector('.title-text');
-        titleTextEl.textContent = song.title;
-        document.getElementById('songArtist').textContent = song.artist;
-        document.getElementById('coverImg').src = song.cover;
-        
-        // 設置音頻源
-        audioPlayer.src = song.url;
-        audioPlayer.volume = volume;
-        
-        updatePlaylistDisplay();
-        updateMarquee();
       }
     }
 
@@ -1250,6 +1338,8 @@
           e.preventDefault();
           volume = Math.min(1, volume + 0.1);
           audioPlayer.volume = volume;
+          audioPlayer.muted = false;
+          isMuted = false;
           updateVolumeDisplay();
           updateVolumeIcon();
           break;
@@ -1263,64 +1353,11 @@
       }
     });
 
-    // 簡化的自動播放函數 - 在收縮狀態下直接播放
-    function autoPlayFirstSong() {
-      if (playlist.length > 0) {
-        // 直接載入並播放第一首歌曲，保持播放器收縮狀態
-        loadSong(0);
-        
-        // 等待音頻載入完成後自動播放
-        function attemptAutoPlay() {
-          audioPlayer.removeEventListener('canplaythrough', attemptAutoPlay);
-          
-          const playPromise = audioPlayer.play();
-          
-          if (playPromise !== undefined) {
-            playPromise.then(() => {
-              // 播放成功
-              isPlaying = true;
-              document.querySelector('.cover-img').classList.add('playing');
-              updatePlayButtons();
-              updateTabIcon();
-              updateMarquee();
-              console.log('自動播放成功');
-            }).catch(error => {
-              // 播放失敗（瀏覽器自動播放策略限制）
-              console.log('自動播放被阻止，等待用戶交互:', error);
-              
-              // 添加一次性用戶交互監聽器
-              function startPlayOnInteraction() {
-                audioPlayer.play().then(() => {
-                  isPlaying = true;
-                  document.querySelector('.cover-img').classList.add('playing');
-                  updatePlayButtons();
-                  updateTabIcon();
-                  updateMarquee();
-                }).catch(err => {
-                  console.error('播放失敗:', err);
-                });
-              }
-              
-              // 監聽用戶的任何交互
-              document.addEventListener('click', startPlayOnInteraction, { once: true });
-              document.addEventListener('keydown', startPlayOnInteraction, { once: true });
-            });
-          }
-        }
-        
-        // 當音頻準備好播放時觸發
-        if (audioPlayer.readyState >= 3) {
-          attemptAutoPlay();
-        } else {
-          audioPlayer.addEventListener('canplaythrough', attemptAutoPlay);
-        }
-      }
-    }
-
     // 初始化播放器
     function initPlayer() {
       // 設置初始音量
       audioPlayer.volume = volume;
+      audioPlayer.muted = false; // 確保初始不是靜音
       updateVolumeDisplay();
       updateVolumeIcon();
       updatePlaylistDisplay();
@@ -1330,12 +1367,53 @@
       playerContainer.classList.remove('expanded');
       expandBtn.setAttribute('title', '展開播放器');
       
-      // 直接自動播放第一首歌曲（不展開播放器）
-      autoPlayFirstSong();
+      // 立即載入第一首歌曲
+      if (playlist.length > 0) {
+        loadSong(0);
+        
+        // 嘗試立即自動播放
+        setTimeout(() => {
+          autoPlayFirstSong();
+        }, 100);
+        
+        // 備用：如果音頻載入完成但還沒自動播放，再次嘗試
+        setTimeout(() => {
+          if (!isPlaying && !autoPlayAttempted) {
+            autoPlayFirstSong();
+          }
+        }, 1000);
+      }
     }
 
-    // 啟動播放器
+    // 頁面載入完成就立即啟動播放器
     initPlayer();
+    
+    // 額外的自動播放觸發器 - 當用戶稍後與頁面交互時
+    let userInteracted = false;
+    const triggerAutoPlay = function() {
+      if (!userInteracted && !isPlaying) {
+        userInteracted = true;
+        if (audioPlayer.paused && playlist.length > 0) {
+          // 確保音量和靜音狀態正確
+          audioPlayer.muted = false;
+          audioPlayer.volume = volume;
+          isMuted = false;
+          
+          audioPlayer.play().then(() => {
+            isPlaying = true;
+            updateUI();
+            console.log('用戶交互觸發自動播放成功');
+          }).catch(err => {
+            console.error('用戶交互後播放失敗:', err);
+          });
+        }
+      }
+    };
+    
+    // 監聽用戶交互事件
+    ['click', 'keydown', 'touchstart', 'mousemove'].forEach(eventType => {
+      document.addEventListener(eventType, triggerAutoPlay, { once: true, passive: true });
+    });
   });
 </script>
 
@@ -1887,8 +1965,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="widget">
       <h3 class="widget-title">分類</h3>
       <div class="category-box">
-            <a class="category-link" href="/categories/Chrome/">
-                Chrome
+            <a class="category-link" href="/categories/%E9%A1%AF%E5%8D%A1/">
+                顯卡
                 <div class="category-count">1</div>
             </a>
         
@@ -1897,13 +1975,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E9%A1%AF%E5%8D%A1/">
-                顯卡
-                <div class="category-count">1</div>
-            </a>
-        
-            <a class="category-link" href="/categories/ICDL/">
-                ICDL
+            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
+                硬體
                 <div class="category-count">1</div>
             </a>
         
@@ -1912,18 +1985,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
-                顯示器
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/Markdown/">
                 Markdown
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
-                硬體
+            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
+                硬碟
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Chrome/">
+                Chrome
                 <div class="category-count">1</div>
             </a>
         
@@ -1932,13 +2005,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E8%BB%9F%E9%AB%94/">
-                軟體
+            <a class="category-link" href="/categories/ICDL/">
+                ICDL
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
-                硬碟
+            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
+                顯示器
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E8%BB%9F%E9%AB%94/">
+                軟體
                 <div class="category-count">1</div>
             </a>
         </div>
@@ -2037,7 +2115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img" rel="gallery_cmeyl82kh003wfssx7vuwb39r">
+      <a class="article-gallery-img" rel="gallery_cmezdnw8e003y98sxfn01cj5b">
         <img src="/img/Software.png" itemprop="image">
       </a>
     
@@ -2161,25 +2239,25 @@ document.addEventListener('DOMContentLoaded', function() {
 <nav id="article-nav">
   <a class="article-nav-btn left "
     
-      href="/2025/06/05/Hardware_menu/"
-      title="硬體相關目錄"
+      href="/2025/06/05/Monitor_menu/"
+      title="顯示器目錄"
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
       
-        硬體相關目錄
+        顯示器目錄
         
     </p>
   </a>
   <a class="article-nav-btn right "
     
-      href="/2025/06/05/SSD_menu/"
-      title="硬碟與固態硬碟"
+      href="/2024/01/28/Python_menu/"
+      title="Python 教學目錄"
      >
 
     <p class="title-text">
       
-        硬碟與固態硬碟
+        Python 教學目錄
         
     </p>
     <i class="fa-solid fa-angle-right"></i>
