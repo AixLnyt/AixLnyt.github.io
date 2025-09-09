@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>虎头鯨</title>
+  
+  <subtitle>blog</subtitle>
+  <link href="https://aixlnyt.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://aixlnyt.github.io/"/>
+  <updated>2025-07-23T15:59:43.989Z</updated>
+  <id>https://aixlnyt.github.io/</id>
+  
+  <author>
+    <name>虎头鲸</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Chrome 擴充功能</title>
+    <link href="https://aixlnyt.github.io/2025/07/23/Chrome_Extension_menu/"/>
+    <id>https://aixlnyt.github.io/2025/07/23/Chrome_Extension_menu/</id>
+    <published>2025-07-23T14:19:16.546Z</published>
+    <updated>2025-07-23T15:59:43.989Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下是我個人推薦的 Chrome 擴充功能，這些擴充功能可以有效提升瀏覽器的使用效率與便利性，無論是日常瀏覽、影片下載、廣告過濾等，甚至是開發者使用，都真的非常方便。文中同時也會介紹如何安裝來自第三方來源的擴充功能，也包含我寫的，讓你能使用更多官方商店以外的優質工具</p><hr><br>]]></content>
+    
+    
+    <summary type="html">使用者可以使用 Chrome 線上應用程式商店搜尋並安裝擴充功能，根據個人的需求增強使用體驗，添加新功能或提高工作效率</summary>
+    
+    
+    
+    <category term="Chrome" scheme="https://aixlnyt.github.io/categories/Chrome/"/>
+    
+    
+    <category term="擴充功能" scheme="https://aixlnyt.github.io/tags/%E6%93%B4%E5%85%85%E5%8A%9F%E8%83%BD/"/>
+    
+    <category term="Extension" scheme="https://aixlnyt.github.io/tags/Extension/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Certiport 考科目錄</title>
+    <link href="https://aixlnyt.github.io/2025/07/19/Certiport_menu/"/>
+    <id>https://aixlnyt.github.io/2025/07/19/Certiport_menu/</id>
+    <published>2025-07-18T16:00:00.000Z</published>
+    <updated>2025-07-27T15:26:36.010Z</updated>
+    
+    <content type="html"><![CDATA[<p>Certiport 隸屬於 Pearson VUE（培生集團），總部位於美國猶他州，成立於 1997 年，專門提供資訊技能與職場應用相關的國際認證考試。其合作品牌包含 Microsoft、Adobe、Apple、Autodesk、Unity 等，提供證照如 MOS、ACA、IC3、PMR 等。其中 PMR 為專案管理入門證照，定位與過去的 MTA 類似，皆屬入門級認證。</p><hr><br><h3 id="➤-Microsoft-MCF-微軟核心能力原廠國際認證"><a href="#➤-Microsoft-MCF-微軟核心能力原廠國際認證" class="headerlink" title="➤ Microsoft MCF 微軟核心能力原廠國際認證"></a>➤ Microsoft MCF 微軟核心能力原廠國際認證</h3><p>👉 <a href="/Certiport/MCF/MCF.html">點我閱讀</a></p><h3 id="➤-Microsoft-Office-Specialist-MOS-原廠國際認證"><a href="#➤-Microsoft-Office-Specialist-MOS-原廠國際認證" class="headerlink" title="➤ Microsoft Office Specialist (MOS)原廠國際認證"></a>➤ Microsoft Office Specialist (MOS)原廠國際認證</h3><p>👉 <a href="/Certiport/MOS/MOS.html">點我閱讀</a></p><h3 id="➤-Autodesk-ACU-工程與數媒設計原廠國際認證"><a href="#➤-Autodesk-ACU-工程與數媒設計原廠國際認證" class="headerlink" title="➤ Autodesk ACU 工程與數媒設計原廠國際認證"></a>➤ Autodesk ACU 工程與數媒設計原廠國際認證</h3><p>👉 <a href="/Certiport/ACU/ACU.html">點我閱讀</a></p><h3 id="➤-Adobe-ACP-數媒設計原廠國際認證"><a href="#➤-Adobe-ACP-數媒設計原廠國際認證" class="headerlink" title="➤ Adobe ACP 數媒設計原廠國際認證"></a>➤ Adobe ACP 數媒設計原廠國際認證</h3><p>👉 <a href="/Certiport/ACP/ACP.html">點我閱讀</a></p><h3 id="➤-Cisco-CCST-思科認證技術人員原廠國際認證"><a href="#➤-Cisco-CCST-思科認證技術人員原廠國際認證" class="headerlink" title="➤ Cisco CCST 思科認證技術人員原廠國際認證"></a>➤ Cisco CCST 思科認證技術人員原廠國際認證</h3><p>👉 <a href="/Certiport/CCST/CCST.html">點我閱讀</a></p><h3 id="➤-Pearson-VUE-ITS-資訊科技專家國際專業認證"><a href="#➤-Pearson-VUE-ITS-資訊科技專家國際專業認證" class="headerlink" title="➤ Pearson VUE ITS 資訊科技專家國際專業認證"></a>➤ Pearson VUE ITS 資訊科技專家國際專業認證</h3><p>👉 <a href="/Certiport/ITS/ITS.html">點我閱讀</a></p><h3 id="➤-Unity-UCU-遊戲設計開發原廠國際認證"><a href="#➤-Unity-UCU-遊戲設計開發原廠國際認證" class="headerlink" title="➤ Unity UCU 遊戲設計開發原廠國際認證"></a>➤ Unity UCU 遊戲設計開發原廠國際認證</h3><p>👉 <a href="/Certiport/UCU/UCU.html">點我閱讀</a></p><h3 id="➤-PMI-PMR-專案管理核心能力國際專業認證"><a href="#➤-PMI-PMR-專案管理核心能力國際專業認證" class="headerlink" title="➤ PMI PMR 專案管理核心能力國際專業認證"></a>➤ PMI PMR 專案管理核心能力國際專業認證</h3><p>👉 <a href="/Certiport/PMI/PMI.html">點我閱讀</a></p><h3 id="➤-Pearson-VUE-Critical-Career-Skills關鍵職業技能國際認證"><a href="#➤-Pearson-VUE-Critical-Career-Skills關鍵職業技能國際認證" class="headerlink" title="➤ Pearson VUE Critical Career Skills關鍵職業技能國際認證"></a>➤ Pearson VUE Critical Career Skills關鍵職業技能國際認證</h3><p>👉 <a href="/Certiport/CCS/CCS.html">點我閱讀</a></p><h3 id="➤-Pearson-VUE-ESB-創業經營與企業管理國際專業認證"><a href="#➤-Pearson-VUE-ESB-創業經營與企業管理國際專業認證" class="headerlink" title="➤ Pearson VUE ESB 創業經營與企業管理國際專業認證"></a>➤ Pearson VUE ESB 創業經營與企業管理國際專業認證</h3><p>👉 <a href="/Certiport/ESB/ESB.html">點我閱讀</a></p><h3 id="➤-Intuit-Design-for-Delight-Innovator-創新思維國際專業認證"><a href="#➤-Intuit-Design-for-Delight-Innovator-創新思維國際專業認證" class="headerlink" title="➤ Intuit Design for Delight Innovator 創新思維國際專業認證"></a>➤ Intuit Design for Delight Innovator 創新思維國際專業認證</h3><p>👉 <a href="/Certiport/D4D/D4D.html">點我閱讀</a></p><h3 id="➤-Apple-App-Development-with-Swift-應用程式開發原廠國際認證"><a href="#➤-Apple-App-Development-with-Swift-應用程式開發原廠國際認證" class="headerlink" title="➤ Apple App Development with Swift 應用程式開發原廠國際認證"></a>➤ Apple App Development with Swift 應用程式開發原廠國際認證</h3><p>👉 <a href="/Certiport/Swift/Swift.html">點我閱讀</a></p><h3 id="➤-Pearson-VUE-IC3-資訊素養綜合能力國際專業認證"><a href="#➤-Pearson-VUE-IC3-資訊素養綜合能力國際專業認證" class="headerlink" title="➤ Pearson VUE IC3 資訊素養綜合能力國際專業認證"></a>➤ Pearson VUE IC3 資訊素養綜合能力國際專業認證</h3><p>👉 <a href="/Certiport/IC3/IC3.html">點我閱讀</a></p><h3 id="➤-Meta數位行銷核心能力國際專業認證"><a href="#➤-Meta數位行銷核心能力國際專業認證" class="headerlink" title="➤ Meta數位行銷核心能力國際專業認證"></a>➤ Meta數位行銷核心能力國際專業認證</h3><p>👉 <a href="/Certiport/Meta/Meta.html">點我閱讀</a></p><p><br><br></p><h2 id="資料來源"><a href="#資料來源" class="headerlink" title="資料來源"></a>資料來源</h2><ul><li>Certiport 台灣官方網站（中文）：<a href="https://www.gotop.com.tw/Certification/certiport/">Certiport 台灣官方網站</a></li></ul>]]></content>
+    
+    
+    <summary type="html">Certiport 是一個專注於專業認證的機構，提供多種數位技能考試，幫助學習者獲得國際認證</summary>
+    
+    
+    
+    <category term="Certiport" scheme="https://aixlnyt.github.io/categories/Certiport/"/>
+    
+    
+    <category term="證照" scheme="https://aixlnyt.github.io/tags/%E8%AD%89%E7%85%A7/"/>
+    
+    <category term="國際認證" scheme="https://aixlnyt.github.io/tags/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ICDL 考科目錄</title>
+    <link href="https://aixlnyt.github.io/2025/07/19/ICDL_menu/"/>
+    <id>https://aixlnyt.github.io/2025/07/19/ICDL_menu/</id>
+    <published>2025-07-18T16:00:00.000Z</published>
+    <updated>2025-09-01T14:36:56.694Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>創立於1997年，由European Computer Driving License Foundation成立</li><li>ICDL 考試需達到75%以上（100題中答對40題）才算通過</li><li>分為專業級(PROFESSIONAL)和職場級(WORK FORCE)</li><li>Advanced Modules需達60%通過率</li><li>ICDL Insights包含雲端運算、人工智慧、物聯網、大數據等，通過率要求45%</li></ul><hr><br><h2 id="ICDL-Workforce-Modules"><a href="#ICDL-Workforce-Modules" class="headerlink" title="ICDL Workforce Modules"></a>ICDL Workforce Modules</h2><h3 id="基礎技能模組-Essential-Skills"><a href="#基礎技能模組-Essential-Skills" class="headerlink" title="基礎技能模組 (Essential Skills)"></a>基礎技能模組 (Essential Skills)</h3><table><thead><tr><th>英文名稱</th><th>中文名稱</th><th>前往位置</th></tr></thead><tbody><tr><td>Computer Essentials</td><td>計算機概論</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Online Essentials</td><td>網際網路概論</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr></tbody></table><h3 id="辦公應用模組-Office-Applications"><a href="#辦公應用模組-Office-Applications" class="headerlink" title="辦公應用模組 (Office Applications)"></a>辦公應用模組 (Office Applications)</h3><table><thead><tr><th>英文名稱</th><th>中文名稱</th><th>前往位置</th></tr></thead><tbody><tr><td>Word Processing</td><td>文書處理</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Spreadsheets</td><td>電子試算表</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Presentation</td><td>電腦簡報</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr></tbody></table><h3 id="良好實務模組-Good-Practice"><a href="#良好實務模組-Good-Practice" class="headerlink" title="良好實務模組 (Good Practice)"></a>良好實務模組 (Good Practice)</h3><table><thead><tr><th>英文名稱</th><th>中文名稱</th><th>前往位置</th></tr></thead><tbody><tr><td>IT Security</td><td>資訊安全</td><td>👉 <a href="/ICDL/Security.html">點我前往</a></td></tr><tr><td>Online Collaboration</td><td>雲端協同作業</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Information Literacy</td><td>網路資訊管理</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr></tbody></table><p><br><br></p><h2 id="ICDL-Professional-Modules"><a href="#ICDL-Professional-Modules" class="headerlink" title="ICDL Professional Modules"></a>ICDL Professional Modules</h2><h3 id="行銷與溝通模組-Marketing-Communications"><a href="#行銷與溝通模組-Marketing-Communications" class="headerlink" title="行銷與溝通模組 (Marketing &amp; Communications)"></a>行銷與溝通模組 (Marketing &amp; Communications)</h3><table><thead><tr><th>英文名稱</th><th>中文名稱</th><th>前往位置</th></tr></thead><tbody><tr><td>Digital Marketing</td><td>數位行銷</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Advanced Word Processing</td><td>進階文書處理</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Advanced Presentation</td><td>進階電腦簡報</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr></tbody></table><h3 id="財務與管理模組-Finance-Management"><a href="#財務與管理模組-Finance-Management" class="headerlink" title="財務與管理模組 (Finance &amp; Management)"></a>財務與管理模組 (Finance &amp; Management)</h3><table><thead><tr><th>英文名稱</th><th>中文名稱</th><th>前往位置</th></tr></thead><tbody><tr><td>Advanced Spreadsheets</td><td>進階電子試算表</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Project Planning</td><td>專案規劃</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr></tbody></table><h3 id="技術模組-Technical"><a href="#技術模組-Technical" class="headerlink" title="技術模組 (Technical)"></a>技術模組 (Technical)</h3><table><thead><tr><th>英文名稱</th><th>中文名稱</th><th>前往位置</th></tr></thead><tbody><tr><td>Computing</td><td>運算思維與Python程式設計</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Using Databases</td><td>電子資料庫</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Advanced Database</td><td>進階電子資料庫</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Data Analytics</td><td>數據分析</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr></tbody></table><h3 id="設計模組-Design"><a href="#設計模組-Design" class="headerlink" title="設計模組 (Design)"></a>設計模組 (Design)</h3><table><thead><tr><th>英文名稱</th><th>中文名稱</th><th>前往位置</th></tr></thead><tbody><tr><td>2D Design</td><td>電腦輔助平面設計</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Web Editing</td><td>網頁編輯</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Image Editing</td><td>影像編輯</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr></tbody></table><p><br><br></p><h2 id="ICDL-Insights-Modules"><a href="#ICDL-Insights-Modules" class="headerlink" title="ICDL Insights Modules"></a>ICDL Insights Modules</h2><h3 id="新興科技模組-Trending-and-Emerging-Technology"><a href="#新興科技模組-Trending-and-Emerging-Technology" class="headerlink" title="新興科技模組 (Trending and Emerging Technology)"></a>新興科技模組 (Trending and Emerging Technology)</h3><table><thead><tr><th>英文名稱</th><th>中文名稱</th><th>前往位置</th></tr></thead><tbody><tr><td>Cloud Computing</td><td>雲端運算</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Internet of Things</td><td>物聯網</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Artificial Intelligence</td><td>人工智慧</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Big Data</td><td>大數據</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr><tr><td>Blockchain</td><td>區塊鏈</td><td>👉 <a href="/ICDL/xxxx.html">點我前往</a></td></tr></tbody></table>]]></content>
+    
+    
+    <summary type="html">ICDL 基金會是負責 ICDL 認證的國際組織，ICDL 國際認證為資訊技能標準，在全球各國、教育、培訓機構，以及政府機關和企業，都使用 ICDL 國際認證來為現有的員工以及未來的勞動力提供現代職場必需的資訊技能。</summary>
+    
+    
+    
+    <category term="ICDL" scheme="https://aixlnyt.github.io/categories/ICDL/"/>
+    
+    
+    <category term="證照" scheme="https://aixlnyt.github.io/tags/%E8%AD%89%E7%85%A7/"/>
+    
+    <category term="國際認證" scheme="https://aixlnyt.github.io/tags/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown 教學目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/06/Markdown_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/06/Markdown_menu/</id>
+    <published>2025-06-05T16:00:00.000Z</published>
+    <updated>2025-07-21T02:12:36.230Z</updated>
+    
+    <content type="html"><![CDATA[<p>Markdown 是一種輕量級標記式語言，由約翰·格魯伯創建，它使用純文字格式編寫文件，並可轉換成 HTML 等格式。Markdown 的設計使其易於閱讀和編寫，且常用於網路內容創作。Markdown 的參考式連結功能讓文件更像瀏覽器最終的結果，使你能夠將標記相關的資訊移至段落文字之外，增進文章的可讀性。</p><hr><br><h3 id="➤-Markdown-顏色教學"><a href="#➤-Markdown-顏色教學" class="headerlink" title="➤ Markdown 顏色教學"></a>➤ Markdown 顏色教學</h3><p>👉 <a href="/markdown/color.html">點我閱讀</a></p>]]></content>
+    
+    
+    <summary type="html">Markdown是一種輕量級標記式語言，允許使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML文件。這種語言吸收了很多在電子郵件中已有的純文字標記的特性。</summary>
+    
+    
+    
+    <category term="Markdown" scheme="https://aixlnyt.github.io/categories/Markdown/"/>
+    
+    
+    <category term="標記語言" scheme="https://aixlnyt.github.io/tags/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>顯示卡目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/GPU_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/GPU_menu/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-07-21T01:14:37.918Z</updated>
+    
+    <content type="html"><![CDATA[<p>想知道該選哪張顯示卡？這篇文章幫你快速搞懂 NVIDIA 和 AMD 的產品系列、差異和選購建議！</p><hr><br><h2 id="NVIDIA-系列"><a href="#NVIDIA-系列" class="headerlink" title="NVIDIA 系列"></a>NVIDIA 系列</h2><h3 id="➤-GeForce-900-系列"><a href="#➤-GeForce-900-系列" class="headerlink" title="➤ GeForce 900 系列"></a>➤ GeForce 900 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/900_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-10-系列"><a href="#➤-GeForce-10-系列" class="headerlink" title="➤ GeForce 10 系列"></a>➤ GeForce 10 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/10_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-16-系列"><a href="#➤-GeForce-16-系列" class="headerlink" title="➤ GeForce 16 系列"></a>➤ GeForce 16 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/16_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-20-系列"><a href="#➤-GeForce-20-系列" class="headerlink" title="➤ GeForce 20 系列"></a>➤ GeForce 20 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/20_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-30-系列"><a href="#➤-GeForce-30-系列" class="headerlink" title="➤ GeForce 30 系列"></a>➤ GeForce 30 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/30_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-40-系列"><a href="#➤-GeForce-40-系列" class="headerlink" title="➤ GeForce 40 系列"></a>➤ GeForce 40 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/40_Series.html">點我閱讀</a></p><h3 id="➤-GeForce-50-系列"><a href="#➤-GeForce-50-系列" class="headerlink" title="➤ GeForce 50 系列"></a>➤ GeForce 50 系列</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/50_Series.html">點我閱讀</a></p><h3 id="➤-VRAM-介紹"><a href="#➤-VRAM-介紹" class="headerlink" title="➤ VRAM 介紹"></a>➤ VRAM 介紹</h3><p>👉 <a href="/technology/hardware/GPU/NVIDIA/VRAM.html">點我閱讀</a></p><p><br><br></p><h2 id="AMD-系列"><a href="#AMD-系列" class="headerlink" title="AMD 系列"></a>AMD 系列</h2><h3 id="➤-Radeon-RX-400-系列"><a href="#➤-Radeon-RX-400-系列" class="headerlink" title="➤ Radeon RX 400 系列"></a>➤ Radeon RX 400 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx400.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-500-系列"><a href="#➤-Radeon-RX-500-系列" class="headerlink" title="➤ Radeon RX 500 系列"></a>➤ Radeon RX 500 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx500.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-Vega-系列"><a href="#➤-Radeon-RX-Vega-系列" class="headerlink" title="➤ Radeon RX Vega 系列"></a>➤ Radeon RX Vega 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/vega.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-5000-系列"><a href="#➤-Radeon-RX-5000-系列" class="headerlink" title="➤ Radeon RX 5000 系列"></a>➤ Radeon RX 5000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx5000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-6000-系列"><a href="#➤-Radeon-RX-6000-系列" class="headerlink" title="➤ Radeon RX 6000 系列"></a>➤ Radeon RX 6000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx6000.html">點我閱讀</a></p><h3 id="➤-Radeon-RX-7000-系列"><a href="#➤-Radeon-RX-7000-系列" class="headerlink" title="➤ Radeon RX 7000 系列"></a>➤ Radeon RX 7000 系列</h3><p>👉 <a href="/technology/hardware/GPU/AMD/rx7000.html">點我閱讀</a></p>]]></content>
+    
+    
+    <summary type="html">顯示卡是電腦中負責處理圖形和影像的硬體設備，主要分為集成顯示卡和獨立顯示卡。集成顯示卡通常與主機板集成，性能較低但成本低廉；獨立顯示卡則擁有更強的性能和更多的記憶體，適合遊戲和專業圖形處理。</summary>
+    
+    
+    
+    <category term="顯卡" scheme="https://aixlnyt.github.io/categories/%E9%A1%AF%E5%8D%A1/"/>
+    
+    
+    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>硬體相關目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/Hardware_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/Hardware_menu/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-07-21T01:15:53.976Z</updated>
+    
+    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。</p><hr><br><h3 id="➤-XXXX"><a href="#➤-XXXX" class="headerlink" title="➤ XXXX"></a>➤ XXXX</h3><p>👉 <a href="/technology/software/XXXX.html">點我閱讀</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與硬體相關的資源，涵蓋電腦零組件、周邊設備、網路設備及各類輔助硬體工具，內容主要基於我對各種硬體知識的整理與認知。目的是方便使用者快速尋找、採購、組裝及學習所需的硬體產品與技術，提升使用與維護效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h3 id=&quot;➤-X</summary>
+      
+    
+    
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E9%AB%94/"/>
+    
+    
+    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 教學目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/Java_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/Java_menu/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-07-23T15:05:46.094Z</updated>
+    
+    <content type="html"><![CDATA[<p>Java 是一種跨平台的物件導向程式語言，常用於開發桌面應用、網站後端及 Android App。基本語法包括變數、條件判斷、迴圈、方法與類別等，進階可學繼承、多型、例外處理與資料結構。Java 擁有強大的標準庫，如 ArrayList、HashMap、Scanner 等，並支援檔案處理與多執行緒，是入門與進階都很實用的語言。</p><hr><br><h2 id="Java-基礎概念"><a href="#Java-基礎概念" class="headerlink" title="Java 基礎概念:"></a>Java 基礎概念:</h2><h3 id="➤-第一章：電腦程式語言介紹"><a href="#➤-第一章：電腦程式語言介紹" class="headerlink" title="➤ 第一章：電腦程式語言介紹"></a>➤ 第一章：電腦程式語言介紹</h3><p>👉 <a href="/java/basic/ch01.html">點我閱讀</a></p><h3 id="➤-第二章：基本資料型態"><a href="#➤-第二章：基本資料型態" class="headerlink" title="➤ 第二章：基本資料型態"></a>➤ 第二章：基本資料型態</h3><p>👉 <a href="/java/basic/ch02.html">點我閱讀</a></p><h3 id="➤-第三章：基本輸出方法及輸入方法"><a href="#➤-第三章：基本輸出方法及輸入方法" class="headerlink" title="➤ 第三章：基本輸出方法及輸入方法"></a>➤ 第三章：基本輸出方法及輸入方法</h3><p>👉 <a href="/java/basic/ch03.html">點我閱讀</a></p><h3 id="➤-第四章：選擇結構"><a href="#➤-第四章：選擇結構" class="headerlink" title="➤ 第四章：選擇結構"></a>➤ 第四章：選擇結構</h3><p>👉 <a href="/java/basic/ch04.html">點我閱讀</a></p><h3 id="➤-第五章：迴圈結構"><a href="#➤-第五章：迴圈結構" class="headerlink" title="➤ 第五章：迴圈結構"></a>➤ 第五章：迴圈結構</h3><p>👉 <a href="/java/basic/ch05.html">點我閱讀</a></p><h3 id="➤-第六章：內建類別"><a href="#➤-第六章：內建類別" class="headerlink" title="➤ 第六章：內建類別"></a>➤ 第六章：內建類別</h3><p>👉 <a href="/java/basic/ch06.html">點我閱讀</a></p><h3 id="➤-第七章：陣列"><a href="#➤-第七章：陣列" class="headerlink" title="➤ 第七章：陣列"></a>➤ 第七章：陣列</h3><p>👉 <a href="/java/basic/ch07.html">點我閱讀</a></p><p><br><br></p><h2 id="Java-進階概念"><a href="#Java-進階概念" class="headerlink" title="Java 進階概念:"></a>Java 進階概念:</h2><h3 id="➤-第八章：參考資料形態"><a href="#➤-第八章：參考資料形態" class="headerlink" title="➤ 第八章：參考資料形態"></a>➤ 第八章：參考資料形態</h3><p>👉 <a href="/java/advance/ch08.html">點我閱讀</a></p><h3 id="➤-第九章：例外處理"><a href="#➤-第九章：例外處理" class="headerlink" title="➤ 第九章：例外處理"></a>➤ 第九章：例外處理</h3><p>👉 <a href="/java/advance/ch09.html">點我閱讀</a></p><h3 id="➤-第十章：自訂類別與方法"><a href="#➤-第十章：自訂類別與方法" class="headerlink" title="➤ 第十章：自訂類別與方法"></a>➤ 第十章：自訂類別與方法</h3><p>👉 <a href="/java/advance/ch10.html">點我閱讀</a></p><h3 id="➤-第十一章：修飾子"><a href="#➤-第十一章：修飾子" class="headerlink" title="➤ 第十一章：修飾子"></a>➤ 第十一章：修飾子</h3><p>👉 <a href="/java/advance/ch11.html">點我閱讀</a></p><h3 id="➤-第十二章：繼承"><a href="#➤-第十二章：繼承" class="headerlink" title="➤ 第十二章：繼承"></a>➤ 第十二章：繼承</h3><p>👉 <a href="/java/advance/ch12.html">點我閱讀</a></p><h3 id="➤-第十三章：抽象類別和介面"><a href="#➤-第十三章：抽象類別和介面" class="headerlink" title="➤ 第十三章：抽象類別和介面"></a>➤ 第十三章：抽象類別和介面</h3><p>👉 <a href="/java/advance/ch13.html">點我閱讀</a></p><h3 id="➤-第十四章：檔案處理"><a href="#➤-第十四章：檔案處理" class="headerlink" title="➤ 第十四章：檔案處理"></a>➤ 第十四章：檔案處理</h3><p>👉 <a href="/java/advance/ch14.html">點我閱讀</a></p><h3 id="➤-第十五章：套件"><a href="#➤-第十五章：套件" class="headerlink" title="➤ 第十五章：套件"></a>➤ 第十五章：套件</h3><p>👉 <a href="/java/advance/ch15.html">點我閱讀</a></p><h3 id="➤-第十六章：多執行緒"><a href="#➤-第十六章：多執行緒" class="headerlink" title="➤ 第十六章：多執行緒"></a>➤ 第十六章：多執行緒</h3><p>👉 <a href="/java/advance/ch16.html">點我閱讀</a></p><h3 id="➤-第十七章：資料結構"><a href="#➤-第十七章：資料結構" class="headerlink" title="➤ 第十七章：資料結構"></a>➤ 第十七章：資料結構</h3><p>👉 <a href="/java/advance/ch17.html">點我閱讀</a></p><h3 id="➤-第十八章：泛型"><a href="#➤-第十八章：泛型" class="headerlink" title="➤ 第十八章：泛型"></a>➤ 第十八章：泛型</h3><p>👉 <a href="/java/advance/ch18.html">點我閱讀</a></p><h3 id="➤-第十九章：集合"><a href="#➤-第十九章：集合" class="headerlink" title="➤ 第十九章：集合"></a>➤ 第十九章：集合</h3><p>👉 <a href="/java/advance/ch19.html">點我閱讀</a></p><p><br><br></p><h2 id="Java-概念延伸或補充筆記"><a href="#Java-概念延伸或補充筆記" class="headerlink" title="Java 概念延伸或補充筆記:"></a>Java 概念延伸或補充筆記:</h2><h3 id="➤-大小寫字母對應-ASCII"><a href="#➤-大小寫字母對應-ASCII" class="headerlink" title="➤ 大小寫字母對應 ASCII"></a>➤ 大小寫字母對應 ASCII</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-進制轉換教學"><a href="#➤-進制轉換教學" class="headerlink" title="➤ 進制轉換教學"></a>➤ 進制轉換教學</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-多型與變數宣告"><a href="#➤-多型與變數宣告" class="headerlink" title="➤ 多型與變數宣告"></a>➤ 多型與變數宣告</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-建構式特別注意"><a href="#➤-建構式特別注意" class="headerlink" title="➤ 建構式特別注意"></a>➤ 建構式特別注意</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-修飾子總整理"><a href="#➤-修飾子總整理" class="headerlink" title="➤ 修飾子總整理"></a>➤ 修飾子總整理</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-常見-Exception-與-Error"><a href="#➤-常見-Exception-與-Error" class="headerlink" title="➤ 常見 Exception 與 Error"></a>➤ 常見 Exception 與 Error</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-費波那契數列"><a href="#➤-費波那契數列" class="headerlink" title="➤ 費波那契數列"></a>➤ 費波那契數列</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-Character-類"><a href="#➤-Character-類" class="headerlink" title="➤ Character 類"></a>➤ Character 類</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-final-教學"><a href="#➤-final-教學" class="headerlink" title="➤ final 教學"></a>➤ final 教學</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><h3 id="➤-String-類"><a href="#➤-String-類" class="headerlink" title="➤ String 類"></a>➤ String 類</h3><p>👉 <a href="/java/extra/ch01.html">點我閱讀</a></p><p><br><br></p><h2 id="Java-題目題型"><a href="#Java-題目題型" class="headerlink" title="Java 題目題型:"></a>Java 題目題型:</h2>]]></content>
+    
+    
+    <summary type="html">Java是一種廣泛使用的電腦程式設計語言，擁有跨平台、物件導向、泛型程式設計的特性，廣泛應用於企業級Web應用開發和行動應用開發。</summary>
+    
+    
+    
+    <category term="Java" scheme="https://aixlnyt.github.io/categories/Java/"/>
+    
+    
+    <category term="程式語言" scheme="https://aixlnyt.github.io/tags/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>顯示器目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/Monitor_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/Monitor_menu/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-07-21T01:19:14.832Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下是本系列針對顯示器相關主題的文章目錄，幫助你全面了解顯示器的各種知識與挑選技巧</p><hr><br><h3 id="➤-顯示器面板介紹"><a href="#➤-顯示器面板介紹" class="headerlink" title="➤ 顯示器面板介紹"></a>➤ 顯示器面板介紹</h3><p>👉 <a href="/technology/hardware/Monitor/ScreenPanel.html">點我閱讀</a></p><h3 id="➤-顯示器解析度與刷新率說明"><a href="#➤-顯示器解析度與刷新率說明" class="headerlink" title="➤ 顯示器解析度與刷新率說明"></a>➤ 顯示器解析度與刷新率說明</h3><p>👉 <a href="/technology/hardware/Monitor/ResolutionRefreshRate.html">點我閱讀</a></p><h3 id="➤-顯示器色彩表現"><a href="#➤-顯示器色彩表現" class="headerlink" title="➤ 顯示器色彩表現"></a>➤ 顯示器色彩表現</h3><p>👉 <a href="/technology/hardware/Monitor/ColorPerformance.html">點我閱讀</a></p><h3 id="➤-顯示器色域與色彩校正方法"><a href="#➤-顯示器色域與色彩校正方法" class="headerlink" title="➤ 顯示器色域與色彩校正方法"></a>➤ 顯示器色域與色彩校正方法</h3><p>👉 <a href="/technology/hardware/Monitor/ColorGamutCalibration.html">點我閱讀</a></p><h3 id="➤-曲面顯示器-vs-平面顯示器"><a href="#➤-曲面顯示器-vs-平面顯示器" class="headerlink" title="➤ 曲面顯示器 vs 平面顯示器"></a>➤ 曲面顯示器 vs 平面顯示器</h3><p>👉 <a href="/technology/hardware/Monitor/Curved_vs_Flat.html">點我閱讀</a></p><h3 id="➤-顯示器連接介面介紹"><a href="#➤-顯示器連接介面介紹" class="headerlink" title="➤ 顯示器連接介面介紹"></a>➤ 顯示器連接介面介紹</h3><p>👉 <a href="/technology/hardware/Monitor/ConnectionInterface.html">點我閱讀</a></p><h3 id="➤-顯示器選購指南"><a href="#➤-顯示器選購指南" class="headerlink" title="➤ 顯示器選購指南"></a>➤ 顯示器選購指南</h3><p>👉 <a href="/technology/hardware/Monitor/BuyingGuide.html">點我閱讀</a></p><h3 id="➤-顯示器響應時間和影像延遲解說"><a href="#➤-顯示器響應時間和影像延遲解說" class="headerlink" title="➤ 顯示器響應時間和影像延遲解說"></a>➤ 顯示器響應時間和影像延遲解說</h3><p>👉 <a href="/technology/hardware/Monitor/ResponseTimeLag.html">點我閱讀</a></p><h3 id="➤-多螢幕架設與支架選購"><a href="#➤-多螢幕架設與支架選購" class="headerlink" title="➤ 多螢幕架設與支架選購"></a>➤ 多螢幕架設與支架選購</h3><p>👉 <a href="/technology/hardware/Monitor/MultiMonitorMount.html">點我閱讀</a></p><h3 id="➤-顯示器使用壽命與保養秘訣"><a href="#➤-顯示器使用壽命與保養秘訣" class="headerlink" title="➤ 顯示器使用壽命與保養秘訣"></a>➤ 顯示器使用壽命與保養秘訣</h3><p>👉 <a href="/technology/hardware/Monitor/LifespanCare.html">點我閱讀</a></p>]]></content>
+    
+    
+    <summary type="html">顯示器(display or monitor) 是一種輸出裝置，用於顯示文字、圖像、影片等視覺資訊。 它通常是電腦、電視、手機等電子設備的重要組成部分，讓使用者可以與設備進行交互，並接收來自設備的視覺反饋。</summary>
+    
+    
+    
+    <category term="顯示器" scheme="https://aixlnyt.github.io/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/"/>
+    
+    
+    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>硬碟與固態硬碟</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/SSD_menu/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/SSD_menu/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-09-03T15:12:28.207Z</updated>
+    
+    <content type="html"><![CDATA[<p>硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。</p><hr><br><h3 id="➤-SSD-系統碟推薦"><a href="#➤-SSD-系統碟推薦" class="headerlink" title="➤ SSD 系統碟推薦"></a>➤ SSD 系統碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/system.html">點我閱讀</a></p><h3 id="➤-SSD-遊戲碟推薦"><a href="#➤-SSD-遊戲碟推薦" class="headerlink" title="➤ SSD 遊戲碟推薦"></a>➤ SSD 遊戲碟推薦</h3><p>👉 <a href="/technology/hardware/SSD/game.html">點我閱讀</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;硬碟（HDD）和固態硬碟（SSD）都是數據存儲設備，HDD使用磁碟片和讀寫頭進行機械式存取，容量大且成本低，但速度較慢；而SSD則基於閃存技術，無機械部件，讀寫速度快、抗震性強，但價格相對較高，容量通常較小。選擇時需考慮性能需求與預算。&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h3</summary>
+      
+    
+    
+    
+    <category term="硬碟" scheme="https://aixlnyt.github.io/categories/%E7%A1%AC%E7%A2%9F/"/>
+    
+    
+    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
+    
+    <category term="硬體" scheme="https://aixlnyt.github.io/tags/%E7%A1%AC%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>軟體相關目錄</title>
+    <link href="https://aixlnyt.github.io/2025/06/05/Software_meun/"/>
+    <id>https://aixlnyt.github.io/2025/06/05/Software_meun/</id>
+    <published>2025-06-04T16:00:00.000Z</published>
+    <updated>2025-09-03T15:12:38.624Z</updated>
+    
+    <content type="html"><![CDATA[<p>本目錄匯集並分類了所有與軟體相關的資源，涵蓋程式、應用軟體、開發工具及各類輔助工具，內容主要基於我對各種軟體相關知識的整理與認知。目的是方便使用者快速尋找、下載、管理及學習所需的軟體產品與技術，提升工作與學習效率。</p><hr><br><h2 id="➤-FFmpeg-安裝教學"><a href="#➤-FFmpeg-安裝教學" class="headerlink" title="➤ FFmpeg 安裝教學"></a>➤ FFmpeg 安裝教學</h2><style>@media (max-width: 768px) {  .ffmpeg-card {    flex-direction: column !important;  }  .ffmpeg-card .img-box {    margin-left: 0 !important;    margin-top: 20px;    align-self: flex-start;  }}/* 針對超小螢幕，如320px以下 */@media (max-width: 360px) {  .ffmpeg-card > div {    min-width: 0 !important;  /* 取消最小寬度限制，讓容器可縮 */  }  .ffmpeg-card .img-box {    max-width: 100% !important; /* 圖片最大寬度為容器寬度 */    margin-left: 0 !important;  }  .ffmpeg-card p {    word-break: break-word; /* 允許長文字換行 */  }}</style><div class="ffmpeg-card" style="  display: flex;  flex-wrap: wrap;  align-items: flex-start;  justify-content: space-between;  margin-bottom: 20px;  background: rgba(30, 41, 59, 0.8);  border-radius: 20px;  padding: 30px;  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);  backdrop-filter: blur(10px);  color: #e2e8f0;">  <div style="flex: 1; min-width: 250px;">    <p style="color: #cbd5e1;">      FFmpeg 是一套免費又開放原始碼的軟體，它主要用來處理影音檔案。你可以用它來錄影、轉換影片格式、剪輯影片，甚至可以用來直播或串流影片。它功能很強大但操作起來也比較偏命令列，適合有點基礎想進階學習影音處理的學生。    </p>    <p style="color: #60a5fa; font-weight: 500;">      👉 <a href="/technology/software/FFmpeg" style="color: #60a5fa; text-decoration: none;">點我閱讀</a>    </p>  </div>  <div class="img-box" style="min-width: 200px; flex-shrink: 0; margin-left: 20px;">    <img src="/img/FFmpeg/FFmpeg.png" alt="FFmpeg" style="width: 100%; max-width: 200px; border-radius: 12px;">  </div></div><br>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本目錄匯集並分類了所有與軟體相關的資源，涵蓋程式、應用軟體、開發工具及各類輔助工具，內容主要基於我對各種軟體相關知識的整理與認知。目的是方便使用者快速尋找、下載、管理及學習所需的軟體產品與技術，提升工作與學習效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;➤-FFmp</summary>
+      
+    
+    
+    
+    <category term="軟體" scheme="https://aixlnyt.github.io/categories/%E8%BB%9F%E9%AB%94/"/>
+    
+    
+    <category term="電腦" scheme="https://aixlnyt.github.io/tags/%E9%9B%BB%E8%85%A6/"/>
+    
+    <category term="軟體" scheme="https://aixlnyt.github.io/tags/%E8%BB%9F%E9%AB%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>鳴潮</title>
+    <link href="https://aixlnyt.github.io/2024/05/23/WuWa_meun/"/>
+    <id>https://aixlnyt.github.io/2024/05/23/WuWa_meun/</id>
+    <published>2024-05-22T16:00:00.000Z</published>
+    <updated>2025-09-03T16:35:39.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>《鳴潮》是由中國遊戲開發商庫洛遊戲開發的開放世界類3D動作遊戲。遊戲自2021年開案並投入開發，2024年5月23日在Android、iOS和Microsoft Windows平台上公測。</p><span id="more"></span><hr><br><h3 id="➤-角色培養攻略-製作中"><a href="#➤-角色培養攻略-製作中" class="headerlink" title="➤ 角色培養攻略 製作中"></a>➤ 角色培養攻略 製作中</h3><p>👉 <a href="">點我前往</a></p><h3 id="➤-隊伍手法攻略-製作中"><a href="#➤-隊伍手法攻略-製作中" class="headerlink" title="➤ 隊伍手法攻略 製作中"></a>➤ 隊伍手法攻略 製作中</h3><p>👉 <a href="">點我前往</a></p><h3 id="➤-隊伍手法攻略-製作中-1"><a href="#➤-隊伍手法攻略-製作中-1" class="headerlink" title="➤ 隊伍手法攻略 製作中"></a>➤ 隊伍手法攻略 製作中</h3><p>👉 <a href="">點我前往</a></p><h3 id="➤-代打代肝代儲-製作中"><a href="#➤-代打代肝代儲-製作中" class="headerlink" title="➤ 代打代肝代儲 製作中"></a>➤ 代打代肝代儲 製作中</h3><p>👉 <a href="">點我前往</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;《鳴潮》是由中國遊戲開發商庫洛遊戲開發的開放世界類3D動作遊戲。遊戲自2021年開案並投入開發，2024年5月23日在Android、iOS和Microsoft Windows平台上公測。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="遊戲" scheme="https://aixlnyt.github.io/categories/%E9%81%8A%E6%88%B2/"/>
+    
+    
+    <category term="鳴潮" scheme="https://aixlnyt.github.io/tags/%E9%B3%B4%E6%BD%AE/"/>
+    
+    <category term="玩法" scheme="https://aixlnyt.github.io/tags/%E7%8E%A9%E6%B3%95/"/>
+    
+    <category term="攻略" scheme="https://aixlnyt.github.io/tags/%E6%94%BB%E7%95%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 教學目錄</title>
+    <link href="https://aixlnyt.github.io/2024/01/28/Python_menu/"/>
+    <id>https://aixlnyt.github.io/2024/01/28/Python_menu/</id>
+    <published>2024-01-27T16:00:00.000Z</published>
+    <updated>2025-09-01T14:37:29.568Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python 是一種廣泛使用的直譯式、進階和通用的程式語言。Python支援多種程式設計範式，包括結構化、程序式、反射式、物件導向和函數式程式設計。它擁有動態型別系統和垃圾回收功能，能夠自動管理主記憶體使用，並且其本身擁有一個巨大而廣泛的標準庫。它的語言結構以及物件導向的方法，旨在幫助程式設計師為小型的和大型的專案編寫邏輯清晰的程式碼。</p><hr><br>]]></content>
+    
+    
+    <summary type="html">Python 是一種廣泛使用的程式語言，以其快速開發能力和系統整合的效率而聞名。它支援多種程式設計範式，使其成為用途廣泛的工具。</summary>
+    
+    
+    
+    <category term="Python" scheme="https://aixlnyt.github.io/categories/Python/"/>
+    
+    
+    <category term="程式語言" scheme="https://aixlnyt.github.io/tags/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/"/>
+    
+  </entry>
+  
+</feed>

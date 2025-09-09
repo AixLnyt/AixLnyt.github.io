@@ -1,0 +1,3393 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="true" >
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>第一章：電腦程式語言介紹 | 虎头鯨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="虎头鲸 - blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="第一章：電腦程式語言介紹">
+<meta property="og:url" content="https://aixlnyt.github.io/java/extra/%E8%B2%BB%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B8%E5%88%97">
+<meta property="og:site_name" content="虎头鯨">
+<meta property="og:description" content="虎头鲸 - blog">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-06-24T15:49:57.222Z">
+<meta property="article:modified_time" content="2025-06-10T15:15:44.000Z">
+<meta property="article:author" content="虎头鲸">
+<meta property="article:tag" content="lenient, 虎頭鯨, 虎头鲸, baiyue, 白玥">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="虎头鯨" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/img/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+  
+  
+    
+
+<div id="banner" class="">
+  <!-- 图片/视频轮播容器 -->
+  <div class="banner-slideshow">
+    
+      <!-- 桌面端媒体 -->
+      
+        <video src="/img/d01.mp4" 
+               class="banner-media desktop-media media-0"
+               data-slide-index="0"
+               data-desktop-position="50% 20%"
+               autoplay muted loop playsinline preload="metadata">
+        </video>
+      
+      
+      <!-- 移动端媒体 -->
+      
+        <video src="/img/m01.mp4" 
+               class="banner-media mobile-media media-0"
+               data-slide-index="0"
+               data-mobile-position="70% 50%"
+               autoplay muted loop playsinline preload="metadata">
+        </video>
+      
+    
+  </div>
+  
+  <div id="banner-dim" style="display: none;"></div>
+  
+  <!-- 只有首页才显示标题 -->
+  
+  
+  <!-- Wave 效果 - 双层设计避免色差 -->
+  <div class="waves-container">
+    <!-- 暗色主题的 Wave -->
+    <svg class="waves waves-dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave-dark" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v28h-352z"/>
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave-dark" x="50" y="0" class="wave1"/>
+        <use xlink:href="#gentle-wave-dark" x="50" y="2" class="wave2"/>
+        <use xlink:href="#gentle-wave-dark" x="50" y="4" class="wave3"/>
+        <use xlink:href="#gentle-wave-dark" x="50" y="6" class="wave4"/>
+      </g>
+    </svg>
+    
+    <!-- 明亮主题的 Wave -->
+    <svg class="waves waves-light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave-light" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v28h-352z"/>
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave-light" x="50" y="0" class="wave1"/>
+        <use xlink:href="#gentle-wave-light" x="50" y="2" class="wave2"/>
+        <use xlink:href="#gentle-wave-light" x="50" y="4" class="wave3"/>
+        <use xlink:href="#gentle-wave-light" x="50" y="6" class="wave4"/>
+      </g>
+    </svg>
+  </div>
+  
+</div>
+
+<!-- 音樂播放器 -->
+<div id="musicPlayer" class="music-player-widget">
+  <!-- 隱藏狀態的半圓形圖標 -->
+  <div class="hidden-tab" id="hiddenTab">
+    <div class="tab-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M8 19V5l11 7z"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 播放器容器 -->
+  <div class="player-container" id="playerContainer">
+    <!-- 基本播放器信息（始終顯示） -->
+    <div class="player-header">
+      <div class="cover-container">
+        <img src="https://via.placeholder.com/48x48/6366f1/ffffff?text=♪" alt="封面" class="cover-img" id="coverImg">
+        <div class="play-overlay" id="playOverlay">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8 19V5l11 7z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="song-info">
+        <div class="song-title" id="songTitle">
+          <span class="title-text">示例歌曲名稱</span>
+        </div>
+        <div class="song-artist" id="songArtist">示例藝術家</div>
+        <div class="song-time" id="songTime">0:00 / 0:00</div>
+      </div>
+      <div class="header-controls">
+        <button class="icon-btn" id="hideBtn" title="隱藏播放器">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="1 0 24 24">
+            <path fill="currentColor" d="M9.4 18L8 16.6l4.6-4.6L8 7.4L9.4 6l6 6z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn play-toggle-btn" id="playToggleBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="1 0 24 24">
+            <path fill="currentColor" d="M8 19V5l11 7z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn expand-btn" id="expandBtn" title="展開播放器">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="1 0 24 24" class="expand-icon">
+            <path fill="currentColor" d="m7 14l5-5l5 5z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 展開內容（默認隱藏） -->
+    <div class="expanded-content" id="expandedContent">
+      <!-- 進度條 -->
+      <div class="progress-section">
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" style="width: 0%"></div>
+          <div class="progress-handle" style="left: 0%"></div>
+        </div>
+      </div>
+
+      <!-- 主控制按鈕 -->
+      <div class="main-controls">
+        <button class="control-btn" id="shuffleBtn" title="隨機播放">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M14 20v-2h2.6l-3.175-3.175L14.85 13.4L18 16.55V14h2v6zm-8.6 0L4 18.6L16.6 6H14V4h6v6h-2V7.4zm3.775-9.425L4 5.4L5.4 4l5.175 5.175z"></path>
+          </svg>
+        </button>
+        <button class="control-btn" id="prevBtn" title="上一首">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M5.5 18V6h2v12zm13 0l-9-6l9-6z"></path>
+          </svg>
+        </button>
+        <button class="play-btn" id="mainPlayBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M8 19V5l11 7z"></path>
+          </svg>
+        </button>
+        <button class="control-btn" id="nextBtn" title="下一首">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M16.5 18V6h2v12zm-11 0V6l9 6z"></path>
+          </svg>
+        </button>
+        <button class="control-btn" id="repeatBtn" title="循環播放">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+            <path fill="currentColor" d="m7 22l-4-4l4-4l1.4 1.45L6.85 17H17v-4h2v6H6.85l1.55 1.55zM5 11V5h12.15L15.6 3.45L17 2l4 4l-4 4l-1.4-1.45L17.15 7H7v4z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- 底部控制 -->
+      <div class="bottom-controls">
+        <button class="icon-btn" id="volumeBtn" title="音量">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="volume-icon">
+            <path fill="currentColor" d="M14 20.725v-2.05q2.25-.65 3.625-2.5t1.375-4.2t-1.375-4.2T14 5.275v-2.05q3.1.7 5.05 3.138T21 11.975t-1.95 5.613T14 20.725M3 15V9h4l5-5v16l-5-5zm11 1V7.95q1.175.55 1.838 1.65T16.5 12q0 1.275-.663 2.363T14 16"></path>
+          </svg>
+        </button>
+        <div class="volume-bar-container">
+          <div class="volume-bar" id="volumeBar">
+            <div class="volume-fill" style="width: 30%"></div>
+            <div class="volume-handle" style="left: 30%"></div>
+          </div>
+        </div>
+        <button class="icon-btn" id="playlistBtn" title="播放列表">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 播放列表彈出框 -->
+  <div class="playlist-modal" id="playlistModal">
+    <div class="playlist-content">
+      <div class="playlist-header">
+        <h3>播放列表</h3>
+        <button class="close-btn" id="closePlaylistBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M18.3 5.71L12 12l6.3 6.29l-1.42 1.42L12 13.41l-5.88 5.88l-1.42-1.42L10.59 12L4.7 5.71l1.42-1.42L12 10.59l6.3-6.3z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="playlist-list" id="playlistList">
+        <!-- 播放列表項目將在這裡生成 -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 隱藏的 Audio 元素 -->
+<audio id="audioPlayer" preload="metadata"></audio>
+
+<style>
+  .music-player-widget {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    z-index: 1000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+  }
+
+  /* 主題色彩變量 */
+  .music-player-widget {
+    --player-bg-light: rgba(255, 255, 255, 0.95);
+    --player-bg-dark: rgba(20, 25, 35, 0.95);
+    --player-header-light: rgba(240, 245, 250, 0.8);
+    --player-header-dark: rgba(30, 35, 45, 0.8);
+    --text-primary-light: #1a202c;
+    --text-primary-dark: #f7fafc;
+    --text-secondary-light: rgba(26, 32, 44, 0.7);
+    --text-secondary-dark: rgba(247, 250, 252, 0.7);
+    --text-tertiary-light: rgba(26, 32, 44, 0.5);
+    --text-tertiary-dark: rgba(247, 250, 252, 0.5);
+    --icon-bg-light: rgba(26, 32, 44, 0.08);
+    --icon-bg-dark: rgba(247, 250, 252, 0.08);
+    --icon-bg-hover-light: rgba(26, 32, 44, 0.15);
+    --icon-bg-hover-dark: rgba(247, 250, 252, 0.15);
+    --border-light: rgba(26, 32, 44, 0.1);
+    --border-dark: rgba(247, 250, 252, 0.1);
+    --progress-track-light: rgba(26, 32, 44, 0.1);
+    --progress-track-dark: rgba(247, 250, 252, 0.1);
+    --modal-overlay-light: rgba(0, 0, 0, 0.5);
+    --modal-overlay-dark: rgba(0, 0, 0, 0.8);
+    --playlist-hover-light: rgba(26, 32, 44, 0.05);
+    --playlist-hover-dark: rgba(247, 250, 252, 0.05);
+  }
+
+  /* Light 主題 */
+  :root[theme="light"] .music-player-widget {
+    --player-bg: var(--player-bg-light);
+    --player-header-bg: var(--player-header-light);
+    --text-primary: var(--text-primary-light);
+    --text-secondary: var(--text-secondary-light);
+    --text-tertiary: var(--text-tertiary-light);
+    --icon-bg: var(--icon-bg-light);
+    --icon-bg-hover: var(--icon-bg-hover-light);
+    --border-color: var(--border-light);
+    --progress-track: var(--progress-track-light);
+    --modal-overlay: var(--modal-overlay-light);
+    --playlist-hover: var(--playlist-hover-light);
+  }
+
+  /* Dark 主題 */
+  :root[theme="dark"] .music-player-widget {
+    --player-bg: var(--player-bg-dark);
+    --player-header-bg: var(--player-header-dark);
+    --text-primary: var(--text-primary-dark);
+    --text-secondary: var(--text-secondary-dark);
+    --text-tertiary: var(--text-tertiary-dark);
+    --icon-bg: var(--icon-bg-dark);
+    --icon-bg-hover: var(--icon-bg-hover-dark);
+    --border-color: var(--border-dark);
+    --progress-track: var(--progress-track-dark);
+    --modal-overlay: var(--modal-overlay-dark);
+    --playlist-hover: var(--playlist-hover-dark);
+  }
+
+  /* 默認為 dark 主題（如果沒有設定主題） */
+  .music-player-widget {
+    --player-bg: var(--player-bg-dark);
+    --player-header-bg: var(--player-header-dark);
+    --text-primary: var(--text-primary-dark);
+    --text-secondary: var(--text-secondary-dark);
+    --text-tertiary: var(--text-tertiary-dark);
+    --icon-bg: var(--icon-bg-dark);
+    --icon-bg-hover: var(--icon-bg-hover-dark);
+    --border-color: var(--border-dark);
+    --progress-track: var(--progress-track-dark);
+    --modal-overlay: var(--modal-overlay-dark);
+    --playlist-hover: var(--playlist-hover-dark);
+  }
+
+  /* 隱藏狀態的半圓形標籤 */
+  .hidden-tab {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 32px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--primary, #6366f1) 0%, hsl(calc(var(--primary-hue, 250) + 20), 70%, 65%) 100%);
+    border-radius: 0 32px 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 2px 0 15px hsla(var(--primary-hue, 250), 70%, 60%, 0.3);
+    transform: translateX(-100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .hidden-tab.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hidden-tab:hover {
+    transform: translateX(4px);
+    box-shadow: 4px 0 20px hsla(var(--primary-hue, 250), 70%, 60%, 0.4);
+  }
+
+  .tab-icon {
+    color: white;
+    transform: translateX(2px);
+  }
+
+  /* 播放器容器 */
+  .player-container {
+    background: var(--player-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 280px;
+    margin-left: 15px;
+    transform-origin: bottom left;
+  }
+
+  .player-container.expanded {
+    width: 320px;
+    transform: scale(1.01);
+  }
+
+  .player-container.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* 頭部區域 */
+  .player-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: var(--player-header-bg);
+  }
+
+  .cover-container {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+    background: var(--page-background);
+  }
+
+  .cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+  }
+
+  .cover-container:hover .play-overlay {
+    opacity: 1;
+  }
+
+  .song-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .song-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+    overflow: hidden;
+    position: relative;
+    height: 17px;
+  }
+
+  .title-text {
+    display: block;
+    white-space: nowrap;
+    transition: transform 0.3s ease;
+  }
+
+  .song-title.marquee .title-text {
+    animation: marquee 10s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .song-artist {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .song-time {
+    font-size: 10px;
+    color: var(--text-tertiary);
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .icon-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: var(--icon-bg);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  .icon-btn svg {
+    transform: translate(1px, 1px);
+  }
+
+  .icon-btn:hover {
+    background: var(--icon-bg-hover);
+    color: var(--text-primary);
+    transform: scale(1.05);
+  }
+
+  /* 播放按鈕使用主題色 */
+  .play-toggle-btn {
+    background: linear-gradient(135deg, var(--primary, #6366f1) 0%, hsl(calc(var(--primary-hue, 250) + 20), 70%, 65%) 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 8px hsla(var(--primary-hue, 250), 70%, 60%, 0.3);
+  }
+
+  .play-toggle-btn:hover {
+    background: linear-gradient(135deg, hsl(calc(var(--primary-hue, 250) - 10), 70%, 55%) 0%, hsl(calc(var(--primary-hue, 250) + 15), 70%, 60%) 100%);
+    box-shadow: 0 3px 12px hsla(var(--primary-hue, 250), 70%, 60%, 0.4);
+    transform: scale(1.05);
+  }
+
+  .expand-btn .expand-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .player-container.expanded .expand-btn .expand-icon {
+    transform: rotate(180deg);
+  }
+
+  /* 展開內容區域 */
+  .expanded-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 16px;
+  }
+
+  .player-container.expanded .expanded-content {
+    max-height: 400px;
+    padding: 16px;
+  }
+
+  /* 進度條區域 - 使用主題色 */
+  .progress-section {
+    margin-bottom: 20px;
+  }
+
+  .progress-bar {
+    height: 5px;
+    background: var(--progress-track);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: height 0.2s ease;
+  }
+
+  .progress-bar:hover {
+    height: 6px;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary, #6366f1) 0%, hsl(calc(var(--primary-hue, 250) + 20), 70%, 65%) 100%);
+    border-radius: 3px;
+    transition: width 0.1s ease;
+    position: relative;
+  }
+
+  .progress-handle {
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border: 2px solid var(--primary, #6366f1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: grab;
+  }
+
+  .progress-handle:active {
+    cursor: grabbing;
+  }
+
+  .progress-bar:hover .progress-handle {
+    opacity: 1;
+  }
+
+  /* 主控制區域 */
+  .main-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .control-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--icon-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .control-btn:hover {
+    background: var(--icon-bg-hover);
+    color: var(--text-primary);
+    transform: scale(1.05);
+  }
+
+  /* 控制按鈕激活狀態使用主題色 */
+  .control-btn.active {
+    background: hsla(var(--primary-hue, 250), 70%, 60%, 0.3);
+    color: var(--primary, #6366f1);
+  }
+
+  /* 主播放按鈕使用主題色 */
+  .play-btn {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: linear-gradient(135deg, var(--primary, #6366f1) 0%, hsl(calc(var(--primary-hue, 250) + 20), 70%, 65%) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 15px hsla(var(--primary-hue, 250), 70%, 60%, 0.4);
+  }
+
+  .play-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 20px hsla(var(--primary-hue, 250), 70%, 60%, 0.5);
+  }
+
+  /* 底部控制區域 */
+  .bottom-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .volume-bar-container {
+    flex: 1;
+    position: relative;
+  }
+
+  /* 音量條使用主題色 */
+  .volume-bar {
+    height: 4px;
+    background: var(--progress-track);
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: height 0.2s ease;
+  }
+
+  .volume-bar:hover {
+    height: 5px;
+  }
+
+  .volume-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary, #6366f1) 0%, hsl(calc(var(--primary-hue, 250) + 20), 70%, 65%) 100%);
+    border-radius: 2px;
+    transition: width 0.1s ease;
+  }
+
+  .volume-handle {
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border: 2px solid var(--primary, #6366f1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: grab;
+  }
+
+  .volume-handle:active {
+    cursor: grabbing;
+  }
+
+  .volume-bar:hover .volume-handle {
+    opacity: 1;
+  }
+
+  /* 播放列表彈出框 */
+  .playlist-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--modal-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .playlist-modal.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .playlist-content {
+    background: var(--player-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+  }
+
+  .playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .playlist-header h3 {
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .close-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: var(--icon-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .close-btn:hover {
+    background: var(--icon-bg-hover);
+    color: var(--text-primary);
+  }
+
+  .playlist-list {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 8px 0;
+  }
+
+  .playlist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .playlist-item:hover {
+    background: var(--playlist-hover);
+  }
+
+  /* 播放列表激活項目使用主題色 */
+  .playlist-item.active {
+    background: hsla(var(--primary-hue, 250), 70%, 60%, 0.2);
+  }
+
+  .playlist-item-cover {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .playlist-item-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .playlist-item-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .playlist-item-artist {
+    font-size: 12px;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .playlist-item-duration {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+  }
+
+  /* 響應式設計 */
+  @media (max-width: 480px) {
+    .player-container {
+      width: calc(100vw - 30px);
+      max-width: 280px;
+      margin-left: 10px;
+    }
+    
+    .player-container.expanded {
+      width: calc(100vw - 30px);
+      max-width: 320px;
+    }
+
+    .playlist-content {
+      width: 95%;
+      max-height: 85vh;
+    }
+  }
+
+  /* 旋轉動畫 */
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .cover-img.playing {
+    animation: rotate 10s linear infinite;
+  }
+
+  /* 滾動條樣式 */
+  .playlist-list::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .playlist-list::-webkit-scrollbar-track {
+    background: var(--progress-track);
+    border-radius: 3px;
+  }
+
+  .playlist-list::-webkit-scrollbar-thumb {
+    background: var(--text-tertiary);
+    border-radius: 3px;
+  }
+
+  .playlist-list::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 元素引用
+    const playerContainer = document.getElementById('playerContainer');
+    const expandBtn = document.getElementById('expandBtn');
+    const hideBtn = document.getElementById('hideBtn');
+    const hiddenTab = document.getElementById('hiddenTab');
+    const playlistModal = document.getElementById('playlistModal');
+    const playlistBtn = document.getElementById('playlistBtn');
+    const closePlaylistBtn = document.getElementById('closePlaylistBtn');
+    const audioPlayer = document.getElementById('audioPlayer');
+
+    // 播放器狀態
+    let isExpanded = false;
+    let isHidden = false;
+    let isPlaying = false;
+    let isMuted = false;
+    let isShuffleOn = false;
+    let repeatMode = 0; // 0: 不循環, 1: 全部循環, 2: 單曲循環
+    let volume = 0.3;
+    let currentSongIndex = 0;
+    let isDragging = false;
+    let isVolumeDragging = false;
+    let userInteracted = false; // 追蹤用戶是否已經互動
+    let pendingAutoPlay = false; // 等待自動播放
+
+    // 播放列表 - 使用示例音頻文件
+    let playlist = [
+      {
+        title: "Echoes / 60min TOKYO Night Walking",
+        artist: "SoundZenith",
+        cover: "/audio/Echoes.png",
+        url: "/audio/Echoes.mp3"
+      },
+      {
+        title: "Nobody (from Kaiju No. 8)",
+        artist: "OneRepublic",
+        cover: "/audio/Nobody.png",
+        url: "/audio/Nobody.mp3"
+      }
+    ];
+
+    // 後台偵測用戶互動並自動播放
+    function setupAutoPlay() {
+      const events = ['click', 'touchstart', 'keydown', 'scroll', 'mousemove'];
+      
+      function handleUserInteraction() {
+        if (!userInteracted) {
+          userInteracted = true;
+          console.log('用戶互動偵測到，準備自動播放');
+          
+          // 移除所有事件監聽器
+          events.forEach(event => {
+            document.removeEventListener(event, handleUserInteraction, { passive: true });
+          });
+          
+          // 延遲自動播放（避免太突然）
+          setTimeout(() => {
+            if (!isPlaying && playlist.length > 0) {
+              pendingAutoPlay = true;
+              startAutoPlay();
+            }
+          }, 500);
+        }
+      }
+      
+      // 添加事件監聽器
+      events.forEach(event => {
+        document.addEventListener(event, handleUserInteraction, { passive: true });
+      });
+    }
+
+    // 自動開始播放
+    function startAutoPlay() {
+      if (!userInteracted) return;
+      
+      loadSong(currentSongIndex);
+      
+      // 嘗試播放
+      const playPromise = audioPlayer.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          console.log('自動播放成功');
+          isPlaying = true;
+          document.querySelector('.cover-img').classList.add('playing');
+          updatePlayButtons();
+          updateTabIcon();
+          updateMarquee();
+        }).catch(error => {
+          console.log('自動播放失敗，瀏覽器政策阻止：', error);
+          pendingAutoPlay = false;
+        });
+      }
+    }
+
+    // 展開/收縮功能
+    expandBtn.addEventListener('click', function() {
+      toggleExpanded();
+    });
+
+    function toggleExpanded() {
+      isExpanded = !isExpanded;
+      if (isExpanded) {
+        playerContainer.classList.add('expanded');
+        expandBtn.setAttribute('title', '縮小播放器');
+      } else {
+        playerContainer.classList.remove('expanded');
+        expandBtn.setAttribute('title', '展開播放器');
+      }
+    }
+
+    // 隱藏/顯示播放器功能
+    hideBtn.addEventListener('click', function() {
+      hidePlayer();
+    });
+
+    hiddenTab.addEventListener('click', function() {
+      showPlayer();
+    });
+
+    function hidePlayer() {
+      isHidden = true;
+      playerContainer.classList.add('hidden');
+      setTimeout(() => {
+        hiddenTab.classList.add('show');
+      }, 400);
+    }
+
+    function showPlayer() {
+      isHidden = false;
+      hiddenTab.classList.remove('show');
+      setTimeout(() => {
+        playerContainer.classList.remove('hidden');
+      }, 200);
+    }
+
+    // 播放/暫停功能
+    const playButtons = [
+      document.getElementById('playToggleBtn'),
+      document.getElementById('mainPlayBtn'),
+      document.getElementById('playOverlay')
+    ];
+
+    playButtons.forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', togglePlay);
+      }
+    });
+
+    function togglePlay() {
+      userInteracted = true; // 標記用戶已互動
+      
+      if (audioPlayer.paused) {
+        const currentSong = playlist[currentSongIndex];
+        if (audioPlayer.src !== window.location.origin + currentSong.url) {
+          loadSong(currentSongIndex);
+        }
+        audioPlayer.play().then(() => {
+          isPlaying = true;
+          document.querySelector('.cover-img').classList.add('playing');
+          updateMarquee();
+        }).catch(error => {
+          console.error('播放失敗:', error);
+        });
+      } else {
+        audioPlayer.pause();
+        isPlaying = false;
+        document.querySelector('.cover-img').classList.remove('playing');
+        updateMarquee();
+      }
+      updatePlayButtons();
+      updateTabIcon();
+    }
+
+    function updatePlayButtons() {
+      const pauseIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>';
+      const playIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M8 19V5l11 7z"></path></svg>';
+      
+      const togglePauseIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>';
+      const togglePlayIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M8 19V5l11 7z"></path></svg>';
+
+      const mainPlayBtn = document.getElementById('mainPlayBtn');
+      const toggleBtn = document.getElementById('playToggleBtn');
+      
+      if (mainPlayBtn) mainPlayBtn.innerHTML = isPlaying ? pauseIcon : playIcon;
+      if (toggleBtn) toggleBtn.innerHTML = isPlaying ? togglePauseIcon : togglePlayIcon;
+    }
+
+    function updateTabIcon() {
+      const tabPauseIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>';
+      const tabPlayIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M8 19V5l11 7z"></path></svg>';
+      
+      document.querySelector('.tab-icon').innerHTML = isPlaying ? tabPauseIcon : tabPlayIcon;
+    }
+
+    // 跑馬燈功能
+    function updateMarquee() {
+      const songTitleEl = document.getElementById('songTitle');
+      const titleTextEl = songTitleEl.querySelector('.title-text');
+      
+      if (isPlaying && titleTextEl.scrollWidth > songTitleEl.offsetWidth) {
+        songTitleEl.classList.add('marquee');
+      } else {
+        songTitleEl.classList.remove('marquee');
+      }
+    }
+
+    // 音頻事件監聽
+    audioPlayer.addEventListener('loadedmetadata', function() {
+      updateProgress();
+      updateMarquee();
+    });
+
+    audioPlayer.addEventListener('timeupdate', function() {
+      if (!isDragging) {
+        updateProgress();
+      }
+    });
+
+    audioPlayer.addEventListener('ended', function() {
+      handleSongEnd();
+    });
+
+    audioPlayer.addEventListener('error', function(e) {
+      console.error('音頻加載錯誤:', e);
+      pendingAutoPlay = false;
+    });
+
+    audioPlayer.addEventListener('play', function() {
+      isPlaying = true;
+      updatePlayButtons();
+      updateTabIcon();
+      updateMarquee();
+      document.querySelector('.cover-img').classList.add('playing');
+    });
+
+    audioPlayer.addEventListener('pause', function() {
+      isPlaying = false;
+      updatePlayButtons();
+      updateTabIcon();
+      updateMarquee();
+      document.querySelector('.cover-img').classList.remove('playing');
+    });
+
+    // 進度條功能
+    const progressBar = document.getElementById('progressBar');
+    const progressFill = progressBar.querySelector('.progress-fill');
+    const progressHandle = progressBar.querySelector('.progress-handle');
+
+    progressBar.addEventListener('click', function(e) {
+      if (!audioPlayer.duration) return;
+      updateProgressFromEvent(e);
+    });
+
+    progressHandle.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      isDragging = true;
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (isDragging) {
+        e.preventDefault();
+        updateProgressFromEvent(e);
+      }
+    });
+
+    document.addEventListener('mouseup', function() {
+      if (isDragging) {
+        isDragging = false;
+      }
+    });
+
+    function updateProgressFromEvent(e) {
+      if (!audioPlayer.duration) return;
+      
+      const rect = progressBar.getBoundingClientRect();
+      const clickX = Math.max(0, Math.min(rect.width, e.clientX - rect.left));
+      const progress = clickX / rect.width;
+      const newTime = progress * audioPlayer.duration;
+      
+      if (!isNaN(newTime) && isFinite(newTime) && newTime >= 0) {
+        audioPlayer.currentTime = newTime;
+        updateProgressDisplay(progress);
+      }
+    }
+
+    function updateProgressDisplay(progress) {
+      const progressPercent = progress * 100;
+      progressFill.style.width = progressPercent + '%';
+      progressHandle.style.left = progressPercent + '%';
+    }
+
+    function updateProgress() {
+      if (!audioPlayer.duration) return;
+      
+      const currentTime = audioPlayer.currentTime || 0;
+      const duration = audioPlayer.duration || 0;
+      const progress = currentTime / duration;
+      
+      updateProgressDisplay(progress);
+      
+      const minutes = Math.floor(currentTime / 60);
+      const seconds = Math.floor(currentTime % 60);
+      const timeString = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+      
+      const totalMinutes = Math.floor(duration / 60);
+      const totalSeconds = Math.floor(duration % 60);
+      const totalTimeString = `${totalMinutes}:${totalSeconds.toString().padStart(2, '0')}`;
+      
+      const songTimeEl = document.querySelector('.song-time');
+      if (songTimeEl) {
+        songTimeEl.textContent = `${timeString} / ${totalTimeString}`;
+      }
+    }
+
+    function handleSongEnd() {
+      if (repeatMode === 2) { // 單曲循環
+        audioPlayer.currentTime = 0;
+        audioPlayer.play();
+      } else if (repeatMode === 1 || currentSongIndex < playlist.length - 1) { // 全部循環或有下一首
+        nextSong();
+      } else {
+        isPlaying = false;
+        updatePlayButtons();
+        updateTabIcon();
+        updateMarquee();
+        document.querySelector('.cover-img').classList.remove('playing');
+      }
+    }
+
+    // 音量控制
+    const volumeBar = document.getElementById('volumeBar');
+    const volumeFill = volumeBar.querySelector('.volume-fill');
+    const volumeHandle = volumeBar.querySelector('.volume-handle');
+    const volumeBtn = document.getElementById('volumeBtn');
+    let lastVolume = volume;
+
+    volumeBar.addEventListener('mousedown', function(e) {
+      if (e.target === volumeHandle) {
+        isVolumeDragging = true;
+        return;
+      }
+      updateVolumeFromEvent(e);
+    });
+
+    volumeHandle.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+      isVolumeDragging = true;
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (isVolumeDragging) {
+        e.preventDefault();
+        updateVolumeFromEvent(e);
+      }
+    });
+
+    document.addEventListener('mouseup', function() {
+      isVolumeDragging = false;
+    });
+
+    function updateVolumeFromEvent(e) {
+      const rect = volumeBar.getBoundingClientRect();
+      const clickX = Math.max(0, Math.min(rect.width, e.clientX - rect.left));
+      volume = clickX / rect.width;
+      audioPlayer.volume = volume;
+      updateVolumeDisplay();
+      updateVolumeIcon();
+      if (volume > 0) {
+        isMuted = false;
+        lastVolume = volume;
+      }
+    }
+
+    function updateVolumeDisplay() {
+      const volumePercent = volume * 100;
+      volumeFill.style.width = volumePercent + '%';
+      volumeHandle.style.left = volumePercent + '%';
+    }
+
+    function updateVolumeIcon() {
+      let iconSvg;
+      if (isMuted || volume === 0) {
+        iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5 12A4.5 4.5 0 0 0 14 7.97v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.796 8.796 0 0 0 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27L7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06a8.99 8.99 0 0 0 3.69-1.81L19.73 21L21 19.73l-9-9L4.27 3zM12 4L9.91 6.09L12 8.18V4z"/></svg>';
+      } else if (volume < 0.3) {
+        iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>';
+      } else if (volume < 0.7) {
+        iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M14 16V7.95q1.175.55 1.838 1.65T16.5 12q0 1.275-.663 2.363T14 16M3 15V9h4l5-5v16l-5-5z"/></svg>';
+      } else {
+        iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M14 20.725v-2.05q2.25-.65 3.625-2.5t1.375-4.2t-1.375-4.2T14 5.275v-2.05q3.1.7 5.05 3.138T21 11.975t-1.95 5.613T14 20.725M3 15V9h4l5-5v16l-5-5zm11 1V7.95q1.175.55 1.838 1.65T16.5 12q0 1.275-.663 2.363T14 16"/></svg>';
+      }
+      volumeBtn.querySelector('.volume-icon').innerHTML = iconSvg;
+    }
+
+    volumeBtn.addEventListener('click', function() {
+      if (isMuted) {
+        isMuted = false;
+        volume = lastVolume;
+        audioPlayer.volume = volume;
+      } else {
+        isMuted = true;
+        lastVolume = volume;
+        volume = 0;
+        audioPlayer.volume = 0;
+      }
+      updateVolumeDisplay();
+      updateVolumeIcon();
+    });
+
+    // 播放控制按鈕
+    document.getElementById('prevBtn')?.addEventListener('click', prevSong);
+    document.getElementById('nextBtn')?.addEventListener('click', nextSong);
+
+    function prevSong() {
+      if (isShuffleOn) {
+        currentSongIndex = Math.floor(Math.random() * playlist.length);
+      } else {
+        currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+      }
+      loadSong(currentSongIndex);
+      if (isPlaying) {
+        audioPlayer.play();
+      }
+    }
+
+    function nextSong() {
+      if (isShuffleOn) {
+        currentSongIndex = Math.floor(Math.random() * playlist.length);
+      } else {
+        currentSongIndex = (currentSongIndex + 1) % playlist.length;
+      }
+      loadSong(currentSongIndex);
+      if (isPlaying) {
+        audioPlayer.play();
+      }
+    }
+
+    function loadSong(index) {
+      if (index >= 0 && index < playlist.length) {
+        const song = playlist[index];
+        currentSongIndex = index;
+        
+        // 更新UI
+        const titleTextEl = document.querySelector('.title-text');
+        titleTextEl.textContent = song.title;
+        document.getElementById('songArtist').textContent = song.artist;
+        document.getElementById('coverImg').src = song.cover;
+        
+        // 設置音頻源
+        audioPlayer.src = song.url;
+        audioPlayer.volume = volume;
+        
+        updatePlaylistDisplay();
+        updateMarquee();
+      }
+    }
+
+    // 隨機播放和循環播放
+    document.getElementById('shuffleBtn')?.addEventListener('click', function() {
+      isShuffleOn = !isShuffleOn;
+      this.classList.toggle('active', isShuffleOn);
+    });
+
+    document.getElementById('repeatBtn')?.addEventListener('click', function() {
+      repeatMode = (repeatMode + 1) % 3;
+      
+      let iconSvg;
+      switch (repeatMode) {
+        case 0: // 不循環
+          this.classList.remove('active');
+          iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m7 22l-4-4l4-4l1.4 1.45L6.85 17H17v-4h2v6H6.85l1.55 1.55zM5 11V5h12.15L15.6 3.45L17 2l4 4l-4 4l-1.4-1.45L17.15 7H7v4z"></path></svg>';
+          break;
+        case 1: // 全部循環
+          this.classList.add('active');
+          iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="m7 22l-4-4l4-4l1.4 1.45L6.85 17H17v-4h2v6H6.85l1.55 1.55zM5 11V5h12.15L15.6 3.45L17 2l4 4l-4 4l-1.4-1.45L17.15 7H7v4z"></path></svg>';
+          break;
+        case 2: // 單曲循環
+          this.classList.add('active');
+          iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path><text x="12" y="15" text-anchor="middle" font-size="8" fill="currentColor">1</text></svg>';
+          break;
+      }
+      
+      this.innerHTML = iconSvg;
+    });
+
+    // 播放列表功能
+    playlistBtn.addEventListener('click', function() {
+      playlistModal.classList.add('show');
+      updatePlaylistDisplay();
+    });
+
+    closePlaylistBtn.addEventListener('click', function() {
+      playlistModal.classList.remove('show');
+    });
+
+    playlistModal.addEventListener('click', function(e) {
+      if (e.target === playlistModal) {
+        playlistModal.classList.remove('show');
+      }
+    });
+
+    function updatePlaylistDisplay() {
+      const playlistList = document.getElementById('playlistList');
+      playlistList.innerHTML = '';
+      
+      playlist.forEach((song, index) => {
+        const item = document.createElement('div');
+        item.className = `playlist-item ${index === currentSongIndex ? 'active' : ''}`;
+        
+        item.innerHTML = `
+          <img src="${song.cover}" alt="封面" class="playlist-item-cover">
+          <div class="playlist-item-info">
+            <div class="playlist-item-title">${song.title}</div>
+            <div class="playlist-item-artist">${song.artist}</div>
+          </div>
+          <div class="playlist-item-duration">--:--</div>
+        `;
+        
+        item.addEventListener('click', function() {
+          loadSong(index);
+          playlistModal.classList.remove('show');
+          if (!isPlaying) {
+            togglePlay();
+          } else {
+            audioPlayer.play();
+          }
+        });
+        
+        playlistList.appendChild(item);
+      });
+    }
+
+    // 鍵盤快捷鍵
+    document.addEventListener('keydown', function(e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      
+      switch(e.code) {
+        case 'Space':
+          e.preventDefault();
+          togglePlay();
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          if (audioPlayer.currentTime > 5) {
+            audioPlayer.currentTime -= 5;
+          }
+          break;
+        case 'ArrowRight':
+          e.preventDefault();
+          audioPlayer.currentTime += 5;
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          volume = Math.min(1, volume + 0.1);
+          audioPlayer.volume = volume;
+          updateVolumeDisplay();
+          updateVolumeIcon();
+          break;
+        case 'ArrowDown':
+          e.preventDefault();
+          volume = Math.max(0, volume - 0.1);
+          audioPlayer.volume = volume;
+          updateVolumeDisplay();
+          updateVolumeIcon();
+          break;
+      }
+    });
+
+    // 初始化播放器
+    function initPlayer() {
+      // 設置初始音量
+      audioPlayer.volume = volume;
+      updateVolumeDisplay();
+      updateVolumeIcon();
+      updatePlaylistDisplay();
+      
+      // 確保播放器保持收縮狀態
+      isExpanded = false;
+      playerContainer.classList.remove('expanded');
+      expandBtn.setAttribute('title', '展開播放器');
+      
+      // 只載入歌曲信息，不設置音頻源（避免預載入）
+      if (playlist.length > 0) {
+        const song = playlist[0];
+        const titleTextEl = document.querySelector('.title-text');
+        titleTextEl.textContent = song.title;
+        document.getElementById('songArtist').textContent = song.artist;
+        document.getElementById('coverImg').src = song.cover;
+        updateMarquee();
+      }
+      
+      // 設置後台自動播放偵測
+      setupAutoPlay();
+    }
+
+    // 啟動播放器
+    initPlayer();
+  });
+</script>
+
+<style>
+/* 主题适配的 Wave 颜色配置 */
+:root {
+  --wave-color: #090e13;
+}
+
+/* 明亮主题的 Wave 颜色 */
+:root[theme="light"] {
+  --wave-color: #eaeff5;
+}
+
+/* 轮播容器 */
+.banner-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner-slideshow:not(.initialized) .banner-media {
+  display: none !important;
+}
+
+.banner-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: scale(1.2);
+  visibility: hidden;
+  /* 移除固定的 object-position，改为动态设置 */
+}
+
+.banner-media.active {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+.banner-media.leaving {
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+/* 标题覆盖层 */
+.banner-title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: white;
+  pointer-events: none;
+}
+
+.main-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  margin: 0 0 1rem 0;
+  animation: fadeInUp 1s ease-out;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  min-height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typewriter {
+  border-right: 2px solid rgba(255, 255, 255, 0.7);
+  padding-right: 2px;
+  animation: blink 1s infinite;
+  min-width: 1px;
+}
+
+/* Wave 效果样式 */
+.waves-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  min-height: 70px;
+  max-height: 120px;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 0;
+}
+
+.waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -7px;
+  min-height: 70px;
+  max-height: 120px;
+  transition: opacity 0.5s ease;
+}
+
+/* 暗色主题的 Wave */
+.waves-dark {
+  opacity: 1;
+}
+
+.waves-dark .wave1 {
+  animation: move-forever 20s cubic-bezier(.55,.5,.45,.5) infinite;
+  opacity: 0.3;
+  fill: #090e13;
+}
+
+.waves-dark .wave2 {
+  animation: move-forever 15s cubic-bezier(.55,.5,.45,.5) infinite;
+  opacity: 0.5;
+  fill: #090e13;
+  animation-delay: -3s;
+}
+
+.waves-dark .wave3 {
+  animation: move-forever 16s cubic-bezier(.55,.5,.45,.5) infinite;
+  opacity: 0.8;
+  fill: #090e13;
+  animation-delay: -4s;
+}
+
+.waves-dark .wave4 {
+  animation: move-forever 14s cubic-bezier(.55,.5,.45,.5) infinite;
+  opacity: 1;
+  fill: #090e13;
+  animation-delay: -5s;
+}
+
+/* 明亮主题的 Wave */
+.waves-light {
+  opacity: 0;
+}
+
+.waves-light .wave1 {
+  animation: move-forever 20s cubic-bezier(.55,.5,.45,.5) infinite;
+  opacity: 0.3;
+  fill: #eaeff5;
+}
+
+.waves-light .wave2 {
+  animation: move-forever 15s cubic-bezier(.55,.5,.45,.5) infinite;
+  opacity: 0.5;
+  fill: #eaeff5;
+  animation-delay: -3s;
+}
+
+.waves-light .wave3 {
+  animation: move-forever 16s cubic-bezier(.55,.5,.45,.5) infinite;
+  opacity: 0.8;
+  fill: #eaeff5;
+  animation-delay: -4s;
+}
+
+.waves-light .wave4 {
+  animation: move-forever 14s cubic-bezier(.55,.5,.45,.5) infinite;
+  opacity: 1;
+  fill: #eaeff5;
+  animation-delay: -5s;
+}
+
+/* 主题切换时的显示控制 */
+:root[theme="light"] .waves-dark {
+  opacity: 0;
+}
+
+:root[theme="light"] .waves-light {
+  opacity: 1;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% { 
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 50% { 
+    border-color: rgba(255, 255, 255, 0.7); 
+  }
+  51%, 100% { 
+    border-color: transparent; 
+  }
+}
+
+/* 响应式媒体显示控制 */
+.desktop-media {
+  display: block;
+}
+
+.mobile-media {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-media {
+    display: none;
+  }
+  
+  .mobile-media {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sub-title {
+    font-size: 1.2rem;
+  }
+  
+  .waves-container {
+    height: 7vh;
+    min-height: 50px;
+    max-height: 90px;
+  }
+  
+  .waves {
+    min-height: 50px;
+    max-height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sub-title {
+    font-size: 1rem;
+  }
+  
+  .waves-container {
+    height: 6vh;
+    min-height: 40px;
+    max-height: 70px;
+  }
+  
+  .waves {
+    min-height: 40px;
+    max-height: 70px;
+  }
+}
+
+@media (max-width: 320px) {
+  /* 删除这行：object-position: center center !important; */
+  
+  .main-title {
+    font-size: 1.5rem;
+  }
+  
+  .sub-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-title {
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sub-title {
+    font-size: 2rem;
+  }
+  
+  .waves-container {
+    height: 12vh;
+    min-height: 100px;
+    max-height: 150px;
+  }
+  
+  .waves {
+    min-height: 100px;
+    max-height: 150px;
+  }
+}
+
+/* 首页特效 */
+#banner.is_home .main-title {
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+#banner.is_home .sub-title {
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* 暗化层 */
+#banner-dim {
+  display: none !important;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const bannerSlideshow = document.querySelector('.banner-slideshow');
+  
+  if (!bannerSlideshow) return;
+  
+  // 设置媒体元素的 object-position
+  function setMediaPositions() {
+    const isDesktop = window.innerWidth > 768;
+    const currentMedia = document.querySelectorAll(isDesktop ? '.desktop-media' : '.mobile-media');
+    
+    currentMedia.forEach(media => {
+      const position = isDesktop ? 
+        media.dataset.desktopPosition : 
+        media.dataset.mobilePosition;
+      
+      if (position) {
+        media.style.objectPosition = position;
+      }
+    });
+  }
+  
+  // 获取当前屏幕尺寸对应的媒体元素
+  function getCurrentMediaElements() {
+    const isDesktop = window.innerWidth > 768;
+    return document.querySelectorAll(isDesktop ? '.desktop-media' : '.mobile-media');
+  }
+  
+  let currentIndex = 0;
+  let slideshowStarted = false;
+  let slideInterval = null;
+  
+  function initializeSlideshow() {
+    // 首先设置位置
+    setMediaPositions();
+    
+    const currentMedia = getCurrentMediaElements();
+    
+    if (currentMedia.length === 0) return;
+    
+    // 立即隐藏所有媒体元素，防止闪烁
+    document.querySelectorAll('.banner-media').forEach(media => {
+      media.style.opacity = '0';
+      media.style.visibility = 'hidden';
+      media.style.display = 'none';
+      media.classList.remove('active', 'leaving');
+    });
+    
+    if (currentMedia.length > 1) {
+      // 多张图片/视频的轮播逻辑
+      preloadAndStartSlideshow(currentMedia);
+    } else {
+      // 单张图片/视频直接显示
+      showSingleMedia(currentMedia[0]);
+    }
+  }
+  
+  function preloadAndStartSlideshow(mediaElements) {
+    const promises = Array.from(mediaElements).map((media) => {
+      return new Promise((resolve) => {
+        if (media.tagName === 'VIDEO') {
+          const handleLoaded = () => {
+            media.removeEventListener('loadeddata', handleLoaded);
+            media.removeEventListener('error', handleError);
+            resolve(true);
+          };
+          const handleError = () => {
+            media.removeEventListener('loadeddata', handleLoaded);
+            media.removeEventListener('error', handleError);
+            resolve(false);
+          };
+          
+          media.addEventListener('loadeddata', handleLoaded);
+          media.addEventListener('error', handleError);
+          media.load();
+        } else {
+          const tempImg = new Image();
+          tempImg.onload = () => resolve(true);
+          tempImg.onerror = () => resolve(false);
+          tempImg.src = media.src;
+        }
+      });
+    });
+    
+    Promise.allSettled(promises).then(() => {
+      startSlideshow(mediaElements);
+    });
+  }
+  
+  function startSlideshow(mediaElements) {
+    if (slideshowStarted) return;
+    slideshowStarted = true;
+    
+    // 标记初始化完成
+    bannerSlideshow.classList.add('initialized');
+    
+    // 重置当前索引
+    currentIndex = 0;
+    
+    // 显示第一个媒体元素
+    mediaElements.forEach((media, index) => {
+      media.style.display = 'block';
+      media.style.visibility = 'visible';
+      if (index === 0) {
+        media.style.opacity = '1';
+        media.style.transform = 'scale(1)';
+        media.classList.add('active');
+        
+        if (media.tagName === 'VIDEO') {
+          media.currentTime = 0;
+          media.play().catch(e => console.log('Video autoplay failed:', e));
+        }
+      } else {
+        media.style.opacity = '0';
+        media.style.transform = 'scale(1.2)';
+      }
+    });
+    
+    // 开始自动轮播
+    if (slideInterval) clearInterval(slideInterval);
+    slideInterval = setInterval(() => nextSlide(mediaElements), 3000);
+  }
+  
+  function showSingleMedia(media) {
+    bannerSlideshow.classList.add('initialized');
+    media.style.display = 'block';
+    media.style.visibility = 'visible';
+    media.style.opacity = '1';
+    media.style.transform = 'scale(1)';
+    media.classList.add('active');
+    
+    if (media.tagName === 'VIDEO') {
+      media.currentTime = 0;
+      media.play().catch(e => console.log('Video autoplay failed:', e));
+    }
+  }
+  
+  function nextSlide(mediaElements) {
+    if (!slideshowStarted || mediaElements.length <= 1) return;
+    
+    const current = mediaElements[currentIndex];
+    const nextIndex = (currentIndex + 1) % mediaElements.length;
+    const next = mediaElements[nextIndex];
+    
+    // 暂停当前视频
+    if (current.tagName === 'VIDEO') {
+      current.pause();
+    }
+    
+    // 切换动画
+    current.classList.add('leaving');
+    current.style.opacity = '0';
+    current.style.transform = 'scale(1.3)';
+    
+    next.classList.add('active');
+    next.style.opacity = '1';
+    next.style.transform = 'scale(1)';
+    
+    // 播放新视频
+    if (next.tagName === 'VIDEO') {
+      next.currentTime = 0;
+      next.play().catch(e => console.log('Video autoplay failed:', e));
+    }
+    
+    // 清理样式
+    setTimeout(() => {
+      current.classList.remove('active', 'leaving');
+      current.style.transform = 'scale(1.2)';
+    }, 500);
+    
+    currentIndex = nextIndex;
+  }
+  
+  // 响应式处理：窗口大小改变时重新初始化
+  let resizeTimeout;
+  function handleResize() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+      }
+      slideshowStarted = false;
+      currentIndex = 0;
+      
+      // 重新设置位置和初始化
+      setMediaPositions();
+      setTimeout(initializeSlideshow, 100);
+    }, 250);
+  }
+  
+  window.addEventListener('resize', handleResize);
+  
+  // 初始化
+  initializeSlideshow();
+
+  // 打字机效果
+  const typewriterElements = document.querySelectorAll('.typewriter');
+
+  class TypeWriter {
+    constructor(element) {
+      this.element = element;
+      
+      try {
+        this.texts = JSON.parse(element.dataset.texts || '["Default text"]');
+      } catch (e) {
+        this.texts = ["Default text"];
+      }
+      
+      this.speed = parseInt(element.dataset.speed || '100');
+      this.deleteSpeed = parseInt(element.dataset.deleteSpeed || '50');
+      this.pauseTime = parseInt(element.dataset.pauseTime || '2000');
+      
+      this.currentTextIndex = 0;
+      this.currentCharIndex = 0;
+      this.isDeleting = false;
+      this.timeoutId = null;
+      
+      this.start();
+    }
+
+    start() {
+      if (this.texts.length === 0) return;
+      this.type();
+    }
+
+    type() {
+      const currentText = this.texts[this.currentTextIndex] || '';
+      
+      if (this.isDeleting) {
+        if (this.currentCharIndex > 0) {
+          this.currentCharIndex--;
+          this.element.textContent = currentText.substring(0, this.currentCharIndex);
+          this.timeoutId = setTimeout(() => this.type(), this.deleteSpeed);
+        } else {
+          this.isDeleting = false;
+          this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
+          this.timeoutId = setTimeout(() => this.type(), this.speed);
+        }
+      } else {
+        if (this.currentCharIndex < currentText.length) {
+          this.currentCharIndex++;
+          this.element.textContent = currentText.substring(0, this.currentCharIndex);
+          this.timeoutId = setTimeout(() => this.type(), this.speed);
+        } else {
+          if (this.texts.length > 1) {
+            this.isDeleting = true;
+            this.timeoutId = setTimeout(() => this.type(), this.pauseTime);
+          }
+        }
+      }
+    }
+
+    destroy() {
+      if (this.timeoutId) {
+        clearTimeout(this.timeoutId);
+      }
+    }
+  }
+
+  const typewriters = [];
+  typewriterElements.forEach(element => {
+    typewriters.push(new TypeWriter(element));
+  });
+
+  window.addEventListener('beforeunload', function() {
+    typewriters.forEach(tw => tw.destroy());
+    if (slideInterval) clearInterval(slideInterval);
+  });
+});
+</script> 
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <!-- 左邊 Logo + 標題 -->
+  <nav id="title-nav">
+    <a href="/">
+      <div id="home-logo">
+        <span class="logo-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1.7em" height="1.7em" viewBox="0 -1 24 24">
+    <path fill="currentColor" d="M6 19h3v-5q0-.425.288-.712T10 13h4q.425 0 .713.288T15 14v5h3v-9l-6-4.5L6 10zm-2 0v-9q0-.475.213-.9t.587-.7l6-4.5q.525-.4 1.2-.4t1.2.4l6 4.5q.375.275.588.7T20 10v9q0 .825-.588 1.413T18 21h-4q-.425 0-.712-.288T13 20v-5h-2v5q0 .425-.288.713T10 21H6q-.825 0-1.412-.587T4 19m8-6.75"/>
+</svg>
+</span>
+      </div>
+      <div style="margin-left: 10px;">虎头鯨</div>
+    </a>
+  </nav>
+
+  <!-- 中間主選單 -->
+  <nav id="main-nav">
+    
+      
+      
+      <!-- 判断是否为下拉菜单 -->
+      
+        <!-- 普通菜单项 -->
+        <a class="main-nav-link" href="/">
+          <!-- 單個選單項目圖標 -->
+          
+            
+              <i class="fas fa-home" style="margin-right: 5px;"></i>
+            
+          
+          首頁
+        </a>
+      
+    
+      
+      
+      <!-- 判断是否为下拉菜单 -->
+      
+        <!-- 普通菜单项 -->
+        <a class="main-nav-link" href="/archives">
+          <!-- 單個選單項目圖標 -->
+          
+            
+              <i class="fas fa-archive" style="margin-right: 5px;"></i>
+            
+          
+          彙整
+        </a>
+      
+    
+      
+      
+      <!-- 判断是否为下拉菜单 -->
+      
+        <!-- 下拉菜单项 -->
+        <div class="nav-dropdown">
+          <a href="#" class="main-nav-link dropdown-trigger">
+            <!-- 主選單項目圖標 -->
+            
+              
+                <i class="fas fa-link" style="margin-right: 5px;"></i>
+              
+            
+            連結
+            <!-- 自定義下拉箭頭 -->
+            
+            
+              <i class="dropdown-arrow fas fa-chevron-down" style="margin-left: 5px; font-size: 0.8em; transition: transform 0.3s;"></i>
+            
+          </a>
+          <div class="dropdown-menu">
+            
+              
+            
+              
+            
+              
+                
+                
+                  <a href="https://discordapp.com/users/975001678350811206" class="dropdown-item" target="_blank">
+                    <div style="display: flex; align-items: center;">
+                      
+                        <span style="margin-right: 8px; display: flex; align-items: center; width: 16px;">
+                          
+                            <i class="fab fa-discord" style="font-size: 14px;"></i>
+                          
+                        </span>
+                      
+                      Discord
+                    </div>
+                    
+                      <span style="font-size: 0.8em; opacity: 0.7;">↗</span>
+                    
+                  </a>
+                
+              
+            
+              
+                
+                
+                  <a href="https://steamcommunity.com/id/DEVlenient/" class="dropdown-item" target="_blank">
+                    <div style="display: flex; align-items: center;">
+                      
+                        <span style="margin-right: 8px; display: flex; align-items: center; width: 16px;">
+                          
+                            <i class="fab fa-steam" style="font-size: 14px;"></i>
+                          
+                        </span>
+                      
+                      Steam
+                    </div>
+                    
+                      <span style="font-size: 0.8em; opacity: 0.7;">↗</span>
+                    
+                  </a>
+                
+              
+            
+              
+                
+                
+                  <a href="https://github.com/AixLnyt" class="dropdown-item" target="_blank">
+                    <div style="display: flex; align-items: center;">
+                      
+                        <span style="margin-right: 8px; display: flex; align-items: center; width: 16px;">
+                          
+                            <i class="fab fa-github" style="font-size: 14px;"></i>
+                          
+                        </span>
+                      
+                      GitHub
+                    </div>
+                    
+                      <span style="font-size: 0.8em; opacity: 0.7;">↗</span>
+                    
+                  </a>
+                
+              
+            
+          </div>
+        </div>
+      
+    
+      
+      
+      <!-- 判断是否为下拉菜单 -->
+      
+        <!-- 普通菜单项 -->
+        <a class="main-nav-link" href="/menu/anime">
+          <!-- 單個選單項目圖標 -->
+          
+            
+              <i class="fas fa-play-circle" style="margin-right: 5px;"></i>
+            
+          
+          動漫
+        </a>
+      
+    
+      
+      
+      <!-- 判断是否为下拉菜单 -->
+      
+        <!-- 普通菜单项 -->
+        <a class="main-nav-link" href="/menu/about">
+          <!-- 單個選單項目圖標 -->
+          
+            
+              <i class="fas fa-user" style="margin-right: 5px;"></i>
+            
+          
+          關於
+        </a>
+      
+    
+      
+      
+      <!-- 判断是否为下拉菜单 -->
+      
+        <!-- 普通菜单项 -->
+        <a class="main-nav-link" href="/menu/sponsor">
+          <!-- 單個選單項目圖標 -->
+          
+            
+              <i class="fas fa-heart" style="margin-right: 5px;"></i>
+            
+          
+          贊助
+        </a>
+      
+    
+  </nav>
+
+  <!-- 右邊功能 -->
+  <nav id="sub-nav">
+    <!-- 主題模式切換 -->
+    <a id="theme-btn" class="nav-icon" title="切換亮暗模式">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+    <path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/>
+</svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+    <path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/>
+</svg></span>
+    </a>
+
+    <!-- 色調選擇 -->
+    <a id="hue-btn" class="nav-icon" title="色調選擇">
+      <span class="hue-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="vertical-align: middle;">
+    <path fill="currentColor" d="M12 22q-2.05 0-3.875-.788t-3.187-2.15t-2.15-3.187T2 12q0-2.075.813-3.9t2.2-3.175T8.25 2.788T12.2 2q2 0 3.775.688t3.113 1.9t2.125 2.875T22 11.05q0 2.875-1.75 4.413T16 17h-1.85q-.225 0-.312.125t-.088.275q0 .3.375.863t.375 1.287q0 1.25-.687 1.85T12 22m-5.5-9q.65 0 1.075-.425T8 11.5t-.425-1.075T6.5 10t-1.075.425T5 11.5t.425 1.075T6.5 13m3-4q.65 0 1.075-.425T11 7.5t-.425-1.075T9.5 6t-1.075.425T8 7.5t.425 1.075T9.5 9m5 0q.65 0 1.075-.425T16 7.5t-.425-1.075T14.5 6t-1.075.425T13 7.5t.425 1.075T14.5 9m3 4q.65 0 1.075-.425T19 11.5t-.425-1.075T17.5 10t-1.075.425T16 11.5t.425 1.075T17.5 13M12 20q.225 0 .363-.125t.137-.325q0-.35-.375-.825T11.75 17.3q0-1.05.725-1.675T14.25 15H16q1.65 0 2.825-.962T20 11.05q0-3.025-2.312-5.038T12.2 4Q8.8 4 6.4 6.325T4 12q0 3.325 2.338 5.663T12 20"/>
+</svg></span>
+    </a>
+    <div id="hue-picker" class="hidden">
+      <div class="hue-header">
+        <div class="hue-title">
+          <span class="hue-bar"></span>
+          主題色
+          <button id="reset-btn" title="重置為預設值" class="hidden">
+            <span class="reset-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 512 512">
+    <path fill="currentColor" d="M125.7 160H176c17.7 0 32 14.3 32 32s-14.3 32-32 32H48c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32s32 14.3 32 32v51.2l17.6-17.6c87.5-87.5 229.3-87.5 316.8 0s87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3s-163.8-62.5-226.3 0z"/>
+</svg></span>
+          </button>
+        </div>
+        <div id="hue-value-box">250</div>
+      </div>
+      <div class="hue-slider">
+        <input type="range" id="hue-range" min="0" max="360" value="250" step="5">
+      </div>
+    </div>
+
+    <!-- 漢堡選單（小螢幕顯示） -->
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+    <path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/>
+</svg>
+    </div>
+  </nav>
+</navbar>
+
+<style>
+  /* 下拉菜单相关样式 - 新增功能 */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .dropdown-trigger {
+    cursor: pointer;
+  }
+
+  /* 修正：箭頭旋轉效果 - 展開時向上，收起時向下 */
+  .nav-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* 特殊處理 chevron 類型的圖標 */
+  .nav-dropdown.active .dropdown-arrow.fa-chevron-down {
+    transform: rotate(180deg);
+  }
+
+  .nav-dropdown.active .dropdown-arrow.fa-chevron-up {
+    transform: rotate(180deg);
+  }
+
+  /* 支援自定義箭頭樣式 */
+  .dropdown-arrow.text-arrow {
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 12px;
+    min-width: 200px;
+    max-width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+  }
+
+  .nav-dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  .dropdown-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* 明亮模式下的下拉菜单样式 */
+  html[theme="light"] .dropdown-menu {
+    background: rgba(234, 239, 245, 0.80);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  html[theme="light"] .dropdown-item {
+    color: #333;
+  }
+
+  html[theme="light"] .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  /* 移动端下拉菜单样式 */
+  @media (max-width: 1023px) {
+    .dropdown-menu {
+      position: static;
+      transform: none;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      margin-top: 0;
+      background: transparent;
+      margin-left: 0;
+      padding: 0;
+      box-shadow: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    .nav-dropdown.active .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      max-height: 300px;
+      margin-top: 8px;
+    }
+
+    .dropdown-menu .dropdown-item {
+      padding: 12px 16px 12px 44px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+      margin: 3px 8px;
+      border-radius: 8px;
+      color: rgba(255, 255, 255, 0.9);
+      border-left: 3px solid transparent;
+      backdrop-filter: blur(8px);
+      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dropdown-menu .dropdown-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+      border-left-color: var(--primary, #00bcd4);
+      transform: translateX(4px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+
+    .dropdown-menu .dropdown-item:hover::before {
+      opacity: 1;
+    }
+
+    .dropdown-menu .dropdown-item div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* 明亮模式下的行動裝置選單 */
+    html[theme="light"] .dropdown-menu .dropdown-item {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02));
+      color: rgba(51, 51, 51, 0.9);
+    }
+
+    html[theme="light"] .dropdown-menu .dropdown-item::before {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.03));
+    }
+
+    html[theme="light"] .dropdown-menu .dropdown-item:hover {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.06));
+      color: #222;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-dropdown .main-nav-link::before {
+      display: none;
+    }
+
+    /* 下拉選單項目圖標美化 */
+    .dropdown-menu .dropdown-item i {
+      width: 16px;
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    .dropdown-menu .dropdown-item:hover i {
+      opacity: 1;
+      color: var(--primary, #00bcd4);
+    }
+  }
+
+  /* 漢堡選單預設隱藏 */
+  #nav-menu-btn {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 小螢幕 1023px 以下顯示漢堡選單 */
+  @media (max-width: 1023px) {
+    #nav-menu-btn {
+      display: flex;
+    }
+
+    #main-nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: 10px;
+      /* 深色模式樣式 */
+      background: rgba(30,30,30,0.95);
+      backdrop-filter: blur(12px);
+      padding: 12px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      min-width: 333px;
+      z-index: 998;
+      align-items: flex-start;
+    }
+
+    /* 明亮模式下的選單樣式 */
+    html[theme="light"] #main-nav {
+      background: rgba(234, 239, 245, 0.80);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #main-nav.show {
+      display: flex;
+    }
+
+    #main-nav a {
+      position: relative;
+      width: 100%;
+      padding: 8px 0 8px 20px;
+      color: #fff;
+      text-decoration: none;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      margin: 2px 8px;
+      transition: all 0.3s ease;
+    }
+
+    /* 行動裝置下的圖標樣式 */
+    #main-nav a i {
+      margin-right: 8px;
+      width: 16px;
+      text-align: center;
+    }
+
+    /* 明亮模式下的文字顏色 */
+    html[theme="light"] #main-nav a {
+      color: #333;
+    }
+
+    /* 主選單項目的 hue-bar 色條（包括下拉選單觸發器） */
+    #main-nav a::before,
+    #main-nav .dropdown-trigger::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 16px;
+      border-radius: 3px;
+      background: var(--primary, #00bcd4);
+    }
+
+    /* 下拉選單項目樣式 - 加上 hue-bar */
+    .dropdown-menu .dropdown-item {
+      padding: 12px 16px 12px 24px;
+      background: transparent;
+      margin: 3px 0;
+      border-radius: 8px;
+      color: rgba(255, 255, 255, 0.9);
+      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dropdown-menu .dropdown-item::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 16px;
+      border-radius: 3px;
+      background: var(--primary, #00bcd4);
+      display: block;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(4px);
+      color: #fff;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    /* 明亮模式下的下拉選單項目 */
+    html[theme="light"] .dropdown-menu .dropdown-item {
+      background: transparent;
+      color: rgba(51, 51, 51, 0.9);
+    }
+
+    html[theme="light"] .dropdown-menu .dropdown-item:hover {
+      background: rgba(0, 0, 0, 0.08);
+      color: #222;
+    }
+  }
+
+  /* 桌面 ≥1024px 隱藏漢堡 */
+  @media (min-width: 1024px) {
+    #nav-menu-btn {
+      display: none;
+    }
+  }
+
+  /* 375px 以下調整選單 */
+  @media (max-width: 375px) {
+    #main-nav {
+      min-width: 90%;
+      right: 5px;
+      left: 5px;
+      box-sizing: border-box;
+    }
+
+    #main-nav a {
+      font-size: 14px;
+      padding: 2px 0 4px 16px;
+    }
+  }
+
+  /* hue-picker 基本樣式 */
+  #hue-picker {
+    position: absolute;
+    top: 85px;
+    right: 10px;
+    z-index: 999;
+    /* 深色模式樣式（預設） */
+    background: rgba(30, 30, 30, 0.80);
+    backdrop-filter: blur(12px);
+    padding: 20px 24px;
+    border-radius: 14px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+
+  /* 明亮模式下的 hue-picker 樣式 */
+  html[theme="light"] #hue-picker {
+    background: rgba(234, 239, 245, 0.80);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  #hue-picker.hidden { 
+    display: none; 
+  }
+
+  /* 375px 以下 hue-picker 等比縮小 */
+  @media (max-width: 375px) {
+    #hue-picker {
+      transform: scale(0.85);
+      transform-origin: top right;
+      min-width: 280px;
+    }
+  }
+
+  /* hue 標題 */
+  .hue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .hue-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+  }
+
+  /* 明亮模式下的標題顏色 */
+  html[theme="light"] .hue-title {
+    color: #333;
+  }
+
+  .hue-bar {
+    position: absolute;
+    left: -10px;
+    width: 4px;
+    height: 16px;
+    border-radius: 3px;
+    background: var(--primary, #00bcd4);
+  }
+
+  /* 顏色值框 */
+  #hue-value-box {
+    width: 46px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #00bcd4;
+    border: 1px solid #00bcd4;
+    background: rgba(0,0,0,0.4);
+  }
+
+  /* 明亮模式下的顏色值框 */
+  html[theme="light"] #hue-value-box {
+    background: rgba(255,255,255,0.8);
+  }
+
+  /* reset 按鈕 */
+  #reset-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1em;
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0 4px;
+    margin-left: 4px;
+    border-radius: 4px;
+    border: none;
+    background: rgba(255,255,255,0.075);
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+    transform: translateY(1px);
+  }
+
+  /* 明亮模式下的 reset 按鈕 */
+  html[theme="light"] #reset-btn {
+    background: rgba(0,0,0,0.075);
+    color: #333;
+  }
+
+  #reset-btn:hover { 
+    background: rgba(255,255,255,0.2); 
+    opacity: 1; 
+  }
+
+  html[theme="light"] #reset-btn:hover { 
+    background: rgba(0,0,0,0.15); 
+  }
+
+  #reset-btn.hidden { 
+    display: none; 
+  }
+
+  /* 色相漸層條 */
+  .hue-slider {
+    width: 300px;
+    height: 24px;
+    padding: 0 4px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg,
+      #ff8a80, #ff80ab, #b388ff, #82b1ff, #80d8ff, #a7ffeb,
+      #ccff90, #ffff8d, #ffd180, #ff9e80
+    );
+  }
+
+  #hue-range {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  #hue-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 8px;
+    border-radius: 2px;
+    background: #fff;
+    border: 2px solid #00bcd4;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  #hue-range::-moz-range-thumb {
+    height: 14px;
+    width: 4px;
+    border-radius: 2px;
+    background: #fff;
+    border: 2px solid #00bcd4;
+    cursor: pointer;
+  }
+
+  /* navbar 明亮模式樣式 */
+  html[theme="light"] #navbar {
+    background: rgba(234, 239, 245, 0.80);
+    backdrop-filter: blur(12px);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const navMenuBtn = document.getElementById("nav-menu-btn");
+    const mainNav = document.getElementById("main-nav");
+    const hueBtn = document.getElementById("hue-btn");
+    const huePicker = document.getElementById("hue-picker");
+    const hueRange = document.getElementById("hue-range");
+    const hueValueBox = document.getElementById("hue-value-box");
+    const resetBtn = document.getElementById("reset-btn");
+    const dropdownTriggers = document.querySelectorAll(".dropdown-trigger");
+
+    // 關閉所有子選單的函數
+    function closeAllSubMenus() {
+      mainNav.classList.remove("show");
+      huePicker.classList.add("hidden");
+      document.querySelectorAll(".nav-dropdown").forEach(dropdown => {
+        dropdown.classList.remove("active");
+      });
+    }
+
+    // 漢堡選單點擊事件
+    if (navMenuBtn) {
+      navMenuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isShowing = mainNav.classList.contains("show");
+        
+        closeAllSubMenus();
+        
+        if (!isShowing) {
+          mainNav.classList.add("show");
+        }
+      });
+    }
+
+    // 色調按鈕點擊事件
+    if (hueBtn) {
+      hueBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isShowing = !huePicker.classList.contains("hidden");
+        
+        closeAllSubMenus();
+        
+        if (!isShowing) {
+          huePicker.classList.remove("hidden");
+        }
+      });
+    }
+
+    // 下拉選單點擊事件
+    dropdownTriggers.forEach(trigger => {
+      // 為整個觸發器添加事件監聽
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const dropdown = trigger.closest(".nav-dropdown");
+        const isActive = dropdown.classList.contains("active");
+        
+        // 關閉其他下拉選單
+        document.querySelectorAll(".nav-dropdown").forEach(d => {
+          if (d !== dropdown) {
+            d.classList.remove("active");
+          }
+        });
+        
+        // 切換當前下拉選單
+        dropdown.classList.toggle("active");
+      });
+
+      // 防止點擊時的預設連結行為
+      trigger.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+      });
+    });
+
+    // 點擊選單連結自動收起
+    mainNav.querySelectorAll("a").forEach(link => {
+      if (!link.classList.contains("dropdown-trigger")) {
+        link.addEventListener("click", () => {
+          closeAllSubMenus();
+        });
+      }
+    });
+
+    // 點擊其他地方關閉所有選單
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest("#sub-nav") && 
+          !e.target.closest("#main-nav") && 
+          !e.target.closest("#hue-picker") &&
+          !e.target.closest(".nav-dropdown")) {
+        closeAllSubMenus();
+      }
+    });
+
+    // 色調控制
+    if (hueRange) {
+      hueRange.addEventListener("input", e => {
+        const value = e.target.value;
+        hueValueBox.textContent = value;
+        document.documentElement.style.setProperty("--primary-hue", value);
+        if (value != "250") resetBtn.classList.remove("hidden");
+        else resetBtn.classList.add("hidden");
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener("click", () => {
+        hueRange.value = "250";
+        hueValueBox.textContent = "250";
+        document.documentElement.style.setProperty("--primary-hue", "250");
+        resetBtn.classList.add("hidden");
+      });
+    }
+  });
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar hover-container" onclick="window.location.href='/about/'">
+      
+        <image src=/img/avatar.png></image>
+      
+      <!-- 新增的hover遮罩和圖標 -->
+      <div class="hover-overlay">
+        <div class="hover-icon">
+          <!-- 使用自定義 SVG 圖標 -->
+          <svg width="1.13em" height="1em" viewBox="0 0 576 512" class="custom-card-icon">
+            <defs>
+              <symbol id="address-card-icon" viewBox="0 0 576 512">
+                <path fill="currentColor" d="M512 80c8.8 0 16 7.2 16 16v320c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V96c0-8.8 7.2-16 16-16zM64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm144 224a64 64 0 1 0 0-128a64 64 0 1 0 0 128m-32 32c-44.2 0-80 35.8-80 80c0 8.8 7.2 16 16 16h192c8.8 0 16-7.2 16-16c0-44.2-35.8-80-80-80zm200-144c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24h80c13.3 0 24-10.7 24-24s-10.7-24-24-24z"/>
+              </symbol>
+            </defs>
+            <use href="#address-card-icon"/>
+          </svg>
+        </div>
+      </div>
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">虎头鯨 </div>
+      <div class="dot"></div>
+      <div class="subtitle">PU CSIM </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://discordapp.com/users/975001678350811206" title="Discord"><i class="fa-brands fa-discord"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://steamcommunity.com/id/DEVlenient/" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/AixLnyt" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+<style>
+/* 基礎容器樣式 */
+.hover-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px; /* 圓角，可根據需要調整 */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* 添加點擊效果 */
+.hover-container:active {
+  transform: scale(0.95);
+}
+
+/* Hover遮罩層 */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色遮罩 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* Hover圖標 */
+.hover-icon {
+  color: white;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+/* 自定義 SVG 圖標樣式 */
+.custom-card-icon {
+  width: 3rem; /* 48px，相當於 text-5xl */
+  height: 3rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Hover效果 */
+.hover-container:hover .hover-overlay {
+  opacity: 1;
+}
+
+.hover-container:hover .hover-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hover-container:hover .custom-card-icon {
+  transform: scale(1.1);
+}
+
+/* 確保原始圖片樣式不受影響 */
+.hover-container image,
+.hover-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 可選：添加更平滑的過渡效果 */
+.hover-container image,
+.hover-container img {
+  transition: transform 0.3s ease;
+}
+
+.hover-container:hover image,
+.hover-container:hover img {
+  transform: scale(1.05); /* 輕微放大圖片 */
+}
+</style>
+  
+  <div class="sticky">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分類</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/Certiport/">
+                Certiport
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Chrome/">
+                Chrome
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%A1%AF%E5%8D%A1/">
+                顯卡
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
+                硬體
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/ICDL/">
+                ICDL
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Java/">
+                Java
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
+                顯示器
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Python/">
+                Python
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Markdown/">
+                Markdown
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
+                硬碟
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E8%BB%9F%E9%AB%94/">
+                軟體
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%81%8A%E6%88%B2/">
+                遊戲
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">標籤</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Extension/" rel="tag">Extension</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%9C%8B%E9%9A%9B%E8%AA%8D%E8%AD%89/" rel="tag">國際認證</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%93%B4%E5%85%85%E5%8A%9F%E8%83%BD/" rel="tag">擴充功能</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%94%BB%E7%95%A5/" rel="tag">攻略</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%A8%99%E8%A8%98%E8%AA%9E%E8%A8%80/" rel="tag">標記語言</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%8E%A9%E6%B3%95/" rel="tag">玩法</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A1%AC%E9%AB%94/" rel="tag">硬體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A8%8B%E5%BC%8F%E8%AA%9E%E8%A8%80/" rel="tag">程式語言</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%AD%89%E7%85%A7/" rel="tag">證照</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E8%BB%9F%E9%AB%94/" rel="tag">軟體</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%9B%BB%E8%85%A6/" rel="tag">電腦</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E9%B3%B4%E6%BD%AE/" rel="tag">鳴潮</a></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<style>
+/* Right Panel 支持視頻和圖片的樣式 - 固定媒體位置版本 */
+.right-panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.right-panel:hover {
+  transform: scale(1.02);
+}
+
+.right-panel .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(var(--media-scale, 1));
+  transition: transform 0.3s ease;
+  
+  /* 使用固定像素偏移避免隨寬度變化 */
+  background-position: 
+    calc(50% + var(--media-offset-x, 0px)) 
+    calc(50% + var(--media-offset-y, 0px));
+}
+
+.right-panel .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(var(--media-scale, 1));
+  transition: transform 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+  
+  /* 使用固定像素偏移避免隨寬度變化 */
+  object-position: 
+    calc(50% + var(--media-offset-x, 0px)) 
+    calc(50% + var(--media-offset-y, 0px));
+}
+
+.right-panel .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.right-panel:hover .overlay {
+  opacity: 1;
+}
+
+.right-panel i.with-pic {
+  color: white;
+  font-size: 2rem;
+  z-index: 3;
+}
+
+.right-panel i.non-pic {
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.right-panel.with-pic {
+  background: #000;
+}
+
+/* 響應式設計 - 768px以下隱藏右側面板，讓article-main占滿 */
+@media (max-width: 768px) {
+  /* 隱藏右側面板 */
+  .right-panel {
+    display: none !important;
+  }
+  
+  /* 讓article-main占滿整個容器 */
+  .article-main {
+    width: 100% !important;
+    flex: 1 !important;
+  }
+  
+  /* 確保article-inner也占滿 */
+  .article-inner {
+    display: block !important;
+    width: 100% !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .right-panel {
+    transition: none;
+  }
+  
+  .right-panel .bg-video {
+    animation-play-state: paused;
+  }
+}
+</style>
+
+
+
+<article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner" 
+    
+  >
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        
+        第一章：電腦程式語言介紹
+      </h1>
+    
+  
+</div>
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-06-24T15:49:57.222Z" itemprop="datePublished">2025-06-24</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分類
+  
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            0 字 
+          </div>
+        </div>
+        
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+
+  
+</article>
+
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer" style="padding: 20px 0;">
+  
+  <div id="footer-info" class="inner" style="text-align:center; width:100%; max-width:900px; margin: 0 auto;">
+    
+    
+    &copy; 2024 - 2025 by 虎头鯨<br>
+    框架 <a href="https://hexo.io/" target="_blank">Hexo</a> | 主題 <a href="https://github.com/saicaca/hexo-theme-vivia" target="_blank">Vivia</a>
+
+    <div id="runtime" style="margin-top: 2px; font-size: 15px; color: var(--neut-L50);"></div>
+  </div>
+  <script src="/js/runtime.js"></script>
+</footer>
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
