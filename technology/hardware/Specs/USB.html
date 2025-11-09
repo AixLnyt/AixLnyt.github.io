@@ -2542,8 +2542,8 @@ document.addEventListener('DOMContentLoaded', function() {
     top: calc(100% + 20px);
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(30, 30, 30, 0.8);
-    backdrop-filter: blur(12px);
+    background: rgba(30, 30, 30, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
     border-radius: 12px;
     padding: 12px;
     min-width: 200px;
@@ -2551,8 +2551,8 @@ document.addEventListener('DOMContentLoaded', function() {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
     z-index: 1001;
   }
 
@@ -2566,13 +2566,29 @@ document.addEventListener('DOMContentLoaded', function() {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 12px;
+    padding: 8px 12px 8px 32px;
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
     transition: all 0.3s ease;
     margin-bottom: 4px;
+    margin-left: 16px;
     font-size: 14px;
+    background: transparent !important;
+    position: relative;
+  }
+
+  /* 桌面版下拉選單項目的 hue-bar */
+  .dropdown-item::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 16px;
+    border-radius: 3px;
+    background: var(--primary, #00bcd4);
   }
 
   .dropdown-item:last-child {
@@ -2580,22 +2596,25 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   .dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateX(4px);
   }
 
   /* 明亮模式下的下拉菜单样式 */
   html[theme="light"] .dropdown-menu {
-    background: rgba(234, 239, 245, 0.80);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: rgba(234, 239, 245, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
   }
 
   html[theme="light"] .dropdown-item {
     color: #333;
+    background: transparent !important;
   }
 
   html[theme="light"] .dropdown-item:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.08) !important;
+    transform: translateX(4px);
   }
 
   /* 移动端下拉菜单样式 */
@@ -2607,10 +2626,11 @@ document.addEventListener('DOMContentLoaded', function() {
       visibility: hidden;
       pointer-events: none;
       margin-top: 0;
-      background: transparent;
+      background: transparent !important;
+      backdrop-filter: none !important;
       margin-left: 0;
       padding: 0;
-      box-shadow: none;
+      box-shadow: none !important;
       max-height: 0;
       overflow: hidden;
       transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
@@ -2622,44 +2642,37 @@ document.addEventListener('DOMContentLoaded', function() {
       pointer-events: all;
       max-height: 300px;
       margin-top: 8px;
+      background: transparent !important;
     }
 
     .dropdown-menu .dropdown-item {
-      padding: 12px 16px 12px 44px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-      margin: 3px 8px;
+      padding: 12px 16px 12px 48px;
+      background: transparent !important;
+      margin: 3px 8px 3px 24px;
       border-radius: 8px;
       color: rgba(255, 255, 255, 0.9);
-      border-left: 3px solid transparent;
-      backdrop-filter: blur(8px);
       transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
     }
 
+    /* 下拉選單項目的 hue-bar */
     .dropdown-menu .dropdown-item::before {
-      content: '';
+      content: "";
       position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: -1;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 16px;
+      border-radius: 3px;
+      background: var(--primary, #00bcd4);
     }
 
     .dropdown-menu .dropdown-item:hover {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
-      border-left-color: var(--primary, #00bcd4);
+      background: transparent !important;
       transform: translateX(4px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       color: #fff;
-    }
-
-    .dropdown-menu .dropdown-item:hover::before {
-      opacity: 1;
     }
 
     .dropdown-menu .dropdown-item div {
@@ -2669,23 +2682,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /* 明亮模式下的行動裝置選單 */
+    html[theme="light"] .dropdown-menu {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      box-shadow: none !important;
+    }
+
     html[theme="light"] .dropdown-menu .dropdown-item {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02));
+      background: transparent !important;
       color: rgba(51, 51, 51, 0.9);
     }
 
-    html[theme="light"] .dropdown-menu .dropdown-item::before {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.03));
-    }
-
     html[theme="light"] .dropdown-menu .dropdown-item:hover {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.06));
+      background: transparent !important;
       color: #222;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .nav-dropdown .main-nav-link::before {
-      display: none;
+      display: block !important;
     }
 
     /* 下拉選單項目圖標美化 */
@@ -2743,38 +2757,42 @@ document.addEventListener('DOMContentLoaded', function() {
       display: flex;
     }
 
-    #main-nav a {
+    /* 主選單項目樣式 */
+    #main-nav a,
+    #main-nav .dropdown-trigger {
       position: relative;
       width: 100%;
-      padding: 8px 0 8px 20px;
+      padding: 12px 16px 12px 32px;
       color: #fff;
       text-decoration: none;
       text-align: left;
       display: flex;
       align-items: center;
       border-radius: 8px;
-      margin: 2px 8px;
+      margin: 3px 8px;
       transition: all 0.3s ease;
     }
 
     /* 行動裝置下的圖標樣式 */
-    #main-nav a i {
+    #main-nav a i,
+    #main-nav .dropdown-trigger i {
       margin-right: 8px;
       width: 16px;
       text-align: center;
     }
 
     /* 明亮模式下的文字顏色 */
-    html[theme="light"] #main-nav a {
+    html[theme="light"] #main-nav a,
+    html[theme="light"] #main-nav .dropdown-trigger {
       color: #333;
     }
 
-    /* 主選單項目的 hue-bar 色條（包括下拉選單觸發器） */
+    /* 主選單項目的 hue-bar 色條 */
     #main-nav a::before,
     #main-nav .dropdown-trigger::before {
       content: "";
       position: absolute;
-      left: 6px;
+      left: 12px;
       top: 50%;
       transform: translateY(-50%);
       width: 4px;
@@ -2783,48 +2801,16 @@ document.addEventListener('DOMContentLoaded', function() {
       background: var(--primary, #00bcd4);
     }
 
-    /* 下拉選單項目樣式 - 加上 hue-bar */
-    .dropdown-menu .dropdown-item {
-      padding: 12px 16px 12px 24px;
-      background: transparent;
-      margin: 3px 0;
-      border-radius: 8px;
-      color: rgba(255, 255, 255, 0.9);
-      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .dropdown-menu .dropdown-item::before {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 4px;
-      height: 16px;
-      border-radius: 3px;
-      background: var(--primary, #00bcd4);
-      display: block;
-    }
-
-    .dropdown-menu .dropdown-item:hover {
+    /* hover 效果 */
+    #main-nav a:hover,
+    #main-nav .dropdown-trigger:hover {
       background: rgba(255, 255, 255, 0.1);
       transform: translateX(4px);
-      color: #fff;
-      margin-left: 8px;
-      margin-right: 8px;
     }
 
-    /* 明亮模式下的下拉選單項目 */
-    html[theme="light"] .dropdown-menu .dropdown-item {
-      background: transparent;
-      color: rgba(51, 51, 51, 0.9);
-    }
-
-    html[theme="light"] .dropdown-menu .dropdown-item:hover {
+    html[theme="light"] #main-nav a:hover,
+    html[theme="light"] #main-nav .dropdown-trigger:hover {
       background: rgba(0, 0, 0, 0.08);
-      color: #222;
     }
   }
 
@@ -2844,9 +2830,14 @@ document.addEventListener('DOMContentLoaded', function() {
       box-sizing: border-box;
     }
 
-    #main-nav a {
+    #main-nav a,
+    #main-nav .dropdown-trigger {
       font-size: 14px;
-      padding: 2px 0 4px 16px;
+      padding: 10px 14px 10px 28px;
+    }
+
+    .dropdown-menu .dropdown-item {
+      padding: 10px 14px 10px 28px;
     }
   }
 
@@ -3278,6 +3269,16 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="widget">
       <h3 class="widget-title">分類</h3>
       <div class="category-box">
+            <a class="category-link" href="/categories/Certiport/">
+                Certiport
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
+                硬體
+                <div class="category-count">1</div>
+            </a>
+        
             <a class="category-link" href="/categories/Chrome/">
                 Chrome
                 <div class="category-count">1</div>
@@ -3288,33 +3289,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/Java/">
-                Java
-                <div class="category-count">1</div>
-            </a>
-        
-            <a class="category-link" href="/categories/%E7%A1%AC%E9%AB%94/">
-                硬體
-                <div class="category-count">1</div>
-            </a>
-        
-            <a class="category-link" href="/categories/Certiport/">
-                Certiport
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/ICDL/">
                 ICDL
-                <div class="category-count">1</div>
-            </a>
-        
-            <a class="category-link" href="/categories/Python/">
-                Python
-                <div class="category-count">1</div>
-            </a>
-        
-            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
-                硬碟
                 <div class="category-count">1</div>
             </a>
         
@@ -3323,8 +3299,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
-                顯示器
+            <a class="category-link" href="/categories/%E7%A1%AC%E7%A2%9F/">
+                硬碟
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Java/">
+                Java
                 <div class="category-count">1</div>
             </a>
         
@@ -3335,6 +3316,16 @@ document.addEventListener('DOMContentLoaded', function() {
         
             <a class="category-link" href="/categories/%E9%81%8A%E6%88%B2/">
                 遊戲
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/%E9%A1%AF%E7%A4%BA%E5%99%A8/">
+                顯示器
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Python/">
+                Python
                 <div class="category-count">1</div>
             </a>
         </div>
